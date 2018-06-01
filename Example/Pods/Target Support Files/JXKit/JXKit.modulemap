@@ -1,0 +1,6 @@
+framework module JXKit {
+  umbrella header "JXKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
