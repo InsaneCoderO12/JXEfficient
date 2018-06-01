@@ -1,7 +1,8 @@
 use_frameworks!
 
 target 'JXKit_Example' do
-  pod 'JXKit', :path => '../'
+
+    pod 'JXKit', :path => '~/Desktop/GitHub/JXKit/JXKit.podspec'
 
   target 'JXKit_Tests' do
     inherit! :search_paths
