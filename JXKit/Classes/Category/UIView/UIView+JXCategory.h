@@ -28,32 +28,6 @@
 @property (nonatomic, assign)   CGFloat     jx_bottom;
 @property (nonatomic, assign)   CGFloat     jx_right;
 
-//#pragma mark 消息弹窗提示
-//// 普通消息 动画
-//- (void)jx_showMsg:(NSString *)msg animated:(BOOL)animated;
-//
-//// 普通消息 动画 结束回调
-//- (void)jx_showMsg:(NSString *)msg animated:(BOOL)animated complete:(void (^)(void))complete;
-//
-//// 网络错误消息 动画
-//- (void)jx_showHttpError:(NSError *)error msg:(NSString *)msg animated:(BOOL)animated;
-//
-//// 普通消息 动画 y偏移
-//- (void)jx_showMsg:(NSString *)msg animated:(BOOL)animated yLocation:(CGFloat)yLocation;
-//
-//// 普通消息 动画 y偏移 动画结束回调
-//- (void)jx_showMsg:(NSString *)msg animated:(BOOL)animated yLocation:(CGFloat)yLocation complete:(void (^)(void))complete;
-//
-//// 网络错误消息 动画 y偏移
-//- (void)jx_showHttpError:(NSError *)error msg:(NSString *)msg animated:(BOOL)animated yLocation:(CGFloat)yLocation;
-//
-//// 隐藏提示
-//- (void)jx_hideMsg;
-
-#pragma mark progresssHUD 
-//- (void)jx_showProgressHUD:(NSString *)title animation:(BOOL)animation;
-//- (void)jx_hideProgressHUD:(BOOL)animation;
-
 - (void)jx_subviewsHidden:(BOOL)hidden; // 隐藏子视图
 - (void)jx_removeAllSubviews; // 移除子视图
 
