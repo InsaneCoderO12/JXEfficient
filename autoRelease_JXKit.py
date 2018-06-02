@@ -26,7 +26,7 @@ def add_version():
     status = os.popen("git status").read()
     if "nothing to commit" in status: # 当前 仓库 状态无修改
         print("%s %s" % (log_pre_failure, status))
-        # return
+        return
 
     # 获取当前 仓库 的最新版本
     tag_old = os.popen("git describe --tags `git rev-list --tags --max-count=1`").read().replace("\n", "")

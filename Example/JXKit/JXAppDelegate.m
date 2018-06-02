@@ -7,12 +7,56 @@
 //
 
 #import "JXAppDelegate.h"
+#import "JXKit.h"
 
 @implementation JXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
+    // https%3A%2F%2Fwww.baidu.com%3Fname%3D%E4%BD%A0%26age%3D7834%26%2A%2F%5D%2Arrrr
+    // https%3A%2F%2Fwww.baidu.com%3Fname%3D%E4%BD%A0%26age%3D7834%26%2A%2F%5D%2Arrrr
+
+    NSString *tempString = @"https://www.baidu.com?name=你&age=7834&*/]*rrrr";
+    
+    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
+    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
+
+    NSString *en = urlValue(tempString).absoluteString;
+    
+    NSString *de = [en jx_URLDecoded];
+    
+    NSLog(@"");
+
+    
+//
+//    NSString *didString = URLStringValue(tempString);
+//    didString = URLStringValue(didString);
+//    didString = URLStringValue(didString);
+//    didString = URLStringValue(didString);
+//    NSURL *didURL = URLValue(tempString);
+    
+    
+    
+
+    
+//    temp = @"https://app.mixcapp.com/h5/invitation/templets/invitation.html?inviteCode=WXycOpbl&userName=%E4%BA%8C%E7%BB%B4%E7%A0%81&appVersion=2.7.1&mallNo=0202A003&timestamp=1527912762798";
+    
+//    NSURLComponents *com = [[NSURLComponents alloc] initWithString:@"https://www.baidu.com?name=你&age=%"];
+////
+//    NSURL *url = com.URL;
+    
+//    NSURL *url = urlValue(temp.absoluteString);
+//    url = urlValue(url.absoluteString);
+//    url = urlValue(url.absoluteString);
+//    url = urlValue(url.absoluteString);
+//
+//    NSString *s = urlEncode(@"mixc/wwcom?name=你&age=%");
+
+    
+    
     return YES;
 }
 

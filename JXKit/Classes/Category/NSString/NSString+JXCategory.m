@@ -56,18 +56,28 @@
 }
 
 - (NSString *)jx_URLEncoded {
-    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                 (CFStringRef)self,
-                                                                                 NULL,
-                                                                                 (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                 kCFStringEncodingUTF8));
+    NSString *charactersToEscape = @"!*'();:@&=+$,/?%#[]";
+    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+    NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+    return encodedUrl;
+
+    // deprecated in iOS 9.0
+//    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+//                                                                                 (CFStringRef)self,
+//                                                                                 NULL,
+//                                                                                 (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+//                                                                                 kCFStringEncodingUTF8));
 }
 
 - (NSString *)jx_URLDecoded {
-    return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
-                                                                                                 (__bridge CFStringRef)self,
-                                                                                                 CFSTR(""),
-                                                                                                 CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    NSString *decoded = [self stringByRemovingPercentEncoding];
+    return decoded;
+    
+    // deprecated in iOS 9.0
+//    return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+//                                                                                                 (__bridge CFStringRef)self,
+//                                                                                                 CFSTR(""),
+//                                                                                                 CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
 }
 
 - (NSString *)jx_URLAddParameters:(NSDictionary *)parameters {

@@ -96,21 +96,12 @@ static inline NSURL *urlValue(id value) {
     
     if (value && [value isKindOfClass:[NSString class]]) {
         if (isHaveChinese(strValue(value))) {
-            return [NSURL URLWithString:[value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//            return [NSURL URLWithString:[value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            return [NSURL URLWithString:[value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
         }
         else {
             return [NSURL URLWithString:value];
         }
-    }
-    else {
-        return nil;
-    }
-}
-
-// urlEncode 前注意是否已经 urlEncode 过
-static inline NSString *urlEncode(id value) {
-    if (value && [value isKindOfClass:[NSString class]]) {
-        return [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     }
     else {
         return nil;
