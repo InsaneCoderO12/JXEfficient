@@ -95,12 +95,19 @@ static inline NSURL *URLValue(id value) {
     if ([value isKindOfClass:[NSURL class]]) {
         tempURL = (NSURL *)value;
     }
-    if ([value isKindOfClass:[NSString class]]) {
+    else if ([value isKindOfClass:[NSString class]]) {
         NSString *string = (NSString *)value;
-        BOOL haveChinese = isHaveChinese(string);
-        if (haveChinese) {
-            NSString *encodedString = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-            tempURL = [NSURL URLWithString:encodedString];
+        if (string.length > 0) {
+            BOOL haveChinese = isHaveChinese(string);
+            if (haveChinese) {
+                NSString *encodedString = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                if (encodedString.length > 0) {
+                    tempURL = [NSURL URLWithString:encodedString];
+                }
+            }
+            else {
+                tempURL = [NSURL URLWithString:string];
+            }
         }
     }
     return tempURL;
@@ -114,11 +121,14 @@ static inline NSString *URLStringValue(id value) {
         NSURL *URL = (NSURL *)value;
         tempURLString = URL.absoluteString;
     }
-    if ([value isKindOfClass:[NSString class]]) {
+    else if ([value isKindOfClass:[NSString class]]) {
         NSString *string = (NSString *)value;
         BOOL haveChinese = isHaveChinese(string);
         if (haveChinese) {
             tempURLString = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        }
+        else {
+            tempURLString = string;
         }
     }
     return tempURLString;
@@ -132,9 +142,10 @@ static inline NSString *URLEncodedString(id value) {
         NSURL *URL = (NSURL *)value;
         tempEncoded = URL.absoluteString;
     }
-    if ([value isKindOfClass:[NSString class]]) {
+    else if ([value isKindOfClass:[NSString class]]) {
         tempEncoded = (NSString *)value;
     }
+    
     if (tempEncoded) {
         NSString *charactersToEscape = kPercentEncodingCharacters;
         NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
@@ -150,9 +161,10 @@ static inline NSString *URLDecodedString(id value) {
         NSURL *URL = (NSURL *)value;
         tempDecoded = URL.absoluteString;
     }
-    if ([value isKindOfClass:[NSString class]]) {
+    else if ([value isKindOfClass:[NSString class]]) {
         tempDecoded = (NSString *)value;
     }
+    
     if (tempDecoded) {
         tempDecoded = [tempDecoded stringByRemovingPercentEncoding];
     }
