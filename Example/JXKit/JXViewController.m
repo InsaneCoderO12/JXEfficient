@@ -20,7 +20,9 @@
     [super viewDidLoad];
     
 
-    [self.view jx_showToast:@"skdkfj" animated:YES];
+//    [self.view jx_showToast:@"skdkfj" animated:YES];
+    
+    [self.view jx_showProgressHUD:@"加载中" animation:NO];
 
     
     
