@@ -19,18 +19,17 @@
     // https%3A%2F%2Fwww.baidu.com%3Fname%3D%E4%BD%A0%26age%3D7834%26%2A%2F%5D%2Arrrr
     // https%3A%2F%2Fwww.baidu.com%3Fname%3D%E4%BD%A0%26age%3D7834%26%2A%2F%5D%2Arrrr
 
-    NSString *tempString = @"https://www.baidu.com?name=你&age=7834&*/]*rrrr";
-    
-    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
-    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
+//    NSString *tempString = @"https://www.baidu.com?name=你&age=7834&*/]*rrrr";
+//
+//    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
+//    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
+//
+//    NSString *en = urlValue(tempString).absoluteString;
+//
+//    NSString *de = [en jx_URLDecoded];
+//
+//    NSLog(@"");
 
-    NSString *en = urlValue(tempString).absoluteString;
-    
-    NSString *de = [en jx_URLDecoded];
-    
-    NSLog(@"");
-
-    
 //
 //    NSString *didString = URLStringValue(tempString);
 //    didString = URLStringValue(didString);

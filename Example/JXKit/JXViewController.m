@@ -7,6 +7,7 @@
 //
 
 #import "JXViewController.h"
+#import "JXKit.h"
 
 @interface JXViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
+    [self.view jx_showToast:@"skdkfj" animated:YES];
+
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

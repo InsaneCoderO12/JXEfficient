@@ -7,6 +7,7 @@
 //
 
 #import "UIView+JXToastAndProgressHUD.h"
+#import "JXMacro.h"
 
 static const CGFloat kToastViewShowAnimTime = .15f;
 static const CGFloat kToastViewHideAnimTime = .35f;
@@ -24,14 +25,38 @@ static const CGFloat kToastLabelEdgeL = 12.f;
 static const CGFloat kToastLabelEdgeB = 12.f;
 static const CGFloat kToastLabelEdgeR = 12.f;
 
+//
+static UIColor *kToastBgColor = nil;
+static UIColor *kToastTextColor = nil;
+
+static UIColor *kProgressHUDBgColor = nil;
+static UIColor *kProgressHUDTextColor = nil;
+static UIColor *kProgressHUDActivityIndicatorColor = nil;
+
 // ====================================================================================================
 #pragma mark - JX_Toast_View
 
 @interface JX_Toast_View : UIView
 
++ (void)resetStyle;
+
 @end
 
 @implementation JX_Toast_View
+
++ (void)initialize {
+    if (!kToastBgColor) {
+        kToastBgColor = COLOR_RGBA(0, 0, 0, .6f);
+    }
+    if (!kToastTextColor) {
+        kToastTextColor = [UIColor whiteColor];
+    }
+}
+
++ (void)resetStyle {
+    kToastBgColor = COLOR_RGBA(0, 0, 0, .6f);
+    kToastTextColor = [UIColor whiteColor];
+}
 
 @end
 
@@ -40,9 +65,29 @@ static const CGFloat kToastLabelEdgeR = 12.f;
 
 @interface JX_ProgressHUD_View : UIView
 
++ (void)resetStyle;
+
 @end
 
 @implementation JX_ProgressHUD_View
+
++ (void)initialize {
+    if (!kProgressHUDBgColor) {
+        kProgressHUDBgColor = COLOR_RGBA(0, 0, 0, .6f);
+    }
+    if (!kProgressHUDTextColor) {
+        kProgressHUDTextColor = [UIColor whiteColor];
+    }
+    if (!kProgressHUDActivityIndicatorColor) {
+        kProgressHUDActivityIndicatorColor = [UIColor whiteColor];
+    }
+}
+
++ (void)resetStyle {
+    kProgressHUDBgColor = COLOR_RGBA(0, 0, 0, .6f);
+    kProgressHUDTextColor = [UIColor whiteColor];
+    kProgressHUDActivityIndicatorColor = [UIColor whiteColor];
+}
 
 @end
 
@@ -50,6 +95,34 @@ static const CGFloat kToastLabelEdgeR = 12.f;
 #pragma mark - UIView (JXToastAndProgressHUD)
 
 @implementation UIView (JXToastAndProgressHUD)
+
++ (void)jx_toastStyleBgColor:(UIColor *)bgColor {
+    kToastBgColor = bgColor;
+}
+
++ (void)jx_toastStyleTextColor:(UIColor *)textColor {
+    kToastTextColor = textColor;
+}
+
++ (void)jx_toastStyleResetToDefault {
+    [JX_Toast_View resetStyle];
+}
+
++ (void)jx_progressHUDStyleBgColor:(UIColor *)bgColor {
+    kProgressHUDBgColor = bgColor;
+}
+
++ (void)jx_progressHUDStyleTextColor:(UIColor *)textColor {
+    kProgressHUDTextColor = textColor;
+}
+
++ (void)jx_progressHUDStyleActivityIndicatorColor:(UIColor *)activityIndicatorColor {
+    kProgressHUDActivityIndicatorColor = activityIndicatorColor;
+}
+
++ (void)jx_progressHUDStyleResetToDefault {
+    [JX_ProgressHUD_View resetStyle];
+}
 
 #pragma mark 消息弹窗提示
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated {
@@ -80,7 +153,7 @@ static const CGFloat kToastLabelEdgeR = 12.f;
     //
     JX_Toast_View *toastView = [[JX_Toast_View alloc] init];
     [self addSubview:toastView];
-    toastView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
+    toastView.backgroundColor = kToastBgColor;
     toastView.translatesAutoresizingMaskIntoConstraints = NO;
     toastView.layer.cornerRadius = 6.f;
     toastView.clipsToBounds = YES;
@@ -91,7 +164,7 @@ static const CGFloat kToastLabelEdgeR = 12.f;
     toastLabel.translatesAutoresizingMaskIntoConstraints = NO;
     toastLabel.textAlignment = NSTextAlignmentCenter;
     toastLabel.font = [UIFont systemFontOfSize:14.f];
-    toastLabel.textColor = [UIColor whiteColor];
+    toastLabel.textColor = kToastTextColor;
     toastLabel.numberOfLines = 0;
     toastLabel.text = toast;
     
@@ -233,12 +306,6 @@ static const CGFloat kToastLabelEdgeR = 12.f;
     }
 }
 
-- (NSString *)jx_msgForHttpError:(NSError *)error defaultMsg:(NSString *)defaultMsg {
-    if (error.code == -1009)        { return @"网络似乎已断开, 请检查网络 ~"; }
-    else if (error.code == -1001)   { return @"网络请求超时 ~"; }
-    else                            { return defaultMsg; }
-}
-
 #pragma mark progresssHUD
 - (void)jx_showProgressHUD:(NSString *)title animation:(BOOL)animation {
     CGFloat indicatorViewToTop = 20.f;
@@ -251,13 +318,14 @@ static const CGFloat kToastLabelEdgeR = 12.f;
     
     JX_ProgressHUD_View *progressHUDView = [[JX_ProgressHUD_View alloc] init];
     [self addSubview:progressHUDView];
-    progressHUDView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
+    progressHUDView.backgroundColor = kProgressHUDBgColor;
     progressHUDView.translatesAutoresizingMaskIntoConstraints = NO;
     progressHUDView.layer.cornerRadius = 6.f;
     progressHUDView.clipsToBounds = YES;
     
     UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] init];
     indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    indicatorView.color = kProgressHUDActivityIndicatorColor;
     indicatorView.translatesAutoresizingMaskIntoConstraints = NO;
     [progressHUDView addSubview:indicatorView];
     [indicatorView startAnimating];
@@ -267,7 +335,7 @@ static const CGFloat kToastLabelEdgeR = 12.f;
     msgLabel.translatesAutoresizingMaskIntoConstraints = NO;
     msgLabel.textAlignment = NSTextAlignmentCenter;
     msgLabel.font = [UIFont systemFontOfSize:14.f];
-    msgLabel.textColor = [UIColor whiteColor];
+    msgLabel.textColor = kProgressHUDTextColor;
     msgLabel.numberOfLines = 0;
     msgLabel.text = title;
     
