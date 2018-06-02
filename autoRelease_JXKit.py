@@ -22,14 +22,16 @@ log_pre_failure = "❌ =====>"
 def add_version():
     os.chdir("%s" % project_path)
 
+
+    # 获取当前 仓库 的最新版本
+    tag_old = os.popen("git describe --tags `git rev-list --tags --max-count=1`").read().replace("\n", "")
+
     # 检查本地仓库是否修改
     status = os.popen("git status").read()
     if "nothing to commit" in status: # 当前 仓库 状态无修改
         print("%s %s" % (log_pre_failure, status))
+        print("tab_old %s" (tag_old) )
         return
-
-    # 获取当前 仓库 的最新版本
-    tag_old = os.popen("git describe --tags `git rev-list --tags --max-count=1`").read().replace("\n", "")
 
     ver_components = tag_old.split('.')
     ver_components[-1] = str(int(ver_components[-1]) + 1)
