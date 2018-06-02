@@ -88,24 +88,75 @@ static inline BOOL isHaveChinese(NSString *string) {
     return NO;
 }
 
-// 转 NSUrl
-static inline NSURL *urlValue(id value) {
+// 转 NSURL <目前以判断 value 中有中文为其进行 PercentEncoding<URLQueryAllowedCharacterSet> 转换>
+// 需要对 URL 中所有部分进行编码 使用 URLEncodedString()
+static inline NSURL *URLValue(id value) {
+    NSURL *tempURL = nil;
     if ([value isKindOfClass:[NSURL class]]) {
-        return value;
+        tempURL = (NSURL *)value;
     }
-    
-    if (value && [value isKindOfClass:[NSString class]]) {
-        if (isHaveChinese(strValue(value))) {
-//            return [NSURL URLWithString:[value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-            return [NSURL URLWithString:[value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
-        }
-        else {
-            return [NSURL URLWithString:value];
+    if ([value isKindOfClass:[NSString class]]) {
+        NSString *string = (NSString *)value;
+        BOOL haveChinese = isHaveChinese(string);
+        if (haveChinese) {
+            NSString *encodedString = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+            tempURL = [NSURL URLWithString:encodedString];
         }
     }
-    else {
-        return nil;
+    return tempURL;
+}
+
+// 转 URLString <目前以判断 value 中有中文为其进行 PercentEncoding<URLQueryAllowedCharacterSet> 转换>
+// 需要对 URL 中所有部分进行编码 使用 URLEncodedString()
+static inline NSString *URLStringValue(id value) {
+    NSString *tempURLString = nil;
+    if ([value isKindOfClass:[NSURL class]]) {
+        NSURL *URL = (NSURL *)value;
+        tempURLString = URL.absoluteString;
     }
+    if ([value isKindOfClass:[NSString class]]) {
+        NSString *string = (NSString *)value;
+        BOOL haveChinese = isHaveChinese(string);
+        if (haveChinese) {
+            tempURLString = [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+        }
+    }
+    return tempURLString;
+}
+
+static NSString *const kPercentEncodingCharacters = @"!*'();:@&=+$,/?%#[]";
+// 编码 URLEncodedString <强制对 kPercentEncodingCharacters 进行 PercentEncoding 转换>
+static inline NSString *URLEncodedString(id value) {
+    NSString *tempEncoded = nil;
+    if ([value isKindOfClass:[NSURL class]]) {
+        NSURL *URL = (NSURL *)value;
+        tempEncoded = URL.absoluteString;
+    }
+    if ([value isKindOfClass:[NSString class]]) {
+        tempEncoded = (NSString *)value;
+    }
+    if (tempEncoded) {
+        NSString *charactersToEscape = kPercentEncodingCharacters;
+        NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+        tempEncoded = [tempEncoded stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+    }
+    return tempEncoded;
+}
+
+// 解码 URLDecodedString
+static inline NSString *URLDecodedString(id value) {
+    NSString *tempDecoded = nil;
+    if ([value isKindOfClass:[NSURL class]]) {
+        NSURL *URL = (NSURL *)value;
+        tempDecoded = URL.absoluteString;
+    }
+    if ([value isKindOfClass:[NSString class]]) {
+        tempDecoded = (NSString *)value;
+    }
+    if (tempDecoded) {
+        tempDecoded = [tempDecoded stringByRemovingPercentEncoding];
+    }
+    return tempDecoded;
 }
 
 // 转 NSDictionary
