@@ -22,6 +22,6 @@
 // ProgresssHUD
 - (void)jx_showProgressHUD:(NSString *)title animation:(BOOL)animation;
 - (void)jx_hideProgressHUD:(BOOL)animation;
-- (void)hideToastImmediately;
+- (BOOL)jx_progressHUDShowing; // 当前页面是否正在显示 ProgresssHUD
 
 @end
