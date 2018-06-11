@@ -346,8 +346,8 @@
 		C87B023E20C18E38001981C7 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				C87B023F20C18E38001981C7 /* UICollectionView+JXCategory.m */,
 				C87B024020C18E38001981C7 /* UICollectionView+JXCategory.h */,
+				C87B023F20C18E38001981C7 /* UICollectionView+JXCategory.m */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
