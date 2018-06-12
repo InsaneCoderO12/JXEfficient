@@ -15,9 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSString *jx_md5String;
 
-// 数字字符串转三位分节格式 如: [12345 -> 12,345]
-- (NSString *)jx_decimalStyle;
-
 - (NSComparisonResult)compareToVersionString:(NSString *)version ;
 
 - (NSString *)jx_URLEncoded;
@@ -28,11 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)jx_widthForFont:(UIFont *)font;
 
+// 数字字符串转三位分节格式 如: [12345 -> 12,345]
+- (NSString *)jx_decimalStyle;
+
 // 3.40 -> 3.4 | 6.00 -> 6
-+ (NSString *)priceString:(CGFloat)num;
++ (NSString *)jx_priceString:(CGFloat)num;
 
 // 3.4 -> ￥3.4
-+ (NSString *)priceStyleString:(CGFloat)num;
++ (NSString *)jx_priceStyleString:(CGFloat)num;
 
 @end
 

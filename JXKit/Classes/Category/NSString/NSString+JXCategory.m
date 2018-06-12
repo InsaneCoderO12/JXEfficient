@@ -26,10 +26,6 @@
 
 }
 
-- (NSString *)jx_decimalStyle {
-    return [NSNumberFormatter localizedStringFromNumber:@([self integerValue]) numberStyle:NSNumberFormatterDecimalStyle];
-}
-
 - (NSComparisonResult)compareToVersionString:(NSString *)version {
 
     NSMutableArray *leftFields  = [[NSMutableArray alloc] initWithArray:[self  componentsSeparatedByString:@"."]];
@@ -179,7 +175,11 @@
     return result.width;
 }
 
-+ (NSString *)priceString:(CGFloat)num {
+- (NSString *)jx_decimalStyle {
+    return [NSNumberFormatter localizedStringFromNumber:@([self integerValue]) numberStyle:NSNumberFormatterDecimalStyle];
+}
+
++ (NSString *)jx_priceString:(CGFloat)num {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.minimumIntegerDigits = 1;
     formatter.maximumFractionDigits = 2;
@@ -187,7 +187,7 @@
     return [formatter stringFromNumber:@(num)];
 }
 
-+ (NSString *)priceStyleString:(CGFloat)num {
++ (NSString *)jx_priceStyleString:(CGFloat)num {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.minimumIntegerDigits = 1;
     formatter.maximumFractionDigits = 2;
