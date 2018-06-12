@@ -179,6 +179,24 @@
     return result.width;
 }
 
+- (NSString *)priceString:(CGFloat)num {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.minimumIntegerDigits = 1;
+    formatter.maximumFractionDigits = 2;
+    formatter.minimumFractionDigits = 0;
+    return [formatter stringFromNumber:@(num)];
+}
+
+- (NSString *)priceStyleString:(CGFloat)num {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.minimumIntegerDigits = 1;
+    formatter.maximumFractionDigits = 2;
+    formatter.minimumFractionDigits = 0;
+    formatter.positivePrefix = @"¥";
+    formatter.negativePrefix = @"¥";
+    return [formatter stringFromNumber:@(num)];
+}
+
 @end
 
 

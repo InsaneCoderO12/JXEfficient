@@ -28,6 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)jx_widthForFont:(UIFont *)font;
 
+// 3.40 -> 3.4 | 6.00 -> 6
+- (NSString *)priceString:(CGFloat)num;
+
+// 3.4 -> ￥3.4
+- (NSString *)priceStyleString:(CGFloat)num;
+
 @end
 
 NS_ASSUME_NONNULL_END
