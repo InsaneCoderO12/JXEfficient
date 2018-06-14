@@ -25,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)jx_widthForFont:(UIFont *)font;
 
-// 数字字符串转三位分节格式 如: [12345 -> 12,345]
-- (NSString *)jx_decimalStyle;
+// 数字字符串转三位分节格式 如: [12345.432 -> 12,345.432]
++ (NSString *)jx_decimalStyle:(CGFloat)num;
 
 // 3.40 -> 3.4 | 6.00 -> 6
 + (NSString *)jx_priceString:(CGFloat)num;

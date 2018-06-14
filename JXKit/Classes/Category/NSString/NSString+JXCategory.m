@@ -175,8 +175,8 @@
     return result.width;
 }
 
-- (NSString *)jx_decimalStyle {
-    return [NSNumberFormatter localizedStringFromNumber:@([self integerValue]) numberStyle:NSNumberFormatterDecimalStyle];
++ (NSString *)jx_decimalStyle:(CGFloat)num {
+    return [NSNumberFormatter localizedStringFromNumber:@(num) numberStyle:NSNumberFormatterDecimalStyle];
 }
 
 + (NSString *)jx_priceString:(CGFloat)num {
