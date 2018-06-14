@@ -197,6 +197,26 @@
     return [formatter stringFromNumber:@(num)];
 }
 
++ (NSString *)jx_priceDecimalString:(CGFloat)num {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.minimumIntegerDigits = 1;
+    formatter.maximumFractionDigits = 2;
+    formatter.minimumFractionDigits = 0;
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    return [formatter stringFromNumber:@(num)];
+}
+
++ (NSString *)jx_priceDecimalStyleString:(CGFloat)num {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.minimumIntegerDigits = 1;
+    formatter.maximumFractionDigits = 2;
+    formatter.minimumFractionDigits = 0;
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    formatter.positivePrefix = @"¥";
+    formatter.negativePrefix = @"¥";
+    return [formatter stringFromNumber:@(num)];
+}
+
 @end
 
 

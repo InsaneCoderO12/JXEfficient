@@ -37,6 +37,12 @@
 //    didString = URLStringValue(didString);
 //    NSURL *didURL = URLValue(tempString);
     
+//    NSString *num = [NSString jx_decimalStyle:3.001f];
+//    NSString *num = [NSString jx_priceDecimalString:123456.789];
+    NSString *num = [NSString jx_priceDecimalStyleString:123456.789];
+    NSLog(@"%@", num);
+    
+    
     
     
 
