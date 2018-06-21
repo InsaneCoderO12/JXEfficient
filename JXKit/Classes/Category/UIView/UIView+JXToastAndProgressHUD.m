@@ -459,7 +459,8 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
             if (animation) {
                 [UIView animateWithDuration:.3f animations:^{
                     viewEnum.transform = CGAffineTransformMakeScale(.5f, .5f);
-                    viewEnum.backgroundColor = [UIColor clearColor];
+//                    viewEnum.backgroundColor = [UIColor clearColor];
+                    viewEnum.alpha = 0.f;
                 } completion:^(BOOL finished) {
                     [viewEnum removeFromSuperview];
                 }];

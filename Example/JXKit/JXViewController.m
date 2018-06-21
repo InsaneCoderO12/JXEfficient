@@ -23,6 +23,10 @@
 //    [self.view jx_showToast:@"skdkfj" animated:YES];
     
     [self.view jx_showProgressHUD:@"加载中" animation:NO];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.view jx_hideProgressHUD:YES];
+    });
 
     
     
