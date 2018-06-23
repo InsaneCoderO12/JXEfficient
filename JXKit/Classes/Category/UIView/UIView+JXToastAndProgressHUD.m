@@ -309,7 +309,8 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 #pragma mark progresssHUD
 - (void)jx_showProgressHUD:(NSString *)title animation:(BOOL)animation {
     CGFloat indicatorViewToTop = 20.f;
-    CGFloat viewBgMinToTB = [UIScreen mainScreen].bounds.size.height * 160.f / 667.f;
+//    CGFloat viewBgMinToTB = [UIScreen mainScreen].bounds.size.height * 160.f / 667.f;
+    CGFloat viewBgMinToTB = 20.f;
     CGFloat viewBgMinToLR = 20.f;
     CGFloat viewBgMinW = 80.f;
     CGFloat titleToLR = 20.f;
