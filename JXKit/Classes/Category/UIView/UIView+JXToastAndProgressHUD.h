@@ -22,6 +22,7 @@
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated complete:(void (^)(void))complete;
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset;
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset complete:(void (^)(void))complete;
+- (BOOL)jx_toastShowing;
 
 #pragma mark ProgresssHUD
 

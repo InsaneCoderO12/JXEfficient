@@ -306,6 +306,17 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
     }
 }
 
+- (BOOL)jx_toastShowing {
+    BOOL ret = NO;
+    for (UIView *viewEnum in self.subviews) {
+        if ([viewEnum isKindOfClass:[JX_Toast_View class]]) {
+            ret = YES;
+            break;
+        }
+    }
+    return ret;
+}
+
 #pragma mark progresssHUD
 - (void)jx_showProgressHUD:(NSString *)title animation:(BOOL)animation {
     CGFloat indicatorViewToTop = 20.f;
