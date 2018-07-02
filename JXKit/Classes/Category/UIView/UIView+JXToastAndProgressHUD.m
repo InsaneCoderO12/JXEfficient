@@ -487,9 +487,10 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 - (BOOL)jx_progressHUDShowing {
     BOOL showing = NO;
     for (UIView *viewEnum in self.subviews) {
-        [viewEnum isKindOfClass:[JX_ProgressHUD_View class]];
-        showing = YES;
-        break;
+        if ([viewEnum isKindOfClass:[JX_ProgressHUD_View class]]) {
+            showing = YES;
+            break;
+        }
     }
     return showing;
 }
