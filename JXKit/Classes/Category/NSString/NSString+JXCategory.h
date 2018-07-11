@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //
 - (NSString *)jx_URLAddParameters:(NSDictionary *)parameters;
++ (NSDictionary *)jx_paramsForURLString:(NSString *)URL;
 
 - (CGFloat)jx_widthForFont:(UIFont *)font;
 

@@ -60,6 +60,9 @@
 //
 //    NSString *s = urlEncode(@"mixc/wwcom?name=你&age=%");
 
+    NSDictionary *tempDic = [NSString jx_paramsForURLString:@"https://host/path?mixcNativeUrl=mixc%3a%2f%2fapp%2fregister&mallNo=XXX&businessChannel=XXX"];
+    
+    NSLog(@"%@", tempDic);
     
     
     return YES;

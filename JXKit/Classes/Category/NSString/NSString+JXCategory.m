@@ -147,6 +147,15 @@
     }
 }
 
++ (NSDictionary *)jx_paramsForURLString:(NSString *)URL {
+    NSURLComponents *comps = [NSURLComponents componentsWithString:URL];
+    NSMutableDictionary *tempDic = [[NSMutableDictionary alloc] init];
+    for (NSURLQueryItem *itemEnum in comps.queryItems) {
+        tempDic[itemEnum.name] = itemEnum.value;
+    }
+    return [tempDic copy];
+}
+
 - (CGFloat)jx_widthForFont:(UIFont *)font {
     
     CGSize size = CGSizeMake(HUGE, HUGE);
