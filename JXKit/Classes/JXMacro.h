@@ -51,7 +51,8 @@
 #define IS_812_H                    (H_SCREEN == 812.f ? YES : NO)                  // 是否是 812 高的手机 iPhone X
 
 #define ONE_SCREEN_PIX              (1.f / [UIScreen mainScreen].scale)             // 屏幕一个像素
-#define SECONDS_OF_DAY              (24.f * 60.f * 60.f)                            // 一天的秒数
+#define SECONDS_OF_DAY              86400                                           // 一天的秒数
+#define UNUSE_AREA_OF_BOTTOM        (H_TABBAR - 49.f)                               // X 底部闲置区域
 
 @interface JXMacro : NSObject
 
