@@ -76,6 +76,22 @@
 //                                                                                                 CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
 }
 
+- (NSString *)jx_URLDecoded_loop {
+    BOOL didRight = NO;
+    NSString *preStr = self;
+    for (NSInteger i = 0; i < 10; i ++) {
+        NSString *nowStr = [preStr jx_URLDecoded];
+        didRight = [nowStr isEqualToString:preStr];
+        if (didRight) {
+            break;
+        }
+        else {
+            preStr = nowStr;
+        }
+    }
+    return preStr;
+}
+
 - (NSString *)jx_URLAddParameters:(NSDictionary *)parameters {
     if (!parameters || parameters.allKeys.count == 0) {
         return self;
@@ -94,51 +110,67 @@
     // 即
     // mixc%3a%2f%2fapp%2fshopDetail%3fshopId%3dL0124N03 -> mixc://app/shopDetail?shopId%3DL0124N03
 
-    BOOL haveURLTypeQueryItems = NO;
-    NSMutableArray <NSURLQueryItem *> *URLTypeQueryItems = [[NSMutableArray alloc] init];
+    NSMutableDictionary *tempURLEncodedParams = [[NSMutableDictionary alloc] init]; // 存放需要单独 URLEncoded 的参数
     
-    NSMutableArray <NSURLQueryItem *> *arrTemp = [[NSMutableArray alloc] init];
+    // 分析 URL 中的参数
+    NSMutableArray <NSURLQueryItem *> *tempItems = [[NSMutableArray alloc] init];
     for (NSURLQueryItem *itemEnum in comps.queryItems) {
         NSString *name = itemEnum.name;
         NSString *value = itemEnum.value;
         
+        // 参数值中满足以下条件需要单独 URLEncoded <注: 解析出来已经是 URLDecoded, 下面再次独立进行 URLEncoded 拼接>
         if (
 //            [value hasPrefix:@"http://"] ||
 //            [value hasPrefix:@"https://"] ||
             [value hasPrefix:@"mixc://"]
             ) {
-            [URLTypeQueryItems addObject:itemEnum];
-            haveURLTypeQueryItems = YES;
+            tempURLEncodedParams[name] = value;
         }
         else {
             NSURLQueryItem *queryItem  = [[NSURLQueryItem alloc] initWithName:name value:value];
-            [arrTemp addObject:queryItem];
+            [tempItems addObject:queryItem];
         }
     }
     
-    //
-    [parameters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        NSString *dicKey = strValue(key);
-        NSString *dicObj = strValue(obj);
-        if (dicKey && dicObj) {
-            [arrTemp addObject:[NSURLQueryItem queryItemWithName:dicKey value:dicObj]];
+    // 添加的参数
+    for (NSString *keyEnum in parameters.allKeys) {
+        NSString *dicKey = strValue(keyEnum);
+        NSString *dicObj = parameters[keyEnum];
+        
+        if (!dicKey || !dicObj) {
+            continue;
         }
-    }];
-    
+        
+        // 参数值有 Encoded 过的需要先 URLDecoded <注: 下面再次独立进行 URLEncoded 拼接>
+        NSString *URLDecoded = [dicObj jx_URLDecoded_loop];
+        if (![dicObj isEqualToString:URLDecoded]) {
+            tempURLEncodedParams[dicKey] = URLDecoded;
+        }
+        else {
+            NSURLQueryItem *item = [NSURLQueryItem queryItemWithName:dicKey value:dicObj];
+            [tempItems addObject:item];
+        }
+
+    }
+
     //
-    comps.queryItems = [arrTemp copy];
+    comps.queryItems = [tempItems copy];
     
-    //
-    if (haveURLTypeQueryItems) {
+    // <独立进行 URLEncoded 拼接>
+    BOOL needExtraAppend = tempURLEncodedParams.allKeys.count > 0;
+    if (needExtraAppend) {
         NSMutableString *tempURL = [comps.URL.absoluteString mutableCopy];
         if (!tempURL) {
             return nil;
         }
-        for (NSURLQueryItem *itemEnum in URLTypeQueryItems) {
-            [tempURL appendString:@"&"];
-            [tempURL appendString:itemEnum.name];
-            [tempURL appendString:@"="];
-            [tempURL appendString:[itemEnum.value jx_URLEncoded]];
+        for (NSDictionary *keyEnum in tempURLEncodedParams) {
+            NSString *key = strValue(keyEnum);
+            NSString *value = strValue(tempURLEncodedParams[keyEnum]);
+            value = [value jx_URLEncoded];
+            if (key && value) {
+                NSString *param = [NSString stringWithFormat:@"&%@=%@", key, value];
+                [tempURL appendString:param];
+            }
         }
         return tempURL;
     }
