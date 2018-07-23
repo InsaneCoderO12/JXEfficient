@@ -135,7 +135,7 @@
     // 添加的参数
     for (NSString *keyEnum in parameters.allKeys) {
         NSString *dicKey = strValue(keyEnum);
-        NSString *dicObj = parameters[keyEnum];
+        NSString *dicObj = strValue(parameters[keyEnum]);
         
         if (!dicKey || !dicObj) {
             continue;
