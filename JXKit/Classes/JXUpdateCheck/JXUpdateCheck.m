@@ -8,6 +8,7 @@
 
 #import "JXUpdateCheck.h"
 #import <UIKit/UIKit.h>
+#import "JXInline.h"
 
 static NSString *const kAppStoreLookup = @"https://itunes.apple.com/lookup?id=";
 static NSString *const kAppStoreLink = @"https://itunes.apple.com/app/id";
@@ -47,13 +48,19 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
         NSString *appStoreVersion = [NSString stringWithFormat:@"%@", [dicLookup[@"results"] firstObject][@"version"]];
         // 当前版本
         NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+        // 更新文案
+        NSDictionary *resultsDic = [dicLookup[@"results"] firstObject];
+
+        //
+        BOOL haveNew = [self haveNewVerWithAppStoreVersion:appStoreVersion currentVersion:currentVersion];
+
         // 有新版本
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([currentVersion compare:appStoreVersion] == NSOrderedAscending) {
-                !result ? : result(YES, [dicLookup[@"results"] firstObject]);
+                !result ? : result(haveNew, resultsDic);
             }
             else {
-                !result ? : result(NO, [dicLookup[@"results"] firstObject]);
+                !result ? : result(haveNew, resultsDic);
             }
         });
     }];
@@ -100,6 +107,36 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
 
 + (BOOL)validAppID:(NSString *)appID {
     return [appID isKindOfClass:[NSString class]] && appID.length > 0;
+}
+
++ (BOOL)haveNewVerWithAppStoreVersion:(NSString *)appStoreVersion currentVersion:(NSString *)currentVersion {
+    NSArray <NSString *> *arr_appStoreVersion = [appStoreVersion componentsSeparatedByString:@"."];
+    NSArray <NSString *> *arr_currentVersion = [currentVersion componentsSeparatedByString:@"."];
+    
+    NSInteger appStore_count = arr_appStoreVersion.count;
+    NSInteger current_count = arr_currentVersion.count;
+    NSInteger max_count = MAX(arr_appStoreVersion.count, arr_currentVersion.count);
+
+    BOOL haveNew = NO;
+    for (NSInteger i = 0; i < max_count; i ++) {
+        //
+        if (i < appStore_count && i < current_count) {                  // 长度相等部分
+            NSInteger appStore_sub_v = intValue(arr_appStoreVersion[i]);
+            NSInteger current_sub_v = intValue(arr_currentVersion[i]);
+            
+            if (appStore_sub_v > current_sub_v) {
+                haveNew = YES;
+                break;
+            }
+        }
+        else if (i >= appStore_count && i < current_count) {            // 长度不等部分 current 版本号更长 <不存在>
+            
+        }
+        else if (i < appStore_count && i >= current_count) {            // 长度不等部分 appStore 版本号更长
+            haveNew = YES;
+        }
+    }
+    return haveNew;
 }
 
 @end
