@@ -255,6 +255,7 @@
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
     formatter.positivePrefix = @"¥";
     formatter.negativePrefix = @"¥";
+    formatter.negativeFormat = @"¥-";
     return [formatter stringFromNumber:@(num)];
 }
 
