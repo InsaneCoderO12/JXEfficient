@@ -93,9 +93,16 @@
 }
 
 - (NSString *)jx_URLAddParameters:(NSDictionary *)parameters {
+    //
     if (!parameters || parameters.allKeys.count == 0) {
         return self;
     }
+    
+    //
+    if ([self containsString:@"#"]) {
+        return [self jx_URLAddParametersWith_wellSymbol:parameters];
+    }
+    
     NSURLComponents *comps = [NSURLComponents componentsWithString:self];
     if (!comps) {
         return self;
@@ -177,6 +184,55 @@
     else {
         return comps.URL.absoluteString;
     }
+}
+
+// URL 里带 # 的情况
+- (NSString *)jx_URLAddParametersWith_wellSymbol:(NSDictionary *)parameters {
+    if (!parameters || parameters.allKeys.count == 0) {
+        return self;
+    }
+    
+    NSMutableString *selfString = [self mutableCopy];
+    
+    // ?name=iiii&code=ccc
+    NSMutableString *tempMStr = [[NSMutableString alloc] init];
+    for (NSInteger i = 0; i < parameters.count; i ++) {
+        NSString *key = parameters.allKeys[i];
+        NSString *value = parameters[key];
+        
+        [tempMStr appendString:strCat3(key, @"=", value)];
+        if (i != parameters.count - 1) {
+            [tempMStr appendString:@"&"];
+        }
+    }
+    
+    // 没有参数
+    if (tempMStr.length == 0) {
+        return self;
+    }
+    
+    NSRange range = [selfString rangeOfString:@"?"];
+    // 有 ?
+    if (range.location != NSNotFound) {
+        NSString *tempS1 = nil;
+        // 最后一个是 ?
+        if (selfString.length - 1 == range.location) {
+            tempS1 = tempMStr;
+        }
+        // 最后一个不是 ?
+        else {
+            tempS1 = strCat2(tempMStr, @"&");
+        }
+        [selfString insertString:tempS1 atIndex:range.location + 1];
+    }
+    // 没有 ?
+    else {
+        while ([selfString hasSuffix:@"#"] || [selfString hasSuffix:@"/"]) {
+            [selfString deleteCharactersInRange:NSMakeRange(selfString.length - 1, 1)];
+        }
+        [selfString appendString:strCat2(@"?", tempMStr)];
+    }
+    return selfString;
 }
 
 + (NSDictionary *)jx_paramsForURLString:(NSString *)URL {
