@@ -116,7 +116,7 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
     NSInteger appStore_count = arr_appStoreVersion.count;
     NSInteger current_count = arr_currentVersion.count;
     NSInteger max_count = MAX(arr_appStoreVersion.count, arr_currentVersion.count);
-
+    
     BOOL haveNew = NO;
     for (NSInteger i = 0; i < max_count; i ++) {
         //
@@ -124,8 +124,12 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
             NSInteger appStore_sub_v = intValue(arr_appStoreVersion[i]);
             NSInteger current_sub_v = intValue(arr_currentVersion[i]);
             
-            if (appStore_sub_v > current_sub_v) {
+            if (appStore_sub_v > current_sub_v) {                       // 分割后版本号 (大于当前版本 有新版本 )
                 haveNew = YES;
+                break;
+            }
+            else if (appStore_sub_v < current_sub_v) {                  // 分割后版本号 (小于当前版本 无新版本 )
+                haveNew = NO;
                 break;
             }
         }
