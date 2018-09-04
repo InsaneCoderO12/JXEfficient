@@ -24,24 +24,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		C87B025B20C18E38001981C7 /* JXLocationCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B022D20C18E38001981C7 /* JXLocationCoordinates.m */; };
-		C87B025C20C18E38001981C7 /* JXRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B023020C18E38001981C7 /* JXRegular.m */; };
-		C87B025D20C18E38001981C7 /* UIImage+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B023420C18E38001981C7 /* UIImage+JXCategory.m */; };
-		C87B025E20C18E38001981C7 /* UIScrollView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B023620C18E38001981C7 /* UIScrollView+JXCategory.m */; };
-		C87B025F20C18E38001981C7 /* UIButton+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B023A20C18E38001981C7 /* UIButton+JXCategory.m */; };
-		C87B026020C18E38001981C7 /* UIView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B023C20C18E38001981C7 /* UIView+JXCategory.m */; };
-		C87B026120C18E38001981C7 /* UICollectionView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B023F20C18E38001981C7 /* UICollectionView+JXCategory.m */; };
-		C87B026220C18E38001981C7 /* NSString+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B024320C18E38001981C7 /* NSString+JXCategory.m */; };
-		C87B026320C18E38001981C7 /* UITableView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B024620C18E38001981C7 /* UITableView+JXCategory.m */; };
-		C87B026420C18E38001981C7 /* NSDate+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B024820C18E38001981C7 /* NSDate+JXCategory.m */; };
-		C87B026520C18E38001981C7 /* JXMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B024A20C18E38001981C7 /* JXMacro.m */; };
-		C87B026620C18E38001981C7 /* JXUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B024C20C18E38001981C7 /* JXUpdateCheck.m */; };
-		C87B026820C18E38001981C7 /* JXInline.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B024F20C18E38001981C7 /* JXInline.m */; };
-		C87B026920C18E38001981C7 /* JXJSONCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B025120C18E38001981C7 /* JXJSONCache.m */; };
-		C87B026A20C18E38001981C7 /* JXSystemAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B025620C18E38001981C7 /* JXSystemAlert.m */; };
-		C87B026B20C18E38001981C7 /* JXUUIDAndKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B025920C18E38001981C7 /* JXUUIDAndKeyChain.m */; };
-		C87B026E20C18E68001981C7 /* JXKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B026D20C18E68001981C7 /* JXKit.m */; };
-		C87B027120C18EFD001981C7 /* UIView+JXToastAndProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C87B026F20C18EFD001981C7 /* UIView+JXToastAndProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,42 +63,6 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72DC75EAE3052BE93AA67203 /* Pods-JXKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXKit_Example/Pods-JXKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C87B022C20C18E38001981C7 /* JXLocationCoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXLocationCoordinates.h; sourceTree = "<group>"; };
-		C87B022D20C18E38001981C7 /* JXLocationCoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXLocationCoordinates.m; sourceTree = "<group>"; };
-		C87B022F20C18E38001981C7 /* JXRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXRegular.h; sourceTree = "<group>"; };
-		C87B023020C18E38001981C7 /* JXRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXRegular.m; sourceTree = "<group>"; };
-		C87B023320C18E38001981C7 /* UIImage+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JXCategory.h"; sourceTree = "<group>"; };
-		C87B023420C18E38001981C7 /* UIImage+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JXCategory.m"; sourceTree = "<group>"; };
-		C87B023620C18E38001981C7 /* UIScrollView+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JXCategory.m"; sourceTree = "<group>"; };
-		C87B023720C18E38001981C7 /* UIScrollView+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JXCategory.h"; sourceTree = "<group>"; };
-		C87B023920C18E38001981C7 /* UIButton+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JXCategory.h"; sourceTree = "<group>"; };
-		C87B023A20C18E38001981C7 /* UIButton+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JXCategory.m"; sourceTree = "<group>"; };
-		C87B023C20C18E38001981C7 /* UIView+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JXCategory.m"; sourceTree = "<group>"; };
-		C87B023D20C18E38001981C7 /* UIView+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JXCategory.h"; sourceTree = "<group>"; };
-		C87B023F20C18E38001981C7 /* UICollectionView+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+JXCategory.m"; sourceTree = "<group>"; };
-		C87B024020C18E38001981C7 /* UICollectionView+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+JXCategory.h"; sourceTree = "<group>"; };
-		C87B024220C18E38001981C7 /* NSString+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JXCategory.h"; sourceTree = "<group>"; };
-		C87B024320C18E38001981C7 /* NSString+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JXCategory.m"; sourceTree = "<group>"; };
-		C87B024520C18E38001981C7 /* UITableView+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JXCategory.h"; sourceTree = "<group>"; };
-		C87B024620C18E38001981C7 /* UITableView+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JXCategory.m"; sourceTree = "<group>"; };
-		C87B024820C18E38001981C7 /* NSDate+JXCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JXCategory.m"; sourceTree = "<group>"; };
-		C87B024920C18E38001981C7 /* NSDate+JXCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JXCategory.h"; sourceTree = "<group>"; };
-		C87B024A20C18E38001981C7 /* JXMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXMacro.m; sourceTree = "<group>"; };
-		C87B024C20C18E38001981C7 /* JXUpdateCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXUpdateCheck.m; sourceTree = "<group>"; };
-		C87B024D20C18E38001981C7 /* JXUpdateCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXUpdateCheck.h; sourceTree = "<group>"; };
-		C87B024F20C18E38001981C7 /* JXInline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXInline.m; sourceTree = "<group>"; };
-		C87B025120C18E38001981C7 /* JXJSONCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXJSONCache.m; sourceTree = "<group>"; };
-		C87B025220C18E38001981C7 /* JXJSONCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXJSONCache.h; sourceTree = "<group>"; };
-		C87B025320C18E38001981C7 /* JXMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXMacro.h; sourceTree = "<group>"; };
-		C87B025520C18E38001981C7 /* JXSystemAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXSystemAlert.h; sourceTree = "<group>"; };
-		C87B025620C18E38001981C7 /* JXSystemAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXSystemAlert.m; sourceTree = "<group>"; };
-		C87B025820C18E38001981C7 /* JXUUIDAndKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXUUIDAndKeyChain.h; sourceTree = "<group>"; };
-		C87B025920C18E38001981C7 /* JXUUIDAndKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXUUIDAndKeyChain.m; sourceTree = "<group>"; };
-		C87B025A20C18E38001981C7 /* JXInline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXInline.h; sourceTree = "<group>"; };
-		C87B026C20C18E68001981C7 /* JXKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXKit.h; sourceTree = "<group>"; };
-		C87B026D20C18E68001981C7 /* JXKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXKit.m; sourceTree = "<group>"; };
-		C87B026F20C18EFD001981C7 /* UIView+JXToastAndProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JXToastAndProgressHUD.m"; sourceTree = "<group>"; };
-		C87B027020C18EFD001981C7 /* UIView+JXToastAndProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JXToastAndProgressHUD.h"; sourceTree = "<group>"; };
 		D84251F91D42339CBC3CFA09 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DDE7E4AE2FEDD21950C1148F /* JXKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JXKit.podspec; path = ../JXKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F2F651161B0BC4CB526688E8 /* Pods-JXKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXKit_Example/Pods-JXKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,176 +189,11 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				C87B022A20C18E38001981C7 /* Classes */,
 				DDE7E4AE2FEDD21950C1148F /* JXKit.podspec */,
 				0534FCB4D7E7797566BB7D87 /* README.md */,
 				D84251F91D42339CBC3CFA09 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		C87B022A20C18E38001981C7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C87B026C20C18E68001981C7 /* JXKit.h */,
-				C87B026D20C18E68001981C7 /* JXKit.m */,
-				C87B025A20C18E38001981C7 /* JXInline.h */,
-				C87B024F20C18E38001981C7 /* JXInline.m */,
-				C87B025320C18E38001981C7 /* JXMacro.h */,
-				C87B024A20C18E38001981C7 /* JXMacro.m */,
-				C87B023120C18E38001981C7 /* Category */,
-				C87B025020C18E38001981C7 /* JXJSONCache */,
-				C87B022B20C18E38001981C7 /* JXLocationCoordinates */,
-				C87B022E20C18E38001981C7 /* JXRegular */,
-				C87B025420C18E38001981C7 /* JXSystemAlert */,
-				C87B024B20C18E38001981C7 /* JXUpdateCheck */,
-				C87B025720C18E38001981C7 /* JXUUIDAndKeyChain */,
-			);
-			name = Classes;
-			path = ../JXKit/Classes;
-			sourceTree = "<group>";
-		};
-		C87B022B20C18E38001981C7 /* JXLocationCoordinates */ = {
-			isa = PBXGroup;
-			children = (
-				C87B022C20C18E38001981C7 /* JXLocationCoordinates.h */,
-				C87B022D20C18E38001981C7 /* JXLocationCoordinates.m */,
-			);
-			path = JXLocationCoordinates;
-			sourceTree = "<group>";
-		};
-		C87B022E20C18E38001981C7 /* JXRegular */ = {
-			isa = PBXGroup;
-			children = (
-				C87B022F20C18E38001981C7 /* JXRegular.h */,
-				C87B023020C18E38001981C7 /* JXRegular.m */,
-			);
-			path = JXRegular;
-			sourceTree = "<group>";
-		};
-		C87B023120C18E38001981C7 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				C87B023220C18E38001981C7 /* UIImage */,
-				C87B023520C18E38001981C7 /* UIScrollView */,
-				C87B023820C18E38001981C7 /* UIButton */,
-				C87B023B20C18E38001981C7 /* UIView */,
-				C87B023E20C18E38001981C7 /* UICollectionView */,
-				C87B024120C18E38001981C7 /* NSString */,
-				C87B024420C18E38001981C7 /* UITableView */,
-				C87B024720C18E38001981C7 /* NSDate */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		C87B023220C18E38001981C7 /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				C87B023320C18E38001981C7 /* UIImage+JXCategory.h */,
-				C87B023420C18E38001981C7 /* UIImage+JXCategory.m */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		C87B023520C18E38001981C7 /* UIScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				C87B023620C18E38001981C7 /* UIScrollView+JXCategory.m */,
-				C87B023720C18E38001981C7 /* UIScrollView+JXCategory.h */,
-			);
-			path = UIScrollView;
-			sourceTree = "<group>";
-		};
-		C87B023820C18E38001981C7 /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-				C87B023920C18E38001981C7 /* UIButton+JXCategory.h */,
-				C87B023A20C18E38001981C7 /* UIButton+JXCategory.m */,
-			);
-			path = UIButton;
-			sourceTree = "<group>";
-		};
-		C87B023B20C18E38001981C7 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				C87B023D20C18E38001981C7 /* UIView+JXCategory.h */,
-				C87B023C20C18E38001981C7 /* UIView+JXCategory.m */,
-				C87B027020C18EFD001981C7 /* UIView+JXToastAndProgressHUD.h */,
-				C87B026F20C18EFD001981C7 /* UIView+JXToastAndProgressHUD.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		C87B023E20C18E38001981C7 /* UICollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				C87B024020C18E38001981C7 /* UICollectionView+JXCategory.h */,
-				C87B023F20C18E38001981C7 /* UICollectionView+JXCategory.m */,
-			);
-			path = UICollectionView;
-			sourceTree = "<group>";
-		};
-		C87B024120C18E38001981C7 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				C87B024220C18E38001981C7 /* NSString+JXCategory.h */,
-				C87B024320C18E38001981C7 /* NSString+JXCategory.m */,
-			);
-			path = NSString;
-			sourceTree = "<group>";
-		};
-		C87B024420C18E38001981C7 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				C87B024520C18E38001981C7 /* UITableView+JXCategory.h */,
-				C87B024620C18E38001981C7 /* UITableView+JXCategory.m */,
-			);
-			path = UITableView;
-			sourceTree = "<group>";
-		};
-		C87B024720C18E38001981C7 /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				C87B024820C18E38001981C7 /* NSDate+JXCategory.m */,
-				C87B024920C18E38001981C7 /* NSDate+JXCategory.h */,
-			);
-			path = NSDate;
-			sourceTree = "<group>";
-		};
-		C87B024B20C18E38001981C7 /* JXUpdateCheck */ = {
-			isa = PBXGroup;
-			children = (
-				C87B024C20C18E38001981C7 /* JXUpdateCheck.m */,
-				C87B024D20C18E38001981C7 /* JXUpdateCheck.h */,
-			);
-			path = JXUpdateCheck;
-			sourceTree = "<group>";
-		};
-		C87B025020C18E38001981C7 /* JXJSONCache */ = {
-			isa = PBXGroup;
-			children = (
-				C87B025120C18E38001981C7 /* JXJSONCache.m */,
-				C87B025220C18E38001981C7 /* JXJSONCache.h */,
-			);
-			path = JXJSONCache;
-			sourceTree = "<group>";
-		};
-		C87B025420C18E38001981C7 /* JXSystemAlert */ = {
-			isa = PBXGroup;
-			children = (
-				C87B025520C18E38001981C7 /* JXSystemAlert.h */,
-				C87B025620C18E38001981C7 /* JXSystemAlert.m */,
-			);
-			path = JXSystemAlert;
-			sourceTree = "<group>";
-		};
-		C87B025720C18E38001981C7 /* JXUUIDAndKeyChain */ = {
-			isa = PBXGroup;
-			children = (
-				C87B025820C18E38001981C7 /* JXUUIDAndKeyChain.h */,
-				C87B025920C18E38001981C7 /* JXUUIDAndKeyChain.m */,
-			);
-			path = JXUUIDAndKeyChain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,7 +208,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				0E7C836F7D22CC666DE6E1C0 /* [CP] Embed Pods Frameworks */,
-				4F63AAE44A55EADF913317C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,8 +226,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				B3497361E16082B08E0EF0B0 /* [CP] Embed Pods Frameworks */,
-				E430905170E65402356A97C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -534,21 +312,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXKit_Example/Pods-JXKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4F63AAE44A55EADF913317C1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXKit_Example/Pods-JXKit_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6CB81B91F0263BC8B48F55D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,36 +348,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3497361E16082B08E0EF0B0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXKit_Tests/Pods-JXKit_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E430905170E65402356A97C8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXKit_Tests/Pods-JXKit_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -622,27 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C87B026120C18E38001981C7 /* UICollectionView+JXCategory.m in Sources */,
-				C87B026420C18E38001981C7 /* NSDate+JXCategory.m in Sources */,
-				C87B026520C18E38001981C7 /* JXMacro.m in Sources */,
-				C87B025B20C18E38001981C7 /* JXLocationCoordinates.m in Sources */,
 				6003F59E195388D20070C39A /* JXAppDelegate.m in Sources */,
-				C87B026320C18E38001981C7 /* UITableView+JXCategory.m in Sources */,
-				C87B027120C18EFD001981C7 /* UIView+JXToastAndProgressHUD.m in Sources */,
-				C87B026820C18E38001981C7 /* JXInline.m in Sources */,
-				C87B025E20C18E38001981C7 /* UIScrollView+JXCategory.m in Sources */,
-				C87B026E20C18E68001981C7 /* JXKit.m in Sources */,
-				C87B026920C18E38001981C7 /* JXJSONCache.m in Sources */,
 				6003F5A7195388D20070C39A /* JXViewController.m in Sources */,
-				C87B026620C18E38001981C7 /* JXUpdateCheck.m in Sources */,
-				C87B026A20C18E38001981C7 /* JXSystemAlert.m in Sources */,
-				C87B026220C18E38001981C7 /* NSString+JXCategory.m in Sources */,
-				C87B026020C18E38001981C7 /* UIView+JXCategory.m in Sources */,
-				C87B025D20C18E38001981C7 /* UIImage+JXCategory.m in Sources */,
-				C87B026B20C18E38001981C7 /* JXUUIDAndKeyChain.m in Sources */,
-				C87B025F20C18E38001981C7 /* UIButton+JXCategory.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				C87B025C20C18E38001981C7 /* JXRegular.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
