@@ -172,7 +172,7 @@
     CGContextRelease(ctx);
     CGColorSpaceRelease(colorSpace);
     
-    return pdfImage;
+    return [pdfImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 @end
