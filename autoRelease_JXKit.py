@@ -31,7 +31,6 @@ def add_version():
     if "nothing to commit" in status: # 当前 仓库 状态无修改
         print("%s %s" % (log_pre_failure, status))
         print("tab_old %s" % (tag_old))
-        return
 
     ver_components = tag_old.split('.')
     ver_components[-1] = str(int(ver_components[-1]) + 1)
