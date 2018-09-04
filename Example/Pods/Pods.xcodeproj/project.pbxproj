@@ -7,48 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08AAD2FB543EA6830B59F57282E878AD /* JXRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = E9629AA9E530F22DED33E4D3845A12B3 /* JXRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08E3D95445E6D1DBF51BECEB34DDF0CD /* UICollectionView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD69BA1370619A5E9A564AFCF923294 /* UICollectionView+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		120832C723D76BF2F747E70203524C46 /* JXLocationCoordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = E51120BE489BC423562F3B4A37075B43 /* JXLocationCoordinates.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		12E7B86E403F07A5D686262A535C4B38 /* JXSystemAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F81557E026EF1B0F6800DD6012EB3 /* JXSystemAlert.m */; };
-		142489C61D7AB1DE5BB459D8FAEE0D3E /* JXLocationCoordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = E51120BE489BC423562F3B4A37075B43 /* JXLocationCoordinates.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C40B9414FEAE1E3659B41146FDC9BF0 /* UITableView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DA13BC508ED1F25A10E36BC4A9195E /* UITableView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13AD82B16AA00FE1B09A89837DBF2D80 /* UIView+JXToastAndProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CE2F83B178E56502F4678897D67EE9 /* UIView+JXToastAndProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1FDBE4AEE1EE74261CC610A084574ABA /* JXInline.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B1C54249AA6E8BB87BEB134823D423 /* JXInline.m */; };
 		210874E22C84E41447AAFB94B9AD71E9 /* JXKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D73EAD1038BD82D9F657BDDF211721 /* JXKit-dummy.m */; };
 		27CEF2786BDC782A46BECF6B99717359 /* JXKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0DAB0153F520AE60D4ADC726FE805C /* JXKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2994C666E936E73C470CF0CCBC4DE5A6 /* UIImage+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D9D9856028E1886157204E0B20C829 /* UIImage+JXCategory.m */; };
-		29F9A916B1CBF6972317048C65250597 /* JXMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D7C198262B73366DB19D9F0BF1B238 /* JXMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC9496A3AFD34B396807423D750602E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		342C94458CEFDB4E175A5874B9ABFCED /* UIView+JXToastAndProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CE2F83B178E56502F4678897D67EE9 /* UIView+JXToastAndProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D5667D0BBA333C06838E2841F481760 /* JXUUIDAndKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC1B6BC4953080FBC1870EF931D8400 /* JXUUIDAndKeyChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BD43443A8C3306B60EB8E78C6C4738F /* JXSystemAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7001E9F3EF66FE71A59E9F27ABF30918 /* JXSystemAlert.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32E661099932B281099ADE7D3222C8F8 /* JXMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D7C198262B73366DB19D9F0BF1B238 /* JXMacro.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		44F1CEA5989AD536EFF0DF9A51A8491B /* Pods-JXKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7D12D76CB573627A3FE7954A76F1 /* Pods-JXKit_Tests-dummy.m */; };
 		4C75373ADF4ACEE96C12950C2B6D69FD /* UITableView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D1A86E5108EE873A514BA2B87C2766 /* UITableView+JXCategory.m */; };
 		4E1F8C987D1F857679C7AA002F034951 /* Pods-JXKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FCE94C9BEF6F88397875B269A441E4 /* Pods-JXKit_Example-dummy.m */; };
+		5A1E9B8A8FC066A80BA4DC788A76C711 /* JXRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = E9629AA9E530F22DED33E4D3845A12B3 /* JXRegular.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5CD93A12A5DB66AFC313CAC3EF67C875 /* UIScrollView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A71E0626BE45C9FE9AC1DE85479336 /* UIScrollView+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5DBD927245BCED29F71E6306184C7B9B /* JXMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEFABF77AEC96409B7C7242E979874B /* JXMacro.m */; };
 		5F152FE1AC6F8A7A0B4C516628E8A192 /* JXKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BB9EB06E450A123EB9A247D838F751 /* JXKit.m */; };
+		65C574141FC92995336593F5054F3954 /* UIImage+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BF41D8D04CB5B36317C7B16DDE4C7F01 /* UIImage+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6642906CE522F9D2EE10C28631DB8864 /* JXLocationCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 27EDBA6ECE0261A0A901D665D02865E4 /* JXLocationCoordinates.m */; };
-		6B40FF9914661A754900CCDEF564A766 /* UIView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 30DA6C3D50D8C5DA3D236EB32D5ECED0 /* UIView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E15F85D6558592D2BA8AB6C9CE57250 /* NSDate+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3F7B9217CE7AC54156E167FEEF003A /* NSDate+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		78E911B271DA852CC9DDEEC53610FF63 /* JXJSONCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F26B74A2C56B293DC7081D9D69D485F /* JXJSONCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		79391D3E908A7C10D5B8451843C148A9 /* JXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9452D28FAD021EE87348F7C297DD7B71 /* JXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		816ED94D4AA91B4495EE97FEE14FB6D5 /* JXUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FD0BC438E76697B6AF5B16B252FA97 /* JXUpdateCheck.m */; };
 		825D5EA1A135FB37C0ECC11730C8F834 /* JXJSONCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1856652E39380604547B1A74A8859 /* JXJSONCache.m */; };
-		869FB0864EB85F3E6F7F64EF69C42FC3 /* UIButton+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C7614D0DB368C244E0DC1752CBC985 /* UIButton+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E1947DCBAEBEE942BD4B838DBAB83E9 /* UIScrollView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A71E0626BE45C9FE9AC1DE85479336 /* UIScrollView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82A6046ABE9BA972BD7E5D757224D51D /* UITableView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DA13BC508ED1F25A10E36BC4A9195E /* UITableView+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8ECBDFFE6B6834C468F570790BB53A35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		A3811558FC13153EAD61AF01BCCF72DB /* NSString+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A11F3B23769A2EEA5955DE52B741BEA /* NSString+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB081FD184D4D7CC09BBD1B4515B2271 /* NSDate+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3F7B9217CE7AC54156E167FEEF003A /* NSDate+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF0A94F82D11119A25878348D749F27A /* JXSystemAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7001E9F3EF66FE71A59E9F27ABF30918 /* JXSystemAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F68AE41B769306211145DCF5B25F62D /* JXInline.h in Headers */ = {isa = PBXBuildFile; fileRef = A825FDEDB781A78E2CB5D8BC42AEBA90 /* JXInline.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B0B9348E65A5A7FC343F03E5CD1D731D /* UIView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD0B0CFE34654A6B0067471769B672 /* UIView+JXCategory.m */; };
+		B0BC533FD93D60516096C9424527D50F /* UIView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 30DA6C3D50D8C5DA3D236EB32D5ECED0 /* UIView+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B819B0009F3364F705A98F5AF42646B8 /* NSString+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A11F3B23769A2EEA5955DE52B741BEA /* NSString+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B90D8F159580C1742772EC9760E5F188 /* UICollectionView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 141B39A4E8F9C2197425ADAA5D1B53A0 /* UICollectionView+JXCategory.m */; };
 		BE8D19E2BD214A51DCC6C22329C6E9CF /* NSDate+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBEC21C2B664451D0A5EDD84E472BE0 /* NSDate+JXCategory.m */; };
 		BF68D0DE602F7984791DE5082B2A118E /* NSString+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395F7212D407E8BCB0C155AFADD9917 /* NSString+JXCategory.m */; };
-		C1363BF98EFE8664EE1D730797938170 /* UIImage+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BF41D8D04CB5B36317C7B16DDE4C7F01 /* UIImage+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C98A5ADFBC49141FD1D0D543EFF55FF0 /* JXJSONCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F26B74A2C56B293DC7081D9D69D485F /* JXJSONCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB9DC44590227870E78DC6203069D062 /* JXInline.h in Headers */ = {isa = PBXBuildFile; fileRef = A825FDEDB781A78E2CB5D8BC42AEBA90 /* JXInline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1F69F419DF6CBC9709CE98339FCC2D5 /* JXUUIDAndKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC1B6BC4953080FBC1870EF931D8400 /* JXUUIDAndKeyChain.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D277FD3DD8B7D711C90D27036E7B73CF /* UIScrollView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70342B99251B72C161691AF3E358687D /* UIScrollView+JXCategory.m */; };
 		D5A52AE82399588FF79B8E4E233E0E4E /* JXUUIDAndKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29A6A6A0013F2F812768EF81D0A2D1 /* JXUUIDAndKeyChain.m */; };
-		D9B5F5DFFDB88634B0B0D738A7CC4B4E /* JXUpdateCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C85B08F012EB707C4B38953132F2FAE /* JXUpdateCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D923AF33300D0C1A4D0117258BD79037 /* UIButton+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C7614D0DB368C244E0DC1752CBC985 /* UIButton+JXCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E4F81400AD2C4BDB2BE2456D5844E821 /* Pods-JXKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96AD4055A3F749F265D9448B850FE7B9 /* Pods-JXKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E59AD48BEF34E20B9EEA307651F91DB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		ED047CD4B0A8E8F9C34C82B99371C170 /* UICollectionView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD69BA1370619A5E9A564AFCF923294 /* UICollectionView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F327E0C80FC8F17036324B139BADCF08 /* Pods-JXKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F2B4C432B8E6D1FAC1E1D7E2A9E3C /* Pods-JXKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F441047AC9F6EC412F5582CDD55BA28C /* JXUpdateCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C85B08F012EB707C4B38953132F2FAE /* JXUpdateCheck.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F67DD56DDF96C3EF95BAAEB7B128B591 /* UIButton+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D499C4DCF32FE8238E97E6008EE66AB7 /* UIButton+JXCategory.m */; };
 		FAB07631B94E80C4490588E6926D7615 /* UIView+JXToastAndProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 56388660AC19B9A2C5E5C42932FF4B70 /* UIView+JXToastAndProgressHUD.m */; };
 		FFAC1E46046525D6B697D52C21637969 /* JXRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF433089433667FB7DC6172710179F0 /* JXRegular.m */; };
@@ -490,25 +490,25 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB9DC44590227870E78DC6203069D062 /* JXInline.h in Headers */,
-				C98A5ADFBC49141FD1D0D543EFF55FF0 /* JXJSONCache.h in Headers */,
+				9F68AE41B769306211145DCF5B25F62D /* JXInline.h in Headers */,
+				78E911B271DA852CC9DDEEC53610FF63 /* JXJSONCache.h in Headers */,
 				27CEF2786BDC782A46BECF6B99717359 /* JXKit-umbrella.h in Headers */,
 				79391D3E908A7C10D5B8451843C148A9 /* JXKit.h in Headers */,
-				142489C61D7AB1DE5BB459D8FAEE0D3E /* JXLocationCoordinates.h in Headers */,
-				29F9A916B1CBF6972317048C65250597 /* JXMacro.h in Headers */,
-				08AAD2FB543EA6830B59F57282E878AD /* JXRegular.h in Headers */,
-				AF0A94F82D11119A25878348D749F27A /* JXSystemAlert.h in Headers */,
-				D9B5F5DFFDB88634B0B0D738A7CC4B4E /* JXUpdateCheck.h in Headers */,
-				3D5667D0BBA333C06838E2841F481760 /* JXUUIDAndKeyChain.h in Headers */,
-				AB081FD184D4D7CC09BBD1B4515B2271 /* NSDate+JXCategory.h in Headers */,
-				A3811558FC13153EAD61AF01BCCF72DB /* NSString+JXCategory.h in Headers */,
-				869FB0864EB85F3E6F7F64EF69C42FC3 /* UIButton+JXCategory.h in Headers */,
-				ED047CD4B0A8E8F9C34C82B99371C170 /* UICollectionView+JXCategory.h in Headers */,
-				C1363BF98EFE8664EE1D730797938170 /* UIImage+JXCategory.h in Headers */,
-				8E1947DCBAEBEE942BD4B838DBAB83E9 /* UIScrollView+JXCategory.h in Headers */,
-				1C40B9414FEAE1E3659B41146FDC9BF0 /* UITableView+JXCategory.h in Headers */,
-				6B40FF9914661A754900CCDEF564A766 /* UIView+JXCategory.h in Headers */,
-				342C94458CEFDB4E175A5874B9ABFCED /* UIView+JXToastAndProgressHUD.h in Headers */,
+				120832C723D76BF2F747E70203524C46 /* JXLocationCoordinates.h in Headers */,
+				32E661099932B281099ADE7D3222C8F8 /* JXMacro.h in Headers */,
+				5A1E9B8A8FC066A80BA4DC788A76C711 /* JXRegular.h in Headers */,
+				2BD43443A8C3306B60EB8E78C6C4738F /* JXSystemAlert.h in Headers */,
+				F441047AC9F6EC412F5582CDD55BA28C /* JXUpdateCheck.h in Headers */,
+				C1F69F419DF6CBC9709CE98339FCC2D5 /* JXUUIDAndKeyChain.h in Headers */,
+				6E15F85D6558592D2BA8AB6C9CE57250 /* NSDate+JXCategory.h in Headers */,
+				B819B0009F3364F705A98F5AF42646B8 /* NSString+JXCategory.h in Headers */,
+				D923AF33300D0C1A4D0117258BD79037 /* UIButton+JXCategory.h in Headers */,
+				08E3D95445E6D1DBF51BECEB34DDF0CD /* UICollectionView+JXCategory.h in Headers */,
+				65C574141FC92995336593F5054F3954 /* UIImage+JXCategory.h in Headers */,
+				5CD93A12A5DB66AFC313CAC3EF67C875 /* UIScrollView+JXCategory.h in Headers */,
+				82A6046ABE9BA972BD7E5D757224D51D /* UITableView+JXCategory.h in Headers */,
+				B0BC533FD93D60516096C9424527D50F /* UIView+JXCategory.h in Headers */,
+				13AD82B16AA00FE1B09A89837DBF2D80 /* UIView+JXToastAndProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
