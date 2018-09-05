@@ -1,5 +1,5 @@
 PODS:
-  - JXKit (0.1.38)
+  - JXKit (0.1.40)
 
 DEPENDENCIES:
   - JXKit (from `~/Desktop/GitHub/JXKit/JXKit.podspec`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "~/Desktop/GitHub/JXKit/JXKit.podspec"
 
 SPEC CHECKSUMS:
-  JXKit: 09e9a9cc83d50d325a894979ab313142fff3964e
+  JXKit: 386a11ae01e05bb2286a0adf2759dab80a8d53c6
 
-PODFILE CHECKSUM: 52f6ed994ed5d2104b51b0f7340555ccd4148c46
+PODFILE CHECKSUM: ae4d79474d9d783f46dc5de4583239511c5569f4
 
 COCOAPODS: 1.5.3
