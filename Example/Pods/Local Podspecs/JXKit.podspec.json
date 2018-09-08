@@ -1,6 +1,6 @@
 {
   "name": "JXKit",
-  "version": "0.1.40",
+  "version": "0.1.44",
   "summary": "A short description of JXKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/augsun",
@@ -13,10 +13,11 @@
   },
   "source": {
     "git": "git@gitee.com:codersun/JXKit.git",
-    "tag": "0.1.40"
+    "tag": "0.1.44"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "JXKit/Classes/**/*.{h,m}"
+  "source_files": "JXKit/Classes/**/*.{h,m}",
+  "public_header_files": "JXKit/Classes/**/*.h"
 }

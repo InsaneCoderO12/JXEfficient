@@ -318,9 +318,12 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 }
 
 #pragma mark progresssHUD
+- (void)jx_showProgressHUD:(NSString *)title {
+    [self jx_showProgressHUD:title animation:NO];
+}
+
 - (void)jx_showProgressHUD:(NSString *)title animation:(BOOL)animation {
     CGFloat indicatorViewToTop = 20.f;
-//    CGFloat viewBgMinToTB = [UIScreen mainScreen].bounds.size.height * 160.f / 667.f;
     CGFloat viewBgMinToTB = 20.f;
     CGFloat viewBgMinToLR = 20.f;
     CGFloat viewBgMinW = 80.f;
@@ -471,7 +474,6 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
             if (animation) {
                 [UIView animateWithDuration:.3f animations:^{
                     viewEnum.transform = CGAffineTransformMakeScale(.5f, .5f);
-//                    viewEnum.backgroundColor = [UIColor clearColor];
                     viewEnum.alpha = 0.f;
                 } completion:^(BOOL finished) {
                     [viewEnum removeFromSuperview];
