@@ -11,15 +11,15 @@
 @interface JXUpdateCheck : NSObject
 
 // 检查是否有新版本
-+ (void)checkAppID:(NSString *)appID result:(void(^)(BOOL haveNew, NSDictionary *result0))result;
++ (void)jx_checkAppID:(NSString *)appID result:(void(^)(BOOL haveNew, NSDictionary *result0))result;
 
 // 检查是否有新版本, 如果有新版本 Alert 提示更新
-+ (void)checkAndShowAlertIfNewVersionWithAppId:(NSString *)appID;
++ (void)jx_checkAndShowAlertIfNewVersionWithAppId:(NSString *)appID;
 
 // 打开 appStore 去升级
-+ (BOOL)openAppStoreToUpdateWithAppID:(NSString *)appID;
++ (BOOL)jx_openAppStoreToUpdateWithAppID:(NSString *)appID;
 
 // 打开 appStore 去评分
-+ (BOOL)openAppStoreToWriteReviewWithAppID:(NSString *)appID;
++ (BOOL)jx_openAppStoreToWriteReviewWithAppID:(NSString *)appID;
 
 @end

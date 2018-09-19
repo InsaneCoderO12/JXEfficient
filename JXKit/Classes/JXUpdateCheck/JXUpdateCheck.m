@@ -16,7 +16,7 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
 
 @implementation JXUpdateCheck
 
-+ (void)checkAppID:(NSString *)appID result:(void (^)(BOOL, NSDictionary *))result {
++ (void)jx_checkAppID:(NSString *)appID result:(void (^)(BOOL, NSDictionary *))result {
     if (![self validAppID:appID]) {
         return;
     }
@@ -67,17 +67,17 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
     [task resume];
 }
 
-+ (void)checkAndShowAlertIfNewVersionWithAppId:(NSString *)appID {
++ (void)jx_checkAndShowAlertIfNewVersionWithAppId:(NSString *)appID {
     if (![self validAppID:appID]) {
         return;
     }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self checkAppID:appID result:^(BOOL haveNew, NSDictionary *result) {
+        [self jx_checkAppID:appID result:^(BOOL haveNew, NSDictionary *result) {
             if (haveNew) {
                 UIAlertController *alertCtl = [UIAlertController alertControllerWithTitle:@"发现新版本" message:nil preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *actionNextTime = [UIAlertAction actionWithTitle:@"下次提醒我" style:UIAlertActionStyleDefault handler:nil];
                 UIAlertAction *actionUpdate = [UIAlertAction actionWithTitle:@"去 AppStore 更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [self openAppStoreToUpdateWithAppID:appID];
+                    [self jx_openAppStoreToUpdateWithAppID:appID];
                 }];
                 [alertCtl addAction:actionNextTime];
                 [alertCtl addAction:actionUpdate];
@@ -87,11 +87,11 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
     });
 }
 
-+ (BOOL)openAppStoreToUpdateWithAppID:(NSString *)appID {
++ (BOOL)jx_openAppStoreToUpdateWithAppID:(NSString *)appID {
     return [self openUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kAppStoreLink, appID]]];
 }
 
-+ (BOOL)openAppStoreToWriteReviewWithAppID:(NSString *)appID {
++ (BOOL)jx_openAppStoreToWriteReviewWithAppID:(NSString *)appID {
     return [self openUrl:[NSURL URLWithString:[NSString stringWithFormat:kAppStoreReview, appID]]];
 }
 
