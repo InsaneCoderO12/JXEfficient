@@ -200,7 +200,7 @@
         NSString *key = parameters.allKeys[i];
         NSString *value = parameters[key];
         
-        [tempMStr appendString:strCat3(key, @"=", value)];
+        [tempMStr appendString:jx_strCat3(key, @"=", value)];
         if (i != parameters.count - 1) {
             [tempMStr appendString:@"&"];
         }
@@ -221,7 +221,7 @@
         }
         // 最后一个不是 ?
         else {
-            tempS1 = strCat2(tempMStr, @"&");
+            tempS1 = jx_strCat2(tempMStr, @"&");
         }
         [selfString insertString:tempS1 atIndex:range.location + 1];
     }
@@ -230,7 +230,7 @@
         while ([selfString hasSuffix:@"#"] || [selfString hasSuffix:@"/"]) {
             [selfString deleteCharactersInRange:NSMakeRange(selfString.length - 1, 1)];
         }
-        [selfString appendString:strCat2(@"?", tempMStr)];
+        [selfString appendString:jx_strCat2(@"?", tempMStr)];
     }
     return selfString;
 }

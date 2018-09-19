@@ -121,8 +121,8 @@ static NSString *const kAppStoreReview = @"http://itunes.apple.com/WebObjects/MZ
     for (NSInteger i = 0; i < max_count; i ++) {
         //
         if (i < appStore_count && i < current_count) {                  // 长度相等部分
-            NSInteger appStore_sub_v = intValue(arr_appStoreVersion[i]);
-            NSInteger current_sub_v = intValue(arr_currentVersion[i]);
+            NSInteger appStore_sub_v = jx_intValue(arr_appStoreVersion[i]);
+            NSInteger current_sub_v = jx_intValue(arr_currentVersion[i]);
             
             if (appStore_sub_v > current_sub_v) {                       // 分割后版本号 (大于当前版本 有新版本 )
                 haveNew = YES;
