@@ -53,7 +53,7 @@ static inline NSInteger jx_intValue(id value) {
 }
 
 // 转 NSString
-static inline NSString *strValue(id value) {
+static inline NSString *jx_strValue(id value) {
     return jx_isStringOrNumber(value) ? [NSString stringWithFormat:@"%@", value] : nil;
 }
 

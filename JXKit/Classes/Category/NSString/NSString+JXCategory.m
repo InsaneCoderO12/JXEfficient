@@ -141,8 +141,8 @@
     
     // 添加的参数
     for (NSString *keyEnum in parameters.allKeys) {
-        NSString *dicKey = strValue(keyEnum);
-        NSString *dicObj = strValue(parameters[keyEnum]);
+        NSString *dicKey = jx_strValue(keyEnum);
+        NSString *dicObj = jx_strValue(parameters[keyEnum]);
         
         if (!dicKey || !dicObj) {
             continue;
@@ -171,8 +171,8 @@
             return nil;
         }
         for (NSDictionary *keyEnum in tempURLEncodedParams) {
-            NSString *key = strValue(keyEnum);
-            NSString *value = strValue(tempURLEncodedParams[keyEnum]);
+            NSString *key = jx_strValue(keyEnum);
+            NSString *value = jx_strValue(tempURLEncodedParams[keyEnum]);
             value = [value jx_URLEncoded];
             if (key && value) {
                 NSString *param = [NSString stringWithFormat:@"&%@=%@", key, value];
