@@ -30,6 +30,9 @@
 #import "JXUpdateCheck.h"
 #import "JXUUIDAndKeyChain.h"
 
+// UIView
+#import "JXQRCodeScanView.h"
+
 @interface JXKit : NSObject
 
 @end
