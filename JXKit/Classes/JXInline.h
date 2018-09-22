@@ -9,72 +9,62 @@
 #import <UIKit/UIKit.h>
 #import "JXRegular.h"
 
-static inline BOOL jx_isNullOrNil(id obj) {
+// 判断
+static inline BOOL jx_isNullOrNil(id obj) {                 // 是否是 null 或 nil
     return !obj || [obj isKindOfClass:[NSNull class]] ? YES : NO;
 }
 
-// 是否 NSString 或 NSNumber
-static inline BOOL jx_isStringOrNumber(id obj) {
+static inline BOOL jx_isStringOrNumber(id obj) {            // 是否 NSString 或 NSNumber
     return [obj isKindOfClass:[NSString class]] || [obj isKindOfClass:[NSNumber class]];
 }
 
-// 是否 NSString
-static inline BOOL jx_isStrObj(id obj) {
+static inline BOOL jx_isStrObj(id obj) {                    // 是否 NSString
     return [obj isKindOfClass:[NSString class]] ? YES : NO;
 }
 
-// 是否 NSNumber
-static inline BOOL jx_isNumObj(id obj) {
+static inline BOOL jx_isNumObj(id obj) {                    // 是否 NSNumber
     return [obj isKindOfClass:[NSNumber class]] ? YES : NO;
 }
-// 是否 NSDictionary
-static inline BOOL jx_isDicObj(id obj) {
+
+static inline BOOL jx_isDicObj(id obj) {                    // 是否 NSDictionary
     return [obj isKindOfClass:[NSDictionary class]] ? YES : NO;
 }
 
-// 是否 NSArray
-static inline BOOL jx_isArrObj(id obj) {
+static inline BOOL jx_isArrObj(id obj) {                    // 是否 NSArray
     return [obj isKindOfClass:[NSArray class]] ? YES : NO;
 }
 
-// 2个字符串拼接 (可传入 NSString NSNumber)
-static inline NSString *jx_strCat2(id value0, id value1) {
-    return [NSString stringWithFormat:@"%@%@", jx_isStringOrNumber(value0) ? value0 : @"", jx_isStringOrNumber(value1) ? value1 : @""];
+// 转换
+static inline NSString *jx_strValue(id value) {             // 转 NSString
+    return jx_isStrObj(value) ? value : (jx_isNumObj(value) ? [NSString stringWithFormat:@"%@", value] : nil);
 }
 
-// 3个字符串拼接 (可传入 NSString NSNumber)
-static inline NSString *jx_strCat3(id value0, id value1, id value2) {
+static inline NSString *jx_strCat2(id value0, id value1) {  // 2个字符串拼接 (可传入 NSString NSNumber)
+    return [NSString stringWithFormat:@"%@%@", jx_strValue(value0), jx_strValue(value1)];
+}
+
+static inline NSString *jx_strCat3(id value0, id value1, id value2) {   // 3个字符串拼接 (可传入 NSString NSNumber)
     return jx_strCat2(jx_strCat2(value0, value1), jx_isStringOrNumber(value2) ? value2 : @"");
 }
 
-// 转 NSInteger
-static inline NSInteger jx_intValue(id value) {
+static inline NSInteger jx_intValue(id value) {             // 转 NSInteger
     return jx_isStringOrNumber(value) ? [value integerValue] : 0;
 }
 
-// 转 NSString
-static inline NSString *jx_strValue(id value) {
-    return jx_isStringOrNumber(value) ? [NSString stringWithFormat:@"%@", value] : nil;
-}
-
-// 转 NSUInteger
-static inline NSUInteger jx_uIntValue(id value) {
+static inline NSUInteger jx_uIntValue(id value) {           // 转 NSUInteger
     NSInteger num = jx_intValue(value);
     return num < 0 ? 0 : num;
 }
 
-// 转 long long
-static inline long long jx_longlongValue(id value) {
+static inline long long jx_longlongValue(id value) {        // 转 long long
     return jx_isStringOrNumber(value) ? [value longLongValue] : 0;
 }
 
-// 转 CGFloat
-static inline CGFloat jx_floValue(id value) {
+static inline CGFloat jx_floValue(id value) {               // 转 CGFloat
     return jx_isStringOrNumber(value) ? [value floatValue] : 0;
 }
 
-// 转 BOOL
-static inline BOOL jx_booValue(id value) {
+static inline BOOL jx_booValue(id value) {                  // 转 BOOL
     return jx_isStringOrNumber(value) ? [value boolValue] : 0;
 }
 
