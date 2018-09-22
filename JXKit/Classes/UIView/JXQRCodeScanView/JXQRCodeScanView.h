@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface JXQRCodeScannerView : UIView
+@interface JXQRCodeScanView : UIView
 
 @property (nonatomic, readonly) AVAuthorizationStatus status;
 

@@ -7,53 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01872B0CCD9E7342F7EEBCC82D2C98D1 /* NSDate+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7374694491710FBEF0F3E1D12F98223B /* NSDate+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0ED6762E1DC6AF2ACF62A303C95C0A32 /* UICollectionView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB0279B9C70724B500401BA4FBF79CC /* UICollectionView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1009F0DFC05469024AA7074F38D0B597 /* JXKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2354404FCF19518EF37C9B624FEF76FF /* JXKit.m */; };
-		10267BD7B7CA3756C25BF23753D73C0A /* JXUUIDAndKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F616D9036E6E94C7859EC3B29F5036AD /* JXUUIDAndKeyChain.m */; };
-		10C7D4AAB3B0EE6BC622A7A4E653D6AB /* NSDate+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBDFE0E5111738A2B1C86973DC89706 /* NSDate+JXCategory.m */; };
-		20107EFA9A72C6BFC6C13751362CCD87 /* JXUpdateCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E32E80F493D3881FA484A087255AF8 /* JXUpdateCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CBFA4948981861AAC436566D1BDC20B /* JXJSONCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 004888070209535B3ADD726B4ACA64EB /* JXJSONCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D63C2825503A3B0AC664D7FD781135D /* UICollectionView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0154915182A173C8E26FEB0B9ADF3C97 /* UICollectionView+JXCategory.m */; };
-		3D7BBB41BCA0F401C9E8033A39059185 /* UIView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EAFBABBD49E6AF95ABE3CA3686785FE /* UIView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43E0367EDD40219A22280FBFEBC7616A /* JXLocationCoordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = 743222764C1A9C048BE324661E231EC4 /* JXLocationCoordinates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		019D0C4554127C06A587F8E2F9097FD0 /* JXMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 535728874E3532A50D081851AEDB71E9 /* JXMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BDCBFA101390B56BAC87918DCE700BD /* UIButton+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F49D4FEC2B169B7EE14F5645A9D27D7 /* UIButton+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		187AAD308C38680952E2CC75460D486C /* JXKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2354404FCF19518EF37C9B624FEF76FF /* JXKit.m */; };
+		18A6B519ADBADA5F7B5F3BAF5E02AE4C /* JXRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = B4408332CC7FAD08AE5C1FC9F9BA7648 /* JXRegular.m */; };
+		1977D22F1AF0D51FA4AECED3D0102459 /* UIButton+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D1D0053CBA0367D9B68622857CD /* UIButton+JXCategory.m */; };
+		198D2C386EA2F368C7248C0BEFD56D88 /* JXLocationCoordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = 743222764C1A9C048BE324661E231EC4 /* JXLocationCoordinates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19985566F2FB432B08C1BEE1814EB56F /* JXJSONCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 004888070209535B3ADD726B4ACA64EB /* JXJSONCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B525E18F1F03AFDFCC9DC3F8E64B81D /* UICollectionView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB0279B9C70724B500401BA4FBF79CC /* UICollectionView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA320D61507B412A802C8CDF5460D69 /* UICollectionView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0154915182A173C8E26FEB0B9ADF3C97 /* UICollectionView+JXCategory.m */; };
+		271949F9FF26BCD774713B05131C308E /* JXUpdateCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E32E80F493D3881FA484A087255AF8 /* JXUpdateCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		286BB1ECB4A01C2C8061AEEC699445FD /* UIScrollView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 47C97C0DD60BF88856914BB96FF0D2C0 /* UIScrollView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FBBFAFD38B275A7C507271B3EBFAA12 /* JXSystemAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD7BB51319D2316FE3381C31499E6 /* JXSystemAlert.m */; };
+		36CCE4868C2AA2AED7C5FBDA7B08A167 /* UIScrollView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE09F9D44189EFBD7F209B7C888A770 /* UIScrollView+JXCategory.m */; };
 		44F1CEA5989AD536EFF0DF9A51A8491B /* Pods-JXKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D7D12D76CB573627A3FE7954A76F1 /* Pods-JXKit_Tests-dummy.m */; };
-		45B861FFE7C330291109AE97A7CAEAD2 /* UIView+JXToastAndProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA38A7267F5863F9D714E61B069FF41 /* UIView+JXToastAndProgressHUD.m */; };
+		484D71DD8278E317C6FE910A96654DAE /* NSDate+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBDFE0E5111738A2B1C86973DC89706 /* NSDate+JXCategory.m */; };
 		4E1F8C987D1F857679C7AA002F034951 /* Pods-JXKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FCE94C9BEF6F88397875B269A441E4 /* Pods-JXKit_Example-dummy.m */; };
-		5410BBF9D6001DC6E8007888B455DF41 /* UIImage+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AB7111CF0CC6815F1A2C2FB4BCBED0 /* UIImage+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5BF133B42FBAD20B3506AE0DB2A99DEB /* UITableView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 343B793465C966503A4DC0A148B67A97 /* UITableView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		621B33C56425CD1DFBE3BE54FAE8A3D7 /* JXKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F22F6EEEC36E40FFBDCDBB0F6B874 /* JXKit-dummy.m */; };
-		685C5A1C798D7E15CBF0EB57432419CF /* UIButton+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D1D0053CBA0367D9B68622857CD /* UIButton+JXCategory.m */; };
-		6B1E6857A2393794AB77D2F58B47D693 /* UIImage+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA755D9E4EA550BC27237B0FCC89327 /* UIImage+JXCategory.m */; };
-		7251A2A5CEDDC112DA7AA9042BF43E50 /* NSString+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C239B8C11B6927E7C555590B45F8E /* NSString+JXCategory.m */; };
-		824A585E88D7F3CAE1A676978E2CA25B /* JXRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = B4408332CC7FAD08AE5C1FC9F9BA7648 /* JXRegular.m */; };
-		8525419F2397CFECD9122D94C72D8999 /* UIView+JXToastAndProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E816FCA52D0A1A99EED9162EC01A036D /* UIView+JXToastAndProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56B965BB7AA544C29D570F339914F04E /* UIView+JXToastAndProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA38A7267F5863F9D714E61B069FF41 /* UIView+JXToastAndProgressHUD.m */; };
+		5A2572FE6F817FA6D79FAE37DB4DA97B /* UIView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EAFBABBD49E6AF95ABE3CA3686785FE /* UIView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A340195E1A2428F144DFD074892D299 /* JXRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE2F2324C97EE03DF95194331B4F07E /* JXRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62C0D7AF4F5BA604E583429C147A45A3 /* JXUUIDAndKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F616D9036E6E94C7859EC3B29F5036AD /* JXUUIDAndKeyChain.m */; };
+		65128A176551ADBD85ABE6864D30AAAE /* JXKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F22F6EEEC36E40FFBDCDBB0F6B874 /* JXKit-dummy.m */; };
+		6572DB1BE3120CD59619E1D6949E45BA /* JXSystemAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D235656C699F874BC8FCCC88E94E3FE /* JXSystemAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67DD42CE3AFB705B9ADBAFA7721386A6 /* NSString+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 185B548DB3E8A402B5CDBF60467493E2 /* NSString+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B90A1A67103A926EE39902DDE4BD812 /* JXQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D087DFF1014B79D610F8353C3C12461 /* JXQRCodeScanView.m */; };
+		8C4BD99986C4D5CFC81A3D96BA9AD5E3 /* JXJSONCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584338285B73D38A5B58DA3E928C5BF /* JXJSONCache.m */; };
+		8C56663A708FEBF9DCF2E2D015406A58 /* JXUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA9419395C3D749A047C51D23BDE6F9 /* JXUpdateCheck.m */; };
 		8ECBDFFE6B6834C468F570790BB53A35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		97D454A13ED40F79D7CE9FA6E5DC427C /* JXQRCodeScannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A209C0704F57AD65864AC3156C7FE4EC /* JXQRCodeScannerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BA2DF9811B7FE3477304F79EF314385 /* NSString+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 185B548DB3E8A402B5CDBF60467493E2 /* NSString+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A52A4EA276198FE3F149829998BB9B3D /* JXJSONCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9584338285B73D38A5B58DA3E928C5BF /* JXJSONCache.m */; };
-		A764563D9B234030954DAA064CDEE1C0 /* JXInline.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CE2484EF5B966C5DCA5FEB2193420A /* JXInline.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A82298D8D4ACA2870B2E05246A6E72D4 /* JXMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 535728874E3532A50D081851AEDB71E9 /* JXMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A920E860B72E9AB8496784D3C84DE83D /* UIButton+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F49D4FEC2B169B7EE14F5645A9D27D7 /* UIButton+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B00DEE4B4540C50856D5C11913EE2997 /* JXLocationCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 976370FBD2D3FB052238DC52EB3B173C /* JXLocationCoordinates.m */; };
-		B203F06A3F2988AC96E3A7E89298BE88 /* JXInline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A386213C8CC8A50B3CE5FDD94716642 /* JXInline.m */; };
-		B63418B28ACD43C7D12E7EFE8E9D1BEA /* UIView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 270F4FBA78D9B6E58A5E2D9554A07D81 /* UIView+JXCategory.m */; };
 		B99F17D954349F1398F82B09283AE01D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		C4FFD475BB8FDC53896EBDD87B04EAF7 /* JXKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 261B8A33241A862D75A9CC8EB10CB380 /* JXKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8DB0BEB9F64207E3D4EEBB146A73044 /* UIScrollView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 47C97C0DD60BF88856914BB96FF0D2C0 /* UIScrollView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAB32587D4BB0DB2B4853F57E735ECD5 /* JXUUIDAndKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = D7A4E3F2420AB10EC6FB5EBCA206884D /* JXUUIDAndKeyChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D636329AAE33E520623E0489D115FFC0 /* JXMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EADF5F0DAFEBE9604C0C9B7382DDDD /* JXMacro.m */; };
-		E48EB42E8380E93E1ED4DDA99D0604BD /* JXUpdateCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA9419395C3D749A047C51D23BDE6F9 /* JXUpdateCheck.m */; };
+		BB85F5AA2B0B8B0FB556E9B7E0CA1F0F /* JXLocationCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 976370FBD2D3FB052238DC52EB3B173C /* JXLocationCoordinates.m */; };
+		BC3D8E5B6B137E546408A622FD91F60E /* UITableView+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 343B793465C966503A4DC0A148B67A97 /* UITableView+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE719DC6B72AABD55470F0677E8D1D64 /* UIView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 270F4FBA78D9B6E58A5E2D9554A07D81 /* UIView+JXCategory.m */; };
+		C4253EDBC313E577E6462F6F898EBF4B /* JXMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EADF5F0DAFEBE9604C0C9B7382DDDD /* JXMacro.m */; };
+		C8BCFED70ADDF6F30A9509AE3FAE8BBE /* JXInline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A386213C8CC8A50B3CE5FDD94716642 /* JXInline.m */; };
+		D1A012D0B82AB65FFAF8FB7C96FA580C /* UIView+JXToastAndProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E816FCA52D0A1A99EED9162EC01A036D /* UIView+JXToastAndProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D969E63319136D5A2E26973D0DB17BF6 /* JXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C971302D5F9B3A5BE2070462155122D /* JXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2EE75F4A61741C28933693529BFB30D /* JXQRCodeScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = E5762B81F560F71A23FD2B7E41D919B2 /* JXQRCodeScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4F81400AD2C4BDB2BE2456D5844E821 /* Pods-JXKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96AD4055A3F749F265D9448B850FE7B9 /* Pods-JXKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E59AD48BEF34E20B9EEA307651F91DB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		E88762491512A53628504FE566C06AC3 /* UIScrollView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE09F9D44189EFBD7F209B7C888A770 /* UIScrollView+JXCategory.m */; };
-		EACE3D86283311C29A3DC41F98F2FE27 /* JXSystemAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D235656C699F874BC8FCCC88E94E3FE /* JXSystemAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEBB640EAEDAF9B00C4CE4E93736DB00 /* JXSystemAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFAD7BB51319D2316FE3381C31499E6 /* JXSystemAlert.m */; };
+		EEA1EA4E5EEBE4D41032A1B2A75ABCA1 /* NSDate+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7374694491710FBEF0F3E1D12F98223B /* NSDate+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F23945D2B844E549F2098F4FABDF7BB8 /* JXKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 261B8A33241A862D75A9CC8EB10CB380 /* JXKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F327E0C80FC8F17036324B139BADCF08 /* Pods-JXKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6F2B4C432B8E6D1FAC1E1D7E2A9E3C /* Pods-JXKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5A82A743B07DEBE5821434B56A16FCD /* UITableView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EC19712EF4448A09778E0F264F6831AA /* UITableView+JXCategory.m */; };
-		F6FBD83109BC80A217A3CA1F8D16F28A /* JXRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE2F2324C97EE03DF95194331B4F07E /* JXRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD416B715E519C72C5B71DB9E9A97506 /* JXKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C971302D5F9B3A5BE2070462155122D /* JXKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEA2BDC68992A48D25729F6B2268748E /* JXQRCodeScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D34DB2CB3AE026F2C5A063A65BDBB68E /* JXQRCodeScannerView.m */; };
+		F3AF8E2F47930FD5054BFADDFBDD222B /* NSString+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 166C239B8C11B6927E7C555590B45F8E /* NSString+JXCategory.m */; };
+		F6A282127D389AADE8A5F7A2715B3CE7 /* UIImage+JXCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AB7111CF0CC6815F1A2C2FB4BCBED0 /* UIImage+JXCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F751F3836E70A177B64BD250DF9A4D39 /* UIImage+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA755D9E4EA550BC27237B0FCC89327 /* UIImage+JXCategory.m */; };
+		FA372200B7151FD8152893E52E67707A /* UITableView+JXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EC19712EF4448A09778E0F264F6831AA /* UITableView+JXCategory.m */; };
+		FAFD56241C08F0B324450E934B4EEA6C /* JXUUIDAndKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = D7A4E3F2420AB10EC6FB5EBCA206884D /* JXUUIDAndKeyChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDDD1F26CA97B7FFD7F96A3830DA4638 /* JXInline.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CE2484EF5B966C5DCA5FEB2193420A /* JXInline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +89,7 @@
 		254B18614EB92EEDB0B7330B8A97F840 /* Pods-JXKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		261B8A33241A862D75A9CC8EB10CB380 /* JXKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXKit-umbrella.h"; sourceTree = "<group>"; };
 		270F4FBA78D9B6E58A5E2D9554A07D81 /* UIView+JXCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+JXCategory.m"; sourceTree = "<group>"; };
+		2D087DFF1014B79D610F8353C3C12461 /* JXQRCodeScanView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXQRCodeScanView.m; sourceTree = "<group>"; };
 		2DE2F2324C97EE03DF95194331B4F07E /* JXRegular.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXRegular.h; sourceTree = "<group>"; };
 		2EAFBABBD49E6AF95ABE3CA3686785FE /* UIView+JXCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+JXCategory.h"; sourceTree = "<group>"; };
 		343B793465C966503A4DC0A148B67A97 /* UITableView+JXCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+JXCategory.h"; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		976370FBD2D3FB052238DC52EB3B173C /* JXLocationCoordinates.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXLocationCoordinates.m; sourceTree = "<group>"; };
 		99AED389EA2A33938176A945B2071330 /* JXKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXKit-prefix.pch"; sourceTree = "<group>"; };
 		A0E32E80F493D3881FA484A087255AF8 /* JXUpdateCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXUpdateCheck.h; sourceTree = "<group>"; };
-		A209C0704F57AD65864AC3156C7FE4EC /* JXQRCodeScannerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXQRCodeScannerView.h; sourceTree = "<group>"; };
 		A3D2DD52D748F79C4F0C36D449C86331 /* Pods-JXKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CE2484EF5B966C5DCA5FEB2193420A /* JXInline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXInline.h; path = JXKit/Classes/JXInline.h; sourceTree = "<group>"; };
 		AAA38A7267F5863F9D714E61B069FF41 /* UIView+JXToastAndProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+JXToastAndProgressHUD.m"; sourceTree = "<group>"; };
@@ -135,12 +135,12 @@
 		B9B7C0A20C3D8FA751B9F6A14D107EDD /* Pods-JXKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CB6F2B4C432B8E6D1FAC1E1D7E2A9E3C /* Pods-JXKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JXKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		CC6BBA1F21AC0F7AEB3D5EA902AEE6E3 /* Pods-JXKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JXKit_Tests.modulemap"; sourceTree = "<group>"; };
-		D34DB2CB3AE026F2C5A063A65BDBB68E /* JXQRCodeScannerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXQRCodeScannerView.m; sourceTree = "<group>"; };
 		D7861A29619840263D70424B4A57B35F /* Pods-JXKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		D7A4E3F2420AB10EC6FB5EBCA206884D /* JXUUIDAndKeyChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXUUIDAndKeyChain.h; sourceTree = "<group>"; };
 		DA7DA55D0679B16127413FE269E7D7F7 /* Pods-JXKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DDE09F9D44189EFBD7F209B7C888A770 /* UIScrollView+JXCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JXCategory.m"; sourceTree = "<group>"; };
 		DECEC2E1CE82641DE94656D73873FB6E /* JXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JXKit.framework; path = JXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5762B81F560F71A23FD2B7E41D919B2 /* JXQRCodeScanView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXQRCodeScanView.h; sourceTree = "<group>"; };
 		E816FCA52D0A1A99EED9162EC01A036D /* UIView+JXToastAndProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+JXToastAndProgressHUD.h"; sourceTree = "<group>"; };
 		EAF9890E37DA60918E0BBF0B62FD2525 /* JXKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXKit.xcconfig; sourceTree = "<group>"; };
 		EC19712EF4448A09778E0F264F6831AA /* UITableView+JXCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JXCategory.m"; sourceTree = "<group>"; };
@@ -184,6 +184,25 @@
 			);
 			name = JXSystemAlert;
 			path = JXKit/Classes/JXSystemAlert;
+			sourceTree = "<group>";
+		};
+		08A9495BD9D73F73904A9615E93173E7 /* JXQRCodeScanView */ = {
+			isa = PBXGroup;
+			children = (
+				E5762B81F560F71A23FD2B7E41D919B2 /* JXQRCodeScanView.h */,
+				2D087DFF1014B79D610F8353C3C12461 /* JXQRCodeScanView.m */,
+			);
+			name = JXQRCodeScanView;
+			path = JXQRCodeScanView;
+			sourceTree = "<group>";
+		};
+		14BA744F7405A67E360D17BF35531055 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				08A9495BD9D73F73904A9615E93173E7 /* JXQRCodeScanView */,
+			);
+			name = UIView;
+			path = JXKit/Classes/UIView;
 			sourceTree = "<group>";
 		};
 		158ADB12B695142B1F6A016503F27613 /* UIButton */ = {
@@ -262,7 +281,7 @@
 				9B6E8427D039A7AA29CE3B38391D7ED6 /* JXUUIDAndKeyChain */,
 				18D09E5657EA62BC11A59B822CDE5125 /* Pod */,
 				498E312EEB80D26B3F11202D5FAA0E4A /* Support Files */,
-				AF3B49E28AC08E027A4F14B159F9FAC9 /* UIView */,
+				14BA744F7405A67E360D17BF35531055 /* UIView */,
 			);
 			name = JXKit;
 			path = /Users/augsun/Desktop/GitHub/JXKit;
@@ -422,15 +441,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF3B49E28AC08E027A4F14B159F9FAC9 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				F18A7471E67DD9C019B813C6786544E0 /* JXQRCodeScannerView */,
-			);
-			name = UIView;
-			path = JXKit/Classes/UIView;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,16 +481,6 @@
 			path = NSDate;
 			sourceTree = "<group>";
 		};
-		F18A7471E67DD9C019B813C6786544E0 /* JXQRCodeScannerView */ = {
-			isa = PBXGroup;
-			children = (
-				A209C0704F57AD65864AC3156C7FE4EC /* JXQRCodeScannerView.h */,
-				D34DB2CB3AE026F2C5A063A65BDBB68E /* JXQRCodeScannerView.m */,
-			);
-			name = JXQRCodeScannerView;
-			path = JXQRCodeScannerView;
-			sourceTree = "<group>";
-		};
 		F4CD02A857DFF108CB144C5F5965587F /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,30 +510,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F81E98C8D22C93AF19A2FF9E73FF6C86 /* Headers */ = {
+		A1AA33AB178F88B190EA5C5FB8F12719 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A764563D9B234030954DAA064CDEE1C0 /* JXInline.h in Headers */,
-				2CBFA4948981861AAC436566D1BDC20B /* JXJSONCache.h in Headers */,
-				C4FFD475BB8FDC53896EBDD87B04EAF7 /* JXKit-umbrella.h in Headers */,
-				FD416B715E519C72C5B71DB9E9A97506 /* JXKit.h in Headers */,
-				43E0367EDD40219A22280FBFEBC7616A /* JXLocationCoordinates.h in Headers */,
-				A82298D8D4ACA2870B2E05246A6E72D4 /* JXMacro.h in Headers */,
-				97D454A13ED40F79D7CE9FA6E5DC427C /* JXQRCodeScannerView.h in Headers */,
-				F6FBD83109BC80A217A3CA1F8D16F28A /* JXRegular.h in Headers */,
-				EACE3D86283311C29A3DC41F98F2FE27 /* JXSystemAlert.h in Headers */,
-				20107EFA9A72C6BFC6C13751362CCD87 /* JXUpdateCheck.h in Headers */,
-				CAB32587D4BB0DB2B4853F57E735ECD5 /* JXUUIDAndKeyChain.h in Headers */,
-				01872B0CCD9E7342F7EEBCC82D2C98D1 /* NSDate+JXCategory.h in Headers */,
-				9BA2DF9811B7FE3477304F79EF314385 /* NSString+JXCategory.h in Headers */,
-				A920E860B72E9AB8496784D3C84DE83D /* UIButton+JXCategory.h in Headers */,
-				0ED6762E1DC6AF2ACF62A303C95C0A32 /* UICollectionView+JXCategory.h in Headers */,
-				5410BBF9D6001DC6E8007888B455DF41 /* UIImage+JXCategory.h in Headers */,
-				C8DB0BEB9F64207E3D4EEBB146A73044 /* UIScrollView+JXCategory.h in Headers */,
-				5BF133B42FBAD20B3506AE0DB2A99DEB /* UITableView+JXCategory.h in Headers */,
-				3D7BBB41BCA0F401C9E8033A39059185 /* UIView+JXCategory.h in Headers */,
-				8525419F2397CFECD9122D94C72D8999 /* UIView+JXToastAndProgressHUD.h in Headers */,
+				FDDD1F26CA97B7FFD7F96A3830DA4638 /* JXInline.h in Headers */,
+				19985566F2FB432B08C1BEE1814EB56F /* JXJSONCache.h in Headers */,
+				F23945D2B844E549F2098F4FABDF7BB8 /* JXKit-umbrella.h in Headers */,
+				D969E63319136D5A2E26973D0DB17BF6 /* JXKit.h in Headers */,
+				198D2C386EA2F368C7248C0BEFD56D88 /* JXLocationCoordinates.h in Headers */,
+				019D0C4554127C06A587F8E2F9097FD0 /* JXMacro.h in Headers */,
+				E2EE75F4A61741C28933693529BFB30D /* JXQRCodeScanView.h in Headers */,
+				5A340195E1A2428F144DFD074892D299 /* JXRegular.h in Headers */,
+				6572DB1BE3120CD59619E1D6949E45BA /* JXSystemAlert.h in Headers */,
+				271949F9FF26BCD774713B05131C308E /* JXUpdateCheck.h in Headers */,
+				FAFD56241C08F0B324450E934B4EEA6C /* JXUUIDAndKeyChain.h in Headers */,
+				EEA1EA4E5EEBE4D41032A1B2A75ABCA1 /* NSDate+JXCategory.h in Headers */,
+				67DD42CE3AFB705B9ADBAFA7721386A6 /* NSString+JXCategory.h in Headers */,
+				0BDCBFA101390B56BAC87918DCE700BD /* UIButton+JXCategory.h in Headers */,
+				1B525E18F1F03AFDFCC9DC3F8E64B81D /* UICollectionView+JXCategory.h in Headers */,
+				F6A282127D389AADE8A5F7A2715B3CE7 /* UIImage+JXCategory.h in Headers */,
+				286BB1ECB4A01C2C8061AEEC699445FD /* UIScrollView+JXCategory.h in Headers */,
+				BC3D8E5B6B137E546408A622FD91F60E /* UITableView+JXCategory.h in Headers */,
+				5A2572FE6F817FA6D79FAE37DB4DA97B /* UIView+JXCategory.h in Headers */,
+				D1A012D0B82AB65FFAF8FB7C96FA580C /* UIView+JXToastAndProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,8 +544,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 065DAE598ABEF43A2E986E34E965B3D7 /* Build configuration list for PBXNativeTarget "JXKit" */;
 			buildPhases = (
-				F81E98C8D22C93AF19A2FF9E73FF6C86 /* Headers */,
-				D98AABC355C1B671563353B6DB5BAC1E /* Sources */,
+				A1AA33AB178F88B190EA5C5FB8F12719 /* Headers */,
+				ED8ABAE05402CC3C57F4F05A13B7FEA1 /* Sources */,
 				4B2EF71D19588208C762F517BE3BDF8B /* Frameworks */,
 				0DF6D3389635CC4F98F9E31F5FC5F390 /* Resources */,
 			);
@@ -665,30 +665,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D98AABC355C1B671563353B6DB5BAC1E /* Sources */ = {
+		ED8ABAE05402CC3C57F4F05A13B7FEA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B203F06A3F2988AC96E3A7E89298BE88 /* JXInline.m in Sources */,
-				A52A4EA276198FE3F149829998BB9B3D /* JXJSONCache.m in Sources */,
-				621B33C56425CD1DFBE3BE54FAE8A3D7 /* JXKit-dummy.m in Sources */,
-				1009F0DFC05469024AA7074F38D0B597 /* JXKit.m in Sources */,
-				B00DEE4B4540C50856D5C11913EE2997 /* JXLocationCoordinates.m in Sources */,
-				D636329AAE33E520623E0489D115FFC0 /* JXMacro.m in Sources */,
-				FEA2BDC68992A48D25729F6B2268748E /* JXQRCodeScannerView.m in Sources */,
-				824A585E88D7F3CAE1A676978E2CA25B /* JXRegular.m in Sources */,
-				EEBB640EAEDAF9B00C4CE4E93736DB00 /* JXSystemAlert.m in Sources */,
-				E48EB42E8380E93E1ED4DDA99D0604BD /* JXUpdateCheck.m in Sources */,
-				10267BD7B7CA3756C25BF23753D73C0A /* JXUUIDAndKeyChain.m in Sources */,
-				10C7D4AAB3B0EE6BC622A7A4E653D6AB /* NSDate+JXCategory.m in Sources */,
-				7251A2A5CEDDC112DA7AA9042BF43E50 /* NSString+JXCategory.m in Sources */,
-				685C5A1C798D7E15CBF0EB57432419CF /* UIButton+JXCategory.m in Sources */,
-				3D63C2825503A3B0AC664D7FD781135D /* UICollectionView+JXCategory.m in Sources */,
-				6B1E6857A2393794AB77D2F58B47D693 /* UIImage+JXCategory.m in Sources */,
-				E88762491512A53628504FE566C06AC3 /* UIScrollView+JXCategory.m in Sources */,
-				F5A82A743B07DEBE5821434B56A16FCD /* UITableView+JXCategory.m in Sources */,
-				B63418B28ACD43C7D12E7EFE8E9D1BEA /* UIView+JXCategory.m in Sources */,
-				45B861FFE7C330291109AE97A7CAEAD2 /* UIView+JXToastAndProgressHUD.m in Sources */,
+				C8BCFED70ADDF6F30A9509AE3FAE8BBE /* JXInline.m in Sources */,
+				8C4BD99986C4D5CFC81A3D96BA9AD5E3 /* JXJSONCache.m in Sources */,
+				65128A176551ADBD85ABE6864D30AAAE /* JXKit-dummy.m in Sources */,
+				187AAD308C38680952E2CC75460D486C /* JXKit.m in Sources */,
+				BB85F5AA2B0B8B0FB556E9B7E0CA1F0F /* JXLocationCoordinates.m in Sources */,
+				C4253EDBC313E577E6462F6F898EBF4B /* JXMacro.m in Sources */,
+				8B90A1A67103A926EE39902DDE4BD812 /* JXQRCodeScanView.m in Sources */,
+				18A6B519ADBADA5F7B5F3BAF5E02AE4C /* JXRegular.m in Sources */,
+				2FBBFAFD38B275A7C507271B3EBFAA12 /* JXSystemAlert.m in Sources */,
+				8C56663A708FEBF9DCF2E2D015406A58 /* JXUpdateCheck.m in Sources */,
+				62C0D7AF4F5BA604E583429C147A45A3 /* JXUUIDAndKeyChain.m in Sources */,
+				484D71DD8278E317C6FE910A96654DAE /* NSDate+JXCategory.m in Sources */,
+				F3AF8E2F47930FD5054BFADDFBDD222B /* NSString+JXCategory.m in Sources */,
+				1977D22F1AF0D51FA4AECED3D0102459 /* UIButton+JXCategory.m in Sources */,
+				1FA320D61507B412A802C8CDF5460D69 /* UICollectionView+JXCategory.m in Sources */,
+				F751F3836E70A177B64BD250DF9A4D39 /* UIImage+JXCategory.m in Sources */,
+				36CCE4868C2AA2AED7C5FBDA7B08A167 /* UIScrollView+JXCategory.m in Sources */,
+				FA372200B7151FD8152893E52E67707A /* UITableView+JXCategory.m in Sources */,
+				BE719DC6B72AABD55470F0677E8D1D64 /* UIView+JXCategory.m in Sources */,
+				56B965BB7AA544C29D570F339914F04E /* UIView+JXToastAndProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

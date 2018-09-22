@@ -6,9 +6,9 @@
 //  Copyright © 2016 codersun. All rights reserved.
 //
 
-#import "JXQRCodeScannerView.h"
+#import "JXQRCodeScanView.h"
 
-@interface JXQRCodeScannerView () <AVCaptureMetadataOutputObjectsDelegate>
+@interface JXQRCodeScanView () <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (nonatomic, strong) AVCaptureDevice               *device;
 @property (nonatomic, strong) AVCaptureDeviceInput          *input;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation JXQRCodeScannerView
+@implementation JXQRCodeScanView
 
 - (instancetype)init {
     if (self = [super init]) {

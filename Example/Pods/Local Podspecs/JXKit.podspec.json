@@ -1,6 +1,6 @@
 {
   "name": "JXKit",
-  "version": "0.1.50",
+  "version": "0.1.53",
   "summary": "A short description of JXKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/augsun",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "git@gitee.com:codersun/JXKit.git",
-    "tag": "0.1.50"
+    "tag": "0.1.53"
   },
   "platforms": {
     "ios": "8.0"

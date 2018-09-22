@@ -28,7 +28,7 @@
 #import "JXSystemAlert.h"
 #import "JXUpdateCheck.h"
 #import "JXUUIDAndKeyChain.h"
-#import "JXQRCodeScannerView.h"
+#import "JXQRCodeScanView.h"
 
 FOUNDATION_EXPORT double JXKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char JXKitVersionString[];
