@@ -88,6 +88,12 @@
     return YES;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.previewLayer.frame = self.bounds;
+}
+
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     //
     NSString *outputStringValue = nil;
