@@ -53,7 +53,7 @@
 #define ONE_SCREEN_PIX              (1.f / [UIScreen mainScreen].scale)             // 屏幕一个像素
 #define SECONDS_OF_DAY              86400                                           // 一天的秒数
 #define UNUSE_AREA_OF_BOTTOM        (H_TABBAR - 49.f)                               // X 底部闲置区域
-#define JX_BLOCK_EXEC(block, ...)   !block ? nil : block(__VA_ARGS__)               // 执行 block
+#define JX_BLOCK_EXEC(block, ...)   !block ? nil : block(__VA_ARGS__)               // 执行无返回值的 block
 
 @interface JXMacro : NSObject
 

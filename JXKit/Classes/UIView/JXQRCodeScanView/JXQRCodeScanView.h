@@ -18,6 +18,7 @@
 - (BOOL)configScannerWithMetadataObjectTypes:(NSArray *)metadataObjectTypes;
 
 - (void)startRunning;
+@property (nonatomic, readonly) BOOL running;
 
 - (void)stopRunning;
 

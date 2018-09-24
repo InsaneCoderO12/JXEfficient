@@ -31,6 +31,10 @@
     [self.session startRunning];
 }
 
+- (BOOL)running {
+    return self.session.running;
+}
+
 - (void)stopRunning {
     [self.session stopRunning];
 }

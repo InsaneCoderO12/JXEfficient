@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JXKit'
-  s.version          = '0.1.55'
+  s.version          = '0.1.56'
   s.summary          = 'A short description of JXKit.'
 
 # This description is used to generate tags and improve search results.
