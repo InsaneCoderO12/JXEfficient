@@ -44,7 +44,8 @@
     
     
     
-    
+    NSString *beginDate = jx_strCat3(@"当前积分总和（", @(222), @" - 至今）");
+    NSLog(@"");
 
     
 //    temp = @"https://app.mixcapp.com/h5/invitation/templets/invitation.html?inviteCode=WXycOpbl&userName=%E4%BA%8C%E7%BB%B4%E7%A0%81&appVersion=2.7.1&mallNo=0202A003&timestamp=1527912762798";

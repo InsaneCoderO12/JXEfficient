@@ -40,11 +40,13 @@ static inline NSString *jx_strValue(id value) {             // 转 NSString
 }
 
 static inline NSString *jx_strCat2(id value0, id value1) {  // 2个字符串拼接 (可传入 NSString NSNumber)
-    return [NSString stringWithFormat:@"%@%@", jx_strValue(value0), jx_strValue(value1)];
+    NSString *str0 = jx_strValue(value0);
+    NSString *str1 = jx_strValue(value1);
+    return [NSString stringWithFormat:@"%@%@", str0.length == 0 ? @"" : str0, str1.length == 0 ? @"" : str1];
 }
 
 static inline NSString *jx_strCat3(id value0, id value1, id value2) {   // 3个字符串拼接 (可传入 NSString NSNumber)
-    return jx_strCat2(jx_strCat2(value0, value1), jx_isStringOrNumber(value2) ? value2 : @"");
+    return jx_strCat2(jx_strCat2(value0, value1), value2);
 }
 
 static inline NSInteger jx_intValue(id value) {             // 转 NSInteger
