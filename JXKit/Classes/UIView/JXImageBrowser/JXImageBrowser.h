@@ -19,13 +19,18 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface JXImage : NSObject
 
 NS_CLASS_AVAILABLE_IOS(8_0) @interface JXImageBrowser : UIView
 
-// 实例化并设置回调
-+ (instancetype)imageBrowser;
-@property (nonatomic, copy) void (^loadImage)(NSURL *URL, void (^ _Nullable progress)(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL), void (^ _Nullable completed)(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished, NSURL * _Nullable imageURL));
-
 // images 将要显示的图片数组, fromIndex 最先显示的索引
-- (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex;
-+ (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex;
++ (void)browseImages:(NSArray <JXImage *> *)images
+           fromIndex:(NSInteger)fromIndex
+       withLoadImage:(void (^)(NSURL *URL,
+                               void (^ _Nullable progress)(NSInteger receivedSize,
+                                                           NSInteger expectedSize,
+                                                           NSURL * _Nullable targetURL),
+                               void (^ _Nullable completed)(UIImage * _Nullable image,
+                                                            NSData * _Nullable data,
+                                                            NSError * _Nullable error,
+                                                            BOOL finished,
+                                                            NSURL * _Nullable imageURL)))loadImage;
 
 NS_ASSUME_NONNULL_END
 

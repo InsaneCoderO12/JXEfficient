@@ -423,6 +423,8 @@ JX_IMAGE_BROWSER_DEALLOC_TEST
 @property (nonatomic, assign)   NSInteger                       numberImages;
 @property (nonatomic, assign)   CGFloat                         xOffsetPre;
 
+@property (nonatomic, copy) void (^loadImage)(NSURL *URL, void (^ _Nullable progress)(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL), void (^ _Nullable completed)(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished, NSURL * _Nullable imageURL));
+
 @end
 
 static JXImageBrowser *imageBrowser_;
@@ -434,7 +436,12 @@ static JXImageBrowser *imageBrowser_;
     return imageBrowser_;
 }
 
-- (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex {
++ (void)browseImages:(NSArray <JXImage *> *)images
+           fromIndex:(NSInteger)fromIndex
+       withLoadImage:(nonnull void (^)(NSURL * _Nonnull,
+                                       void (^ _Nullable)(NSInteger, NSInteger, NSURL * _Nullable),
+                                       void (^ _Nullable)(UIImage * _Nullable, NSData * _Nullable, NSError * _Nullable, BOOL, NSURL * _Nullable)))loadImage
+{
     if (fromIndex < 0 || fromIndex >= images.count) {
         return;
     }
@@ -444,9 +451,8 @@ static JXImageBrowser *imageBrowser_;
         images[i].firstGrace = i == fromIndex;
     }
     
-    self.images = images;
-    self.currentIndex = fromIndex;
-    self.numberImages = images.count;
+    imageBrowser_ = [[JXImageBrowser alloc] initWith:images fromIndex:fromIndex];
+    imageBrowser_.loadImage = loadImage;
     [imageBrowser_ createComponents];
     
     [UIView animateWithDuration:kAnimationDuration animations:^{
@@ -454,7 +460,7 @@ static JXImageBrowser *imageBrowser_;
     }];
 }
 
-- (instancetype)init {
+- (instancetype)initWith:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex {
     if (self = [super init]) {
         self.bgWindow = [[JXWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.bgWindow.windowLevel = UIWindowLevelStatusBar;
@@ -463,6 +469,9 @@ static JXImageBrowser *imageBrowser_;
         self.bgWindow.rootViewController = self.bgVC;
         self.bgWindow.hidden = NO;
         
+        self.images = images;
+        self.currentIndex = fromIndex;
+        self.numberImages = images.count;
         self.bgView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.bgView.backgroundColor = [UIColor clearColor];
         [self.bgWindow.rootViewController.view addSubview:self.bgView];
@@ -506,10 +515,10 @@ static JXImageBrowser *imageBrowser_;
         CGRect rectImageView = CGRectMake((fromIndexRefresh + i) * (_wSelf + kInteritemSpace), 0, _wSelf, _hSelf);
         JXImageView *jxImageView = [[JXImageView alloc] initWithFrame:rectImageView];
         [self.scrollView addSubview:jxImageView];
+        jxImageView.loadImage = self.loadImage;
         [jxImageView setDelegate:self];
         [self.imgViews addObject:jxImageView];
         jxImageView.jxImage = self.images[fromIndexRefresh + i];
-        jxImageView.loadImage = self.loadImage;
     }
     
     //
