@@ -32,6 +32,8 @@
 
 // UIView
 #import "JXQRCodeScanView.h"
+#import "JXImageBrowser.h"
+#import "JXRollView.h"
 
 @interface JXKit : NSObject
 
