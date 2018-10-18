@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "JXKit"
-  s.version = "0.1.34"
+  s.version = "0.1.61"
   s.summary = "A short description of JXKit."
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"CoderSun"=>"codersun@126.com"}
