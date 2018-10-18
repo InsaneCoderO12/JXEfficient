@@ -75,6 +75,8 @@ JX_IMAGE_BROWSER_DEALLOC_TEST
 @property (nonatomic, assign)   CGFloat                     wSelf;
 @property (nonatomic, assign)   CGFloat                     hSelf;
 
+@property (nonatomic, copy) void (^loadImage)(NSURL *URL, void (^ _Nullable progress)(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL), void (^ _Nullable completed)(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished, NSURL * _Nullable imageURL));
+
 @end
 
 @implementation JXImageView
@@ -168,7 +170,7 @@ JX_IMAGE_BROWSER_DEALLOC_TEST
         [self reFrameImageView];
         
         //
-        JXImageBrowser.loadImage(self.jxImage.urlImg, ^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        self.loadImage(self.jxImage.urlImg, ^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
             CGFloat percent = 1.f * receivedSize / expectedSize;
             if (percent >= jxImage.progressDownload) {
                 jxImage.progressDownload = percent;
@@ -427,7 +429,12 @@ static JXImageBrowser *imageBrowser_;
 
 @implementation JXImageBrowser
 
-+ (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex {
++ (instancetype)imageBrowser {
+    imageBrowser_ = [[JXImageBrowser alloc] init];
+    return imageBrowser_;
+}
+
+- (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex {
     if (fromIndex < 0 || fromIndex >= images.count) {
         return;
     }
@@ -437,7 +444,9 @@ static JXImageBrowser *imageBrowser_;
         images[i].firstGrace = i == fromIndex;
     }
     
-    imageBrowser_ = [[JXImageBrowser alloc] initWith:images fromIndex:fromIndex];
+    self.images = images;
+    self.currentIndex = fromIndex;
+    self.numberImages = images.count;
     [imageBrowser_ createComponents];
     
     [UIView animateWithDuration:kAnimationDuration animations:^{
@@ -445,7 +454,7 @@ static JXImageBrowser *imageBrowser_;
     }];
 }
 
-- (instancetype)initWith:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex {
+- (instancetype)init {
     if (self = [super init]) {
         self.bgWindow = [[JXWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.bgWindow.windowLevel = UIWindowLevelStatusBar;
@@ -454,9 +463,6 @@ static JXImageBrowser *imageBrowser_;
         self.bgWindow.rootViewController = self.bgVC;
         self.bgWindow.hidden = NO;
         
-        self.images = images;
-        self.currentIndex = fromIndex;
-        self.numberImages = images.count;
         self.bgView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.bgView.backgroundColor = [UIColor clearColor];
         [self.bgWindow.rootViewController.view addSubview:self.bgView];
@@ -503,6 +509,7 @@ static JXImageBrowser *imageBrowser_;
         [jxImageView setDelegate:self];
         [self.imgViews addObject:jxImageView];
         jxImageView.jxImage = self.images[fromIndexRefresh + i];
+        jxImageView.loadImage = self.loadImage;
     }
     
     //
