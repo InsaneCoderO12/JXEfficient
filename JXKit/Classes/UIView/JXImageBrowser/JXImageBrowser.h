@@ -25,6 +25,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface JXImageBrowser : UIView
 
 // images 将要显示的图片数组, fromIndex 最先显示的索引
 - (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex;
++ (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex;
 
 NS_ASSUME_NONNULL_END
 
