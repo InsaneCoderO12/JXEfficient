@@ -8,63 +8,22 @@
 
 #import "JXAppDelegate.h"
 #import "JXKit.h"
+#import "JXViewController.h"
 
 @implementation JXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    
-    
-    // https%3A%2F%2Fwww.baidu.com%3Fname%3D%E4%BD%A0%26age%3D7834%26%2A%2F%5D%2Arrrr
-    // https%3A%2F%2Fwww.baidu.com%3Fname%3D%E4%BD%A0%26age%3D7834%26%2A%2F%5D%2Arrrr
 
-//    NSString *tempString = @"https://www.baidu.com?name=你&age=7834&*/]*rrrr";
-//
-//    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
-//    // https://www.baidu.com?name=%E4%BD%A0&age=7834&*/%5D*rrrr
-//
-//    NSString *en = urlValue(tempString).absoluteString;
-//
-//    NSString *de = [en jx_URLDecoded];
-//
-//    NSLog(@"");
+//    UIImage *tempImage = [UIImage imageNamed:@"WX20181023-180131@2x"];
+//    NSString *QRCodeString = [UIImage jx_QRCodeStringFromImage:tempImage];
+//    UIImage *newImage = [UIImage jx_QRCodeImageFromString:QRCodeString px_sideLength:100];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[JXViewController alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 
-//
-//    NSString *didString = URLStringValue(tempString);
-//    didString = URLStringValue(didString);
-//    didString = URLStringValue(didString);
-//    didString = URLStringValue(didString);
-//    NSURL *didURL = URLValue(tempString);
-    
-//    NSString *num = [NSString jx_decimalStyle:3.001f];
-//    NSString *num = [NSString jx_priceDecimalString:123456.789];
-    NSString *num = [NSString jx_priceDecimalStyleString:123456.789];
-    NSLog(@"%@", num);
-    
-    
-    
-    NSString *beginDate = jx_strCat3(@"当前积分总和（", @(222), @" - 至今）");
-    NSLog(@"");
 
-    
-//    temp = @"https://app.mixcapp.com/h5/invitation/templets/invitation.html?inviteCode=WXycOpbl&userName=%E4%BA%8C%E7%BB%B4%E7%A0%81&appVersion=2.7.1&mallNo=0202A003&timestamp=1527912762798";
-    
-//    NSURLComponents *com = [[NSURLComponents alloc] initWithString:@"https://www.baidu.com?name=你&age=%"];
-////
-//    NSURL *url = com.URL;
-    
-//    NSURL *url = urlValue(temp.absoluteString);
-//    url = urlValue(url.absoluteString);
-//    url = urlValue(url.absoluteString);
-//    url = urlValue(url.absoluteString);
-//
-//    NSString *s = urlEncode(@"mixc/wwcom?name=你&age=%");
-
-    NSDictionary *tempDic = [NSString jx_paramsForURLString:@"https://host/path?mixcNativeUrl=mixc%3a%2f%2fapp%2fregister&mallNo=XXX&businessChannel=XXX"];
-    
-    NSLog(@"%@", tempDic);
-    
     
     return YES;
 }

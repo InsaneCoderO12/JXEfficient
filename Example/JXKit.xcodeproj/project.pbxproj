@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C84E0ACB217F32AC004CDA10 /* WX20181023-180131@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C84E0ACA217F32AC004CDA10 /* WX20181023-180131@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72DC75EAE3052BE93AA67203 /* Pods-JXKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXKit_Example/Pods-JXKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C84E0ACA217F32AC004CDA10 /* WX20181023-180131@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WX20181023-180131@2x.png"; sourceTree = "<group>"; };
 		D84251F91D42339CBC3CFA09 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DDE7E4AE2FEDD21950C1148F /* JXKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JXKit.podspec; path = ../JXKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F2F651161B0BC4CB526688E8 /* Pods-JXKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXKit_Example/Pods-JXKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				6003F59C195388D20070C39A /* JXAppDelegate.h */,
 				6003F59D195388D20070C39A /* JXAppDelegate.m */,
+				C84E0ACA217F32AC004CDA10 /* WX20181023-180131@2x.png */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* JXViewController.h */,
 				6003F5A6195388D20070C39A /* JXViewController.m */,
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84E0ACB217F32AC004CDA10 /* WX20181023-180131@2x.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,

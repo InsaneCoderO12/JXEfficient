@@ -175,6 +175,73 @@
     return [pdfImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
++ (NSString *)jx_QRCodeStringFromImageOfBase64String:(NSString *)base64String {
+    NSData *QRData = [[NSData alloc] initWithBase64EncodedString:base64String options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    if (QRData.length <= 0) {
+        return nil;
+    }
+    UIImage *image = [UIImage imageWithData:QRData];
+    if (image.size.width <= 0 && image.size.height <= 0) {
+        return nil;
+    }
+    NSString *QRCodeString = [self jx_QRCodeStringFromImage:image];
+    return QRCodeString;
+}
+
++ (NSString *)jx_QRCodeStringFromImage:(UIImage *)image {
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
+                                              context:nil
+                                              options:@{
+                                                        CIDetectorAccuracy: CIDetectorAccuracyHigh
+                                                        }];
+    CIImage *ciImage = [[CIImage alloc] initWithImage:image];
+    if (!ciImage) {
+        return nil;
+    }
+    NSArray *features = [detector featuresInImage:ciImage];
+    if (features.count <= 0) {
+        return nil;
+    }
+    CIQRCodeFeature *feature = features.firstObject;
+    NSString *QRCodeString = feature.messageString;
+    return QRCodeString;
+}
+
++ (UIImage *)jx_QRCodeImageFromString:(NSString *)string pt_sideLength:(CGFloat)pt_sideLength {
+    CGFloat screenScale = [UIScreen mainScreen].scale;
+    CGFloat px_sideLength = pt_sideLength * screenScale;
+    
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [filter setDefaults];
+    
+    //
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    [filter setValue:data forKeyPath:@"inputMessage"];
+    CIImage *ciImage = [filter outputImage];
+    
+    //
+    CGRect extent = CGRectIntegral(ciImage.extent);
+    CGFloat scale = MIN(px_sideLength/CGRectGetWidth(extent), px_sideLength/CGRectGetHeight(extent));
+
+    //
+    size_t width = CGRectGetWidth(extent) * scale;
+    size_t height = CGRectGetHeight(extent) * scale;
+    CGColorSpaceRef cs = CGColorSpaceCreateDeviceGray();
+    CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, cs, (CGBitmapInfo)kCGImageAlphaNone);
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef bitmapImage = [context createCGImage:ciImage fromRect:extent];
+    CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
+    CGContextScaleCTM(bitmapRef, scale, scale);
+    CGContextDrawImage(bitmapRef, extent, bitmapImage);
+    
+    //
+    CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
+    CGContextRelease(bitmapRef);
+    CGImageRelease(bitmapImage);
+    UIImage *uiImage = [UIImage imageWithCGImage:scaledImage scale:screenScale orientation:UIImageOrientationUp];
+    return uiImage;
+}
+
 @end
 
 

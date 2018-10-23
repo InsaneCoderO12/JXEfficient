@@ -28,4 +28,9 @@
 
 + (UIImage *)jx_PDFImage:(id)dataOrPath;
 
+// QRCode
++ (NSString *)jx_QRCodeStringFromImageOfBase64String:(NSString *)base64String; // 根据 base64 编码后的二维码 返回二维码字符串
++ (NSString *)jx_QRCodeStringFromImage:(UIImage *)image; // 根据图片 返回二维码字符串
++ (UIImage *)jx_QRCodeImageFromString:(NSString *)string pt_sideLength:(CGFloat)pt_sideLength; // 指定边长返回二维码图片
+
 @end

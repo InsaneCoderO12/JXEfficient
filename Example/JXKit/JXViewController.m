@@ -20,14 +20,17 @@
     [super viewDidLoad];
     
 
-//    [self.view jx_showToast:@"skdkfj" animated:YES];
+    UIImage *tempImage = [UIImage imageNamed:@"WX20181023-180131@2x"];
+    NSString *QRCodeString = [UIImage jx_QRCodeStringFromImage:tempImage];
+    UIImage *newImage = [UIImage jx_QRCodeImageFromString:QRCodeString pt_sideLength:300];
     
-    [self.view jx_showProgressHUD:@"加载中" animation:NO];
+    NSLog(@"%@ %lf", NSStringFromCGSize(newImage.size), newImage.scale);
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.view jx_hideProgressHUD:YES];
-    });
 
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 200, 300, 300)];
+    [self.view addSubview:imgView];
+    imgView.image = newImage;
+    
     
     
 	// Do any additional setup after loading the view, typically from a nib.
