@@ -19,11 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)jx_URLEncoded;
 - (NSString *)jx_URLDecoded;
-- (NSString *)jx_URLDecoded_loop; // 最多进行 10 次 URLDecode
+- (NSString *)jx_URLDecoded_loop; // URLDecoded 直到全部被 Decoded, 最多进行 10 次 URLDecode
 
 //
-- (NSString *)jx_URLAddParameters:(NSDictionary *)parameters;
-+ (NSDictionary *)jx_paramsForURLString:(NSString *)URL;
+- (NSString *)jx_URLAddParameters:(NSDictionary *)parameters; // 给 URLString 添加参数
++ (NSDictionary *)jx_paramsForURLString:(NSString *)URL; // 取得 URLString 里的参数
 
 - (CGFloat)jx_widthForFont:(UIFont *)font;
 
