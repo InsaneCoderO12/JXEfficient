@@ -128,7 +128,7 @@ static inline NSString *jx_URLStringValue(id value) {
 
 static NSString *const jx_kPercentEncodingCharacters = @"!*'();:@&=+$,/?%#[]";
 // 编码 URLEncodedString <强制对 kPercentEncodingCharacters 进行 PercentEncoding 转换>
-static inline NSString *URLEncodedString(id value) {
+static inline NSString *jx_URLEncodedString(id value) {
     NSString *tempEncoded = nil;
     if ([value isKindOfClass:[NSURL class]]) {
         NSURL *URL = (NSURL *)value;

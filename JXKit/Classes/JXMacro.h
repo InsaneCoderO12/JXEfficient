@@ -31,8 +31,8 @@
 #define COLOR_SYS_IMG_BG            COLOR_RGB(217, 217, 217)        // (D9D9D9) 图片背景
 #define COLOR_SYS_SEARCH            COLOR_RGB(200, 200, 206)        // (C8C8CE) 搜索框边上颜色
 
-#define WEAK_SELF                   __weak __typeof(self) weakSelf = self
-#define STRONG_SELF                 __strong __typeof(weakSelf) self = weakSelf
+#define JX_WEAK_SELF                __weak __typeof(self) weakSelf = self
+#define JX_STRONG_SELF              __strong __typeof(weakSelf) self = weakSelf
 
 #define W_SCREEN                    [UIScreen mainScreen].bounds.size.width         // 屏幕宽
 #define H_SCREEN                    [UIScreen mainScreen].bounds.size.height        // 屏幕高
@@ -40,7 +40,6 @@
 #define IS_STATUSBAR_44             (H_STATUSBAR == 44.f)                           // iPhone X
 #define H_NAVBAR                    (IS_STATUSBAR_44 ? 88.f : 64.f)                 // 导航条高
 #define H_TABBAR                    (IS_STATUSBAR_44 ? 83.f : 49.f)                 // 标签栏高
-#define H_UNSAFE_AREA_BOTTOM        (H_TABBAR - 49.f)                               // 底部不安全高度
 #define IS_320_W                    (W_SCREEN == 320.f ? YES : NO)                  // 是否是 320 宽的手机 5s
 #define IS_375_W                    (W_SCREEN == 375.f ? YES : NO)                  // 是否是 375 宽的手机 6s
 #define IS_414_W                    (W_SCREEN == 414.f ? YES : NO)                  // 是否是 414 宽的手机 6sP
@@ -50,9 +49,9 @@
 #define IS_736_H                    (H_SCREEN == 736.f ? YES : NO)                  // 是否是 736 高的手机 6sP
 #define IS_812_H                    (H_SCREEN == 812.f ? YES : NO)                  // 是否是 812 高的手机 iPhone X
 
-#define ONE_SCREEN_PIX              (1.f / [UIScreen mainScreen].scale)             // 屏幕一个像素
-#define SECONDS_OF_DAY              86400                                           // 一天的秒数
-#define UNUSE_AREA_OF_BOTTOM        (H_TABBAR - 49.f)                               // X 底部闲置区域
+#define JX_ONE_SCREEN_PIX           (1.f / [UIScreen mainScreen].scale)             // 屏幕一个像素
+#define JX_SECONDS_OF_DAY           86400                                           // 一天的秒数
+#define JX_UNUSE_AREA_OF_BOTTOM     (H_TABBAR - 49.f)                               // X 底部闲置区域
 #define JX_BLOCK_EXEC(block, ...)   !block ? nil : block(__VA_ARGS__)               // 执行无返回值的 block
 
 @interface JXMacro : NSObject

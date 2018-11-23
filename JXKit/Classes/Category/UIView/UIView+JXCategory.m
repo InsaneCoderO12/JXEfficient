@@ -7,7 +7,6 @@
 //
 
 #import "UIView+JXCategory.h"
-#import "UIView+JXToastAndProgressHUD.h"
 
 @implementation UIView (JXCategory)
 
