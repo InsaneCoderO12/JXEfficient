@@ -52,7 +52,7 @@ NSString *const JXDotFormat = @"yyyy.MM.dd HH:mm:ss";
         return;
     }
     NSInteger
-    secondsOfDay = SECONDS_OF_DAY,
+    secondsOfDay = JX_SECONDS_OF_DAY,
     secondsOfHour = 60 * 60,
     secondsOfMinute = 60,
     left = seconds;
