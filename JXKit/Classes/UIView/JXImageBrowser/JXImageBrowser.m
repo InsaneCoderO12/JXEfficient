@@ -425,6 +425,8 @@ JX_IMAGE_BROWSER_DEALLOC_TEST
 
 @property (nonatomic, copy) void (^loadImage)(NSURL *URL, void (^ _Nullable progress)(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL), void (^ _Nullable completed)(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished, NSURL * _Nullable imageURL));
 
+@property (nonatomic, assign) BOOL hideDotForSingle;
+
 @end
 
 static JXImageBrowser *imageBrowser_;
@@ -442,6 +444,15 @@ static JXImageBrowser *imageBrowser_;
                                        void (^ _Nullable)(NSInteger, NSInteger, NSURL * _Nullable),
                                        void (^ _Nullable)(UIImage * _Nullable, NSData * _Nullable, NSError * _Nullable, BOOL, NSURL * _Nullable)))loadImage
 {
+    [self browseImages:images fromIndex:fromIndex hideDotForSingle:NO withLoadImage:loadImage];
+}
+
++ (void)browseImages:(NSArray<JXImage *> *)images
+           fromIndex:(NSInteger)fromIndex
+    hideDotForSingle:(BOOL)hideDotForSingle
+       withLoadImage:(void (^)(NSURL * _Nonnull, void (^ _Nullable)(NSInteger, NSInteger, NSURL * _Nullable),
+                               void (^ _Nullable)(UIImage * _Nullable, NSData * _Nullable, NSError * _Nullable, BOOL, NSURL * _Nullable)))loadImage {
+    
     if (fromIndex < 0 || fromIndex >= images.count) {
         return;
     }
@@ -453,6 +464,7 @@ static JXImageBrowser *imageBrowser_;
     
     imageBrowser_ = [[JXImageBrowser alloc] initWith:images fromIndex:fromIndex];
     imageBrowser_.loadImage = loadImage;
+    imageBrowser_.hideDotForSingle = hideDotForSingle;
     [imageBrowser_ createComponents];
     
     [UIView animateWithDuration:kAnimationDuration animations:^{
@@ -522,11 +534,13 @@ static JXImageBrowser *imageBrowser_;
     }
     
     //
-    self.pageCtl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, _hSelf - 50, _wSelf, 50)];
-    [self.bgView addSubview:self.pageCtl];
-    self.pageCtl.numberOfPages = self.numberImages;
-    self.pageCtl.currentPage = self.currentIndex;
-    self.pageCtl.userInteractionEnabled = NO;
+    if (self.numberImages > 1) {
+        self.pageCtl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, _hSelf - 50, _wSelf, 50)];
+        [self.bgView addSubview:self.pageCtl];
+        self.pageCtl.numberOfPages = self.numberImages;
+        self.pageCtl.currentPage = self.currentIndex;
+        self.pageCtl.userInteractionEnabled = NO;
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

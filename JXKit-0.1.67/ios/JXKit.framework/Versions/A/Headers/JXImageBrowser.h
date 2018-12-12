@@ -19,25 +19,9 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface JXImage : NSObject
 
 NS_CLASS_AVAILABLE_IOS(8_0) @interface JXImageBrowser : UIView
 
-// 默认: images 将要显示的图片数组, fromIndex 最先显示的索引
+// images 将要显示的图片数组, fromIndex 最先显示的索引
 + (void)browseImages:(NSArray <JXImage *> *)images
            fromIndex:(NSInteger)fromIndex
-       withLoadImage:(void (^)(NSURL *URL,
-                               void (^ _Nullable progress)(NSInteger receivedSize,
-                                                           NSInteger expectedSize,
-                                                           NSURL * _Nullable targetURL),
-                               void (^ _Nullable completed)(UIImage * _Nullable image,
-                                                            NSData * _Nullable data,
-                                                            NSError * _Nullable error,
-                                                            BOOL finished,
-                                                            NSURL * _Nullable imageURL)))loadImage;
-
-/* 自定义: 更多传入参数
- hideDotForSingle: 一张图片的时候隐藏底部的 Indicator 点
- */
-+ (void)browseImages:(NSArray <JXImage *> *)images
-           fromIndex:(NSInteger)fromIndex
-    hideDotForSingle:(BOOL)hideDotForSingle
        withLoadImage:(void (^)(NSURL *URL,
                                void (^ _Nullable progress)(NSInteger receivedSize,
                                                            NSInteger expectedSize,
