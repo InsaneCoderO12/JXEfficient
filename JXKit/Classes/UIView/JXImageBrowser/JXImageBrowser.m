@@ -534,7 +534,10 @@ static JXImageBrowser *imageBrowser_;
     }
     
     //
-    if (self.numberImages > 1) {
+    if (self.hideDotForSingle && self.numberImages <= 1) {
+        
+    }
+    else {
         self.pageCtl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, _hSelf - 50, _wSelf, 50)];
         [self.bgView addSubview:self.pageCtl];
         self.pageCtl.numberOfPages = self.numberImages;
