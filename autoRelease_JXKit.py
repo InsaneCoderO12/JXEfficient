@@ -65,7 +65,7 @@ def push_git(tag_new):
 #
 def pod_repo_push():
     # 发布组件版本
-    os.system("pod repo push %s %s.podspec --use-libraries --allow-warnings" % (pod_Spec_Repo, proj_name))
+    os.system("pod repo push %s %s.podspec --allow-warnings" % (pod_Spec_Repo, proj_name))
 
 #
 def main():
