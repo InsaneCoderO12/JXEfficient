@@ -52,7 +52,7 @@
 }
 
 - (NSString *)jx_URLEncoded {
-    NSString *charactersToEscape = @"!*'();:@&=+$,/?%#[]";
+    NSString *charactersToEscape = @"!*'();:@&=+$,/?%#[]^\"`<> {}\\|";
     NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
     NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
     return encodedUrl;
