@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)jx_widthForFont:(UIFont *)font;
 
+#pragma mark 浮点数
 // 12345.432 -> 12,345.432 转三位分节格式 NSNumberFormatterDecimalStyle
 + (NSString *)jx_decimalStyle:(CGFloat)num;
 
@@ -41,6 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 123456.40 -> ￥123,456.4 自动去除无效小数点位 & 添加人民币符号 & NSNumberFormatterDecimalStyle样式
 + (NSString *)jx_priceDecimalStyleString:(CGFloat)num;
+
+#pragma mark 其它
+- (NSString *)jx_stringByTrimmingWhitespaceAndNewlineCharacter; // 修剪掉 前后 空格和回车
 
 @end
 

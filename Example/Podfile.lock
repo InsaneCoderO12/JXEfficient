@@ -1,5 +1,5 @@
 PODS:
-  - JXKit (0.1.64)
+  - JXKit (0.1.77)
 
 DEPENDENCIES:
   - JXKit (from `~/Desktop/GitHub/JXKit/JXKit.podspec`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "~/Desktop/GitHub/JXKit/JXKit.podspec"
 
 SPEC CHECKSUMS:
-  JXKit: d0bed908305c481f55ea5736bc681ada8d2612a8
+  JXKit: e14750ec05bb23ebac978681f6adaaef5c6486c8
 
 PODFILE CHECKSUM: ae4d79474d9d783f46dc5de4583239511c5569f4
 

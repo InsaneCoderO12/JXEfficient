@@ -23,7 +23,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-
+    NSString *newStr = [@"\nalskdf a;df \r\n sdkf \r\n" jx_stringByTrimmingWhitespaceAndNewlineCharacter];
+    
+    
     
     
     return YES;

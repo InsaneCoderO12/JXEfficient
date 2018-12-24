@@ -315,6 +315,12 @@
     return [formatter stringFromNumber:@(num)];
 }
 
+- (NSString *)jx_stringByTrimmingWhitespaceAndNewlineCharacter {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *newText = [self stringByTrimmingCharactersInSet:set];
+    return newText;
+}
+
 @end
 
 
