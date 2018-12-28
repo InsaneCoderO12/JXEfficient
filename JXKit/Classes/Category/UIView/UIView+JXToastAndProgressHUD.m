@@ -8,6 +8,7 @@
 
 #import "UIView+JXToastAndProgressHUD.h"
 #import "JXMacro.h"
+#import "JXInline.h"
 
 static const CGFloat kToastViewShowAnimTime = .15f;
 static const CGFloat kToastViewHideAnimTime = .35f;
@@ -39,6 +40,8 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 @interface JX_Toast_View : UIView
 
 + (void)resetStyle;
+
+@property (nonatomic, copy) NSString *toastID;
 
 @end
 
@@ -125,25 +128,56 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 }
 
 #pragma mark 消息弹窗提示
+// toast 提示
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated {
-    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:nil];
+    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:nil toastId:nil];
 }
 
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated complete:(void (^)(void))complete {
-    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:complete];
+    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:complete toastId:nil];
 }
 
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset {
-    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:nil];
+    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:nil toastId:nil];
 }
 
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset complete:(void (^)(void))complete {
-    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:complete];
+    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:complete toastId:nil];
 }
 
-- (void)showToast:(NSString *)toast animated:(BOOL)animated inCenter:(BOOL)inCenter yOffset:(CGFloat)yOffset complete:(void (^)(void))complete {
+// toast 提示 带 toastId
+- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId {
+    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:nil toastId:toastId];
+}
+
+- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId complete:(void (^)(void))complete {
+    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:complete toastId:toastId];
+}
+
+- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId yOffset:(CGFloat)yOffset {
+    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:nil toastId:toastId];
+}
+
+- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId yOffset:(CGFloat)yOffset complete:(void (^)(void))complete {
+    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:complete toastId:toastId];
+}
+
+- (void)showToast:(NSString *)toast
+         animated:(BOOL)animated
+         inCenter:(BOOL)inCenter
+          yOffset:(CGFloat)yOffset
+         complete:(void (^)(void))complete
+          toastId:(NSString *)toastId {
     //
-    if (!toast || ![toast isKindOfClass:[NSString class]] || toast.length == 0) {
+    toast = jx_strValue(toast);
+    if (toast.length == 0) {
+        return;
+    }
+    
+    //
+    NSString *toastID_found = [self jx_toastID];
+    NSString *toastID_now = jx_strValue(toastId);
+    if (toastID_found && [toastID_found isEqualToString:toastId] ) {
         return;
     }
     
@@ -157,6 +191,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
     toastView.translatesAutoresizingMaskIntoConstraints = NO;
     toastView.layer.cornerRadius = 6.f;
     toastView.clipsToBounds = YES;
+    toastView.toastID = toastID_now;
     
     //
     UILabel *toastLabel = [[UILabel alloc] init];
@@ -315,6 +350,18 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
         }
     }
     return ret;
+}
+
+- (NSString *)jx_toastID {
+    NSString *toastID = nil;
+    for (UIView *viewEnum in self.subviews) {
+        if ([viewEnum isKindOfClass:[JX_Toast_View class]]) {
+            JX_Toast_View *toastView = (JX_Toast_View *)viewEnum;
+            toastID = toastView.toastID;
+            break;
+        }
+    }
+    return toastID;
 }
 
 #pragma mark progresssHUD
