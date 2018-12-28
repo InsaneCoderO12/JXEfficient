@@ -158,7 +158,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
     }
     
     //
-    NSString *toast_found = [self jx_toastID];
+    NSString *toast_found = [self jx_toastInSelf];
     NSString *toast_now = jx_strValue(toast);
     if (toast_found && [toast_found isEqualToString:toast] ) {
         return;
@@ -335,16 +335,16 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
     return ret;
 }
 
-- (NSString *)jx_toastID {
-    NSString *toastID = nil;
+- (NSString *)jx_toastInSelf {
+    NSString *toast = nil;
     for (UIView *viewEnum in self.subviews) {
         if ([viewEnum isKindOfClass:[JX_Toast_View class]]) {
             JX_Toast_View *toastView = (JX_Toast_View *)viewEnum;
-            toastID = toastView.toastID;
+            toast = toastView.toast;
             break;
         }
     }
-    return toastID;
+    return toast;
 }
 
 #pragma mark progresssHUD
