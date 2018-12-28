@@ -41,7 +41,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 
 + (void)resetStyle;
 
-@property (nonatomic, copy) NSString *toastID;
+@property (nonatomic, copy) NSString *toast;
 
 @end
 
@@ -130,36 +130,19 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 #pragma mark 消息弹窗提示
 // toast 提示
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated {
-    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:nil toastId:nil];
+    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:nil];
 }
 
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated complete:(void (^)(void))complete {
-    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:complete toastId:nil];
+    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:complete];
 }
 
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset {
-    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:nil toastId:nil];
+    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:nil];
 }
 
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset complete:(void (^)(void))complete {
-    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:complete toastId:nil];
-}
-
-// toast 提示 带 toastId
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId {
-    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:nil toastId:toastId];
-}
-
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId complete:(void (^)(void))complete {
-    [self showToast:toast animated:animated inCenter:YES yOffset:0 complete:complete toastId:toastId];
-}
-
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId yOffset:(CGFloat)yOffset {
-    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:nil toastId:toastId];
-}
-
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId yOffset:(CGFloat)yOffset complete:(void (^)(void))complete {
-    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:complete toastId:toastId];
+    [self showToast:toast animated:animated inCenter:NO yOffset:yOffset complete:complete];
 }
 
 - (void)showToast:(NSString *)toast
@@ -167,7 +150,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
          inCenter:(BOOL)inCenter
           yOffset:(CGFloat)yOffset
          complete:(void (^)(void))complete
-          toastId:(NSString *)toastId {
+{
     //
     toast = jx_strValue(toast);
     if (toast.length == 0) {
@@ -175,9 +158,9 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
     }
     
     //
-    NSString *toastID_found = [self jx_toastID];
-    NSString *toastID_now = jx_strValue(toastId);
-    if (toastID_found && [toastID_found isEqualToString:toastId] ) {
+    NSString *toast_found = [self jx_toastID];
+    NSString *toast_now = jx_strValue(toast);
+    if (toast_found && [toast_found isEqualToString:toast] ) {
         return;
     }
     
@@ -191,7 +174,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
     toastView.translatesAutoresizingMaskIntoConstraints = NO;
     toastView.layer.cornerRadius = 6.f;
     toastView.clipsToBounds = YES;
-    toastView.toastID = toastID_now;
+    toastView.toast = toast_now;
     
     //
     UILabel *toastLabel = [[UILabel alloc] init];

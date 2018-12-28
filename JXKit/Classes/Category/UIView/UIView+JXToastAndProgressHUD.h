@@ -22,14 +22,6 @@
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated complete:(void (^)(void))complete;
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset;
 - (void)jx_showToast:(NSString *)toast animated:(BOOL)animated yOffset:(CGFloat)yOffset complete:(void (^)(void))complete;
-/*
- toast 提示 带 toastId
- toastId 用于校验此次 toast 是否与上次还没隐藏的 toast 是同一个 toastId, 是的话则不进行此次 toast, 否则立即隐藏上一个 toast 显示此次 toast.
- */
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId;
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId complete:(void (^)(void))complete;
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId yOffset:(CGFloat)yOffset;
-- (void)jx_showToast:(NSString *)toast animated:(BOOL)animated toastId:(NSString *)toastId yOffset:(CGFloat)yOffset complete:(void (^)(void))complete;
 - (BOOL)jx_toastShowing;
 
 #pragma mark ProgresssHUD
