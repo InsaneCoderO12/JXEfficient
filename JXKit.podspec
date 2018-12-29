@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JXKit'
-  s.version          = '0.1.82'
+  s.version          = '0.1.83'
   s.summary          = 'A short description of JXKit.'
 
 # This description is used to generate tags and improve search results.
@@ -36,6 +36,7 @@ TODO: Add long description of the pod here.
   #   'JXKit' => ['JXKit/Assets/*.png']
   # }
 
+  
   s.public_header_files = 'JXKit/Classes/**/*.h'
   #s.vendored_frameworks = 'JXKit/Frameworks/**/*.framework'
   s.frameworks = 'UIKit', 'Foundation', 'AssetsLibrary', 'Security', 'CoreLocation'
