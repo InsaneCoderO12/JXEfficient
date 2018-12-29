@@ -1,5 +1,5 @@
 //
-//  JXKit.h
+//  JXEfficient.h
 //  JXKit_Example
 //
 //  Created by augsun on 6/1/18.
@@ -35,6 +35,6 @@
 #import "JXImageBrowser.h"
 #import "JXRollView.h"
 
-@interface JXKit : NSObject
+@interface JXEfficient : NSObject
 
 @end

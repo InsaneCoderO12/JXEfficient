@@ -6,8 +6,8 @@
 //  Copyright © 2018 452720799@qq.com. All rights reserved.
 //
 
-#import "JXKit.h"
+#import "JXEfficient.h"
 
-@implementation JXKit
+@implementation JXEfficient
 
 @end

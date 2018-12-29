@@ -1,5 +1,5 @@
 PODS:
-  - JXEfficient (0.1.88)
+  - JXEfficient (0.1.89)
 
 DEPENDENCIES:
   - JXEfficient (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JXEfficient: c2ce49b95db03a980f18a69dc8d97a9ffe7a8b0f
+  JXEfficient: e82c880a5053e2e3e016649c489784f20fab2af0
 
 PODFILE CHECKSUM: 181ab98a964e31410a90ce8e87c535371ae78dc0
 
