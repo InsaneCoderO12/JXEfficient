@@ -73,7 +73,7 @@ def push_git(tag_new):
     print(status)
 
     # 创建 tag
-    os.system("git push %s" % (tag_new))
+    os.system("git push")
     os.system("git tag %s" % (tag_new))
     os.system("git push --tags")
 
