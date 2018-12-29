@@ -83,8 +83,10 @@ def push_git(tag_new):
 def pod_repo_push():
     # 发布组件版本
     # os.system("pod repo push %s %s.podspec --allow-warnings --verbose --sources=\'git@gitee.com:codersun/JXSpecRepo.git, https://github.com/CocoaPods/Specs.git\'" % (pod_Spec_Repo, proj_name))
-    os.system("pod repo push %s %s.podspec --allow-warnings --verbose" % (pod_Spec_Repo, proj_name))
+    # os.system("pod repo push %s %s.podspec --allow-warnings --verbose" % (pod_Spec_Repo, proj_name))
 
+    # github
+    os.system("pod trunk push %s.podspec --allow-warnings --verbose" % (proj_name))
 #
 def main():
     add_version()
