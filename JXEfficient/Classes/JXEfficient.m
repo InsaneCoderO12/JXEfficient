@@ -1,6 +1,6 @@
 //
-//  JXKit.m
-//  JXKit_Example
+//  JXEfficient.m
+//  JXEfficient_Example
 //
 //  Created by augsun on 6/1/18.
 //  Copyright © 2018 452720799@qq.com. All rights reserved.
