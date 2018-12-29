@@ -1,6 +1,0 @@
-framework module Pods_JXKit_Tests {
-  umbrella header "Pods-JXKit_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
