@@ -392,13 +392,13 @@ JX_IMAGE_BROWSER_DEALLOC_TEST
 @end
 
 // ====================================================================================================
-#pragma mark - JXViewController
+#pragma mark - JXImageBrowserVC
 
-@interface JXViewController : UIViewController
+@interface JXImageBrowserVC : UIViewController
 
 @end
 
-@implementation JXViewController
+@implementation JXImageBrowserVC
 
 JX_IMAGE_BROWSER_DEALLOC_TEST
 
@@ -410,7 +410,7 @@ JX_IMAGE_BROWSER_DEALLOC_TEST
 @interface JXImageBrowser () <UIScrollViewDelegate, JXImageViewDelegate>
 
 @property (nonatomic, strong)   JXWindow                        *bgWindow;
-@property (nonatomic, strong)   JXViewController                *bgVC;
+@property (nonatomic, strong)   JXImageBrowserVC                *bgVC;
 @property (nonatomic, strong)   UIView                          *bgView;
 
 @property (nonatomic, copy)     NSArray <JXImage *>             *images;
@@ -477,7 +477,7 @@ static JXImageBrowser *imageBrowser_;
         self.bgWindow = [[JXWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.bgWindow.windowLevel = UIWindowLevelStatusBar;
         
-        self.bgVC = [[JXViewController alloc] init];
+        self.bgVC = [[JXImageBrowserVC alloc] init];
         self.bgWindow.rootViewController = self.bgVC;
         self.bgWindow.hidden = NO;
         

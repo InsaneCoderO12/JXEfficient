@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "JXInline.h"
 #import "JXMacro.h"
@@ -34,7 +35,13 @@
 #import "JXQRCodeScanView.h"
 #import "JXImageBrowser.h"
 #import "JXRollView.h"
+#import "JXNaviView.h"
 
 @interface JXEfficient : NSObject
+
+#pragma mark 以下方法只在 JXEfficient 内部使用有效果<获取 JXEfficient 内部资源>
++ (NSBundle *)efficientBundle;
++ (UIImage *)imageNamed:(NSString *)name; // 获取图片资源
++ (UIImage *)PDFImageNamed:(NSString *)name; // 获取图片资源 (PDF)
 
 @end

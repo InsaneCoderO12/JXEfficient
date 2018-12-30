@@ -29,6 +29,7 @@
 #import "JXUpdateCheck.h"
 #import "JXUUIDAndKeyChain.h"
 #import "JXImageBrowser.h"
+#import "JXNaviView.h"
 #import "JXQRCodeScanView.h"
 #import "JXRollView.h"
 

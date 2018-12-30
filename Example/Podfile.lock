@@ -1,16 +1,23 @@
 PODS:
-  - JXEfficient (0.1.89)
+  - JXEfficient (0.1.93)
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - JXEfficient (from `../`)
+  - Masonry (= 1.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
 
 EXTERNAL SOURCES:
   JXEfficient:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JXEfficient: e82c880a5053e2e3e016649c489784f20fab2af0
+  JXEfficient: f6f070ba7ff501d34189bdd361bf016ae6a86131
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 181ab98a964e31410a90ce8e87c535371ae78dc0
+PODFILE CHECKSUM: 91cefc7b49eed7b2ed571bb9fe79775fcdcd7890
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

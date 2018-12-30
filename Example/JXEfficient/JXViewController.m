@@ -7,8 +7,12 @@
 //
 
 #import "JXViewController.h"
+#import <JXEfficient.h>
+#import <Masonry/Masonry.h>
 
 @interface JXViewController ()
+
+@property (nonatomic, strong) JXNaviView *naviView;
 
 @end
 
@@ -17,7 +21,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    self.naviView = [JXNaviView createFromXib];
+    [self.view addSubview:self.naviView];
+    
+    
+    [self.naviView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(H_NAVBAR);
+    }];
+//    self.naviView.backgroundColor = COLOR_RANDOM;
+    
+//    self.naviView.backButtonHidden = YES;
+    self.naviView.leftButtonTitle = @"关闭";
+    
+    self.naviView.rightButtonTitle = @"右一右1";
+    self.naviView.rightSubButtonTitle = @"右二右二";
+    
+    self.naviView.title = @"快点发水电费快点电费快点电费快点发快点发水水水水水";
+    
+//    self.naviView.bgColorStyle = YES;
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
