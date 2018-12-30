@@ -9,6 +9,9 @@
 #import "JXNaviView.h"
 #import "JXEfficient.h"
 
+static UIImage *JXNaviView_white_img_ = nil;
+static UIImage *JXNaviView_black_img_ = nil;
+
 @interface JXNaviView ()
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
@@ -33,11 +36,15 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomLineView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *h_bottomLineView;
 
+//
+@property (nonatomic, strong) UIImage *back_white_img;
+@property (nonatomic, strong) UIImage *back_black_img;
+
 @end
 
 @implementation JXNaviView
 
-+ (instancetype)createFromXib {
++ (instancetype)naviView {
     return [JXNaviView jx_createFromXibInBundle:[JXEfficient efficientBundle]];
 }
 
@@ -49,9 +56,6 @@
     _defaultStyleTitleColor = COLOR_GRAY(51);
     _bottomLineColor = COLOR_GRAY(222);
     
-    //
-    [self.backButton setImage:[JXEfficient PDFImageNamed:@"JXNaviView_black"] forState:UIControlStateNormal];
-
     //
     self.leftButton.tintColor = self.defaultStyleTitleColor;
     [self.leftButton setTitle:nil forState:UIControlStateNormal];
@@ -83,16 +87,28 @@
     self.rightButton.hidden = YES;
     [self reFrame];
     
-    
+    // TEST
 //    self.rightButton.backgroundColor = COLOR_RANDOM;
 //    self.rightSubButton.backgroundColor = COLOR_RANDOM;
 //    self.titleLabel.backgroundColor = COLOR_RANDOM;
 //    self.leftButton.backgroundColor = COLOR_RANDOM;
 //    self.backButton.backgroundColor = COLOR_RANDOM;
     
-        
 
-    
+}
+
+- (UIImage *)back_white_img {
+    if (!JXNaviView_white_img_) {
+        JXNaviView_white_img_ = [JXEfficient PDFImageNamed:@"JXNaviView_white"];
+    }
+    return JXNaviView_white_img_;
+}
+
+- (UIImage *)back_black_img {
+    if (!JXNaviView_black_img_) {
+        JXNaviView_black_img_ = [JXEfficient PDFImageNamed:@"JXNaviView_black"];
+    }
+    return JXNaviView_black_img_;
 }
 
 - (void)setDefaultStyleTitleColor:(UIColor *)defaultStyleTitleColor {
@@ -107,21 +123,21 @@
 - (void)setBottomLineColor:(UIColor *)bottomLineColor {
     if (bottomLineColor) {
         _bottomLineColor = bottomLineColor;
+        self.bottomLineView.backgroundColor = bottomLineColor;
     }
-    self.bottomLineView.backgroundColor = bottomLineColor;
 }
 
 - (void)setBgColorStyle:(BOOL)bgColorStyle {
     _bgColorStyle = bgColorStyle;
     if (bgColorStyle) {
         self.titleLabel.textColor = [UIColor whiteColor];
-        [self.backButton setImage:[JXEfficient PDFImageNamed:@"JXNaviView_white"] forState:UIControlStateNormal];
+        [self.backButton setImage:self.back_white_img forState:UIControlStateNormal];
         [self.leftButton jx_titleColorStyleNormalColor:[UIColor whiteColor] highlightedColor:[UIColor whiteColor] disabledColor:[UIColor whiteColor]];
         [self.rightButton jx_titleColorStyleNormalColor:[UIColor whiteColor] highlightedColor:[UIColor whiteColor] disabledColor:[UIColor whiteColor]];
         [self.rightSubButton jx_titleColorStyleNormalColor:[UIColor whiteColor] highlightedColor:[UIColor whiteColor] disabledColor:[UIColor whiteColor]];
     }
     else {
-        [self.backButton setImage:[JXEfficient PDFImageNamed:@"JXNaviView_black"] forState:UIControlStateNormal];
+        [self.backButton setImage:self.back_black_img forState:UIControlStateNormal];
         self.titleLabel.textColor = self.defaultStyleTitleColor;
         [self.leftButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:COLOR_GRAY(204) disabledColor:COLOR_GRAY(204)];
         [self.rightButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:COLOR_GRAY(204) disabledColor:COLOR_GRAY(204)];

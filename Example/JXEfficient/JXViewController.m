@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
 	
-    self.naviView = [JXNaviView createFromXib];
+    self.naviView = [JXNaviView naviView];
     [self.view addSubview:self.naviView];
     
     

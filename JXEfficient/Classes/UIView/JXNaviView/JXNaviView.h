@@ -44,7 +44,7 @@
 @property (nonatomic, copy) void (^rightSubButtonTap)(void);
 @property (nonatomic, assign) BOOL rightSubButtonHidden;
 
-+ (instancetype)createFromXib; // 指定初始化方法
++ (instancetype)naviView; // 指定初始化器
 
 @end
 

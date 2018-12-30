@@ -19,7 +19,7 @@
     UIImage *img = [JXEfficient PDFImageNamed:@"JXNaviView_white"];
     
     
-    JXNaviView *naviView = [JXNaviView createFromXib];
+    JXNaviView *naviView = [JXNaviView naviView];
 
     return YES;
 }
