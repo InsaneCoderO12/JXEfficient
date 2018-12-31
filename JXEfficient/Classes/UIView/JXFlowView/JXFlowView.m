@@ -10,6 +10,7 @@
 #import "JXInline.h"
 #import "UIView+JXCategory.h"
 #import "JXMacro.h"
+#import "JXEfficient.h"
 
 @implementation MCFlowLayout
 
@@ -30,6 +31,10 @@
 @end
 
 @implementation JXFlowView
+
++ (instancetype)flowView {
+    return [JXFlowView jx_createFromXibInBundle:[JXEfficient efficientBundle]];
+}
 
 - (NSMutableArray<MCFlowItemView *> *)itemViews {
     if (!_itemViews) {

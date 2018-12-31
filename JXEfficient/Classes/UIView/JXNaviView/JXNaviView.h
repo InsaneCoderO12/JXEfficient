@@ -17,6 +17,8 @@
 
 @interface JXNaviView : UIView
 
++ (instancetype)naviView; // 指定初始化器
+
 @property (nonatomic, assign) BOOL bgColorStyle; // 背景样式 def. NO (标题按钮控件置白色) <YES 时 内部文字控件反白, NO 时 内部文字控件为 defaultStyleTitleColor 颜色>
 @property (nonatomic, strong) UIColor *defaultStyleTitleColor; // bgColorStyle = NO 时生效 的标题颜色 (不设置默认为 0x333333)
 
@@ -43,8 +45,6 @@
 @property (nonatomic, strong) UIImage *rightSubButtonImage;
 @property (nonatomic, copy) void (^rightSubButtonTap)(void);
 @property (nonatomic, assign) BOOL rightSubButtonHidden;
-
-+ (instancetype)naviView; // 指定初始化器
 
 @end
 

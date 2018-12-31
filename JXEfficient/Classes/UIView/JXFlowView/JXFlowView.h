@@ -48,6 +48,8 @@
 // ====================================================================================================
 @interface JXFlowView : UIView
 
++ (instancetype)flowView; // 指定初始化器
+
 // 在 inWidth 宽度下模型化行列存放 同时计算 wCell
 + (NSArray <NSArray <MCFlowItemModel *> *> *)itemWidthsFromStrings:(NSArray <NSString *> *)strings withLayout:(MCFlowLayout *)layout;
 
