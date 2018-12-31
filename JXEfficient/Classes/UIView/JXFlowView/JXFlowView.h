@@ -40,7 +40,7 @@
 @end
 
 // ====================================================================================================
-// 子类必须继承自 MCFlowItemView
+// 子类必须继承自 MCFlowItemView 必须是 xib
 @interface MCFlowItemView : UIView
 
 @end
