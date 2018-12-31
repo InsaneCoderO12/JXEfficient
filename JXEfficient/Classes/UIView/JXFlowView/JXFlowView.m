@@ -169,10 +169,10 @@
                                                                multiplier:1.f
                                                                  constant:x],
                                    [NSLayoutConstraint constraintWithItem:itemView
-                                                                attribute:NSLayoutAttributeRight
+                                                                attribute:NSLayoutAttributeTop
                                                                 relatedBy:NSLayoutRelationEqual
                                                                    toItem:self
-                                                                attribute:NSLayoutAttributeRight
+                                                                attribute:NSLayoutAttributeTop
                                                                multiplier:1.f
                                                                  constant:y],
                                    ]
@@ -197,12 +197,6 @@
                                        ]
              ];
             
-//            [itemView mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.left.mas_equalTo(self).with.offset(x);
-//                make.top.mas_equalTo(self).with.offset(y);
-//                make.width.mas_equalTo(modelEnum.itemWidth);
-//                make.height.mas_equalTo(self.layout.itemHeight);
-//            }];
             itemView.hidden = NO;
             
             x+= (self.layout.kInterGap + modelEnum.itemWidth);

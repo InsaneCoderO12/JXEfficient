@@ -1,5 +1,5 @@
 PODS:
-  - JXEfficient (0.1.95)
+  - JXEfficient (0.1.100)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JXEfficient: 6cb4a31fd3e61479275c87c1ebd683f4a6fa9102
+  JXEfficient: 7095cebd69047bd372a644b0eecdd30089427b80
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 91cefc7b49eed7b2ed571bb9fe79775fcdcd7890
