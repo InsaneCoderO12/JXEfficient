@@ -28,6 +28,7 @@
 #import "JXSystemAlert.h"
 #import "JXUpdateCheck.h"
 #import "JXUUIDAndKeyChain.h"
+#import "JXFlowView.h"
 #import "JXImageBrowser.h"
 #import "JXNaviView.h"
 #import "JXQRCodeScanView.h"
