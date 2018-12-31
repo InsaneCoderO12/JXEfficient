@@ -67,7 +67,7 @@ def push_git(tag_new):
     # 提交当前修改
     os.chdir("%s" % project_path)
     os.system("git add -A")
-    status = os.popen("git commit -m \"push by autoRelease.py\"").read()
+    status = os.popen("git commit -m \"push by autoRelease_JXEfficient.py\"").read()
     if "nothing to commit" in status:
         return
     print(status)
