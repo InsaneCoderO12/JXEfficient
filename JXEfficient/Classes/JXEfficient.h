@@ -36,6 +36,7 @@
 #import "JXImageBrowser.h"
 #import "JXRollView.h"
 #import "JXNaviView.h"
+#import "JXFlowView.h"
 
 @interface JXEfficient : NSObject
 
