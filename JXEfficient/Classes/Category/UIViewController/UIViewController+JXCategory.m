@@ -18,4 +18,12 @@
     [self.navigationController pushViewController:vc animated:animated];
 }
 
+- (UIViewController *)jx_popVC {
+    return [self jx_popVCAnimated:YES];
+}
+
+- (UIViewController *)jx_popVCAnimated:(BOOL)animated {
+    return [self.navigationController popViewControllerAnimated:animated];
+}
+
 @end
