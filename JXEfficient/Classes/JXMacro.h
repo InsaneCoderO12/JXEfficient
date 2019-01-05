@@ -50,7 +50,7 @@
 #define IS_812_H                    (H_SCREEN == 812.f ? YES : NO)                  // 是否是 812 高的手机 iPhone X
 
 #define JX_DOCUMENT_DIRECTORY       [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
-#define JX_DOCUMENT_APPEND(path)    [MC_DOCUMENT_DIRECTORY stringByAppendingPathComponent:path]
+#define JX_DOCUMENT_APPEND(path)    [JX_DOCUMENT_DIRECTORY stringByAppendingPathComponent:path]
 #define JX_ONE_SCREEN_PIX           (1.f / [UIScreen mainScreen].scale)             // 屏幕一个像素
 #define JX_SECONDS_OF_DAY           86400                                           // 一天的秒数
 #define JX_UNUSE_AREA_OF_BOTTOM     (H_TABBAR - 49.f)                               // X 底部闲置区域
