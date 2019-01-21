@@ -14,6 +14,7 @@
 #import "NSString+JXCategory.h"
 #import "UIButton+JXCategory.h"
 #import "UICollectionView+JXCategory.h"
+#import "UIColor+JXCategory.h"
 #import "UIImage+JXCategory.h"
 #import "UIScrollView+JXCategory.h"
 #import "UITableView+JXCategory.h"

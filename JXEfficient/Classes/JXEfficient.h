@@ -23,6 +23,7 @@
 #import "UITableView+JXCategory.h"
 #import "NSDate+JXCategory.h"
 #import "UIViewController+JXCategory.h"
+#import "UIColor+JXCategory.h"
 
 //
 #import "JXJSONCache.h"
