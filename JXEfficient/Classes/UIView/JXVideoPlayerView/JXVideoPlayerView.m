@@ -215,16 +215,15 @@ static const CGFloat kProgressViewHeight = 3.0;
 - (BOOL)play {
     if (_status == JXVideoPlayerViewStatusReadyToPlay ||
         _status == JXVideoPlayerViewStatusPause ||
-        _status == JXVideoPlayerViewStatusEndPlaying) {
+        _status == JXVideoPlayerViewStatusFailure) {
         
         _status = JXVideoPlayerViewStatusPlaying;
         [self.player play];
         return YES;
     }
     else if (_status == JXVideoPlayerViewStatusEndPlaying) {
-        [self.player seekToTime:kCMTimeZero];
-        _status = JXVideoPlayerViewStatusPlaying;
-        [self.player play];
+        BOOL ret = [self rePlay];
+        return ret;
     }
     else {
         return NO;
@@ -232,9 +231,20 @@ static const CGFloat kProgressViewHeight = 3.0;
 }
 
 - (BOOL)rePlay {
-    [self.player seekToTime:kCMTimeZero];
-    BOOL ret = [self play];
-    return ret;
+    if (_status == JXVideoPlayerViewStatusReadyToPlay ||
+        _status == JXVideoPlayerViewStatusPlaying ||
+        _status == JXVideoPlayerViewStatusPause ||
+        _status == JXVideoPlayerViewStatusEndPlaying ||
+        _status == JXVideoPlayerViewStatusFailure ) {
+        
+        _status = JXVideoPlayerViewStatusPlaying;
+        [self.player seekToTime:kCMTimeZero];
+        [self.player play];
+        return YES;
+    }
+    else {
+        return NO;
+    }
 }
 
 - (void)pause {
