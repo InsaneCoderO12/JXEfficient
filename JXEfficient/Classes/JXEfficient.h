@@ -39,6 +39,7 @@
 #import "JXRollView.h"
 #import "JXNaviView.h"
 #import "JXFlowView.h"
+#import "JXVideoPlayerView.h"
 
 @interface JXEfficient : NSObject
 

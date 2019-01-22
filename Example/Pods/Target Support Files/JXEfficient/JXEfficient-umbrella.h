@@ -35,6 +35,7 @@
 #import "JXNaviView.h"
 #import "JXQRCodeScanView.h"
 #import "JXRollView.h"
+#import "JXVideoPlayerView.h"
 
 FOUNDATION_EXPORT double JXEfficientVersionNumber;
 FOUNDATION_EXPORT const unsigned char JXEfficientVersionString[];
