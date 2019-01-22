@@ -221,6 +221,11 @@ static const CGFloat kProgressViewHeight = 3.0;
         [self.player play];
         return YES;
     }
+    else if (_status == JXVideoPlayerViewStatusEndPlaying) {
+        [self.player seekToTime:kCMTimeZero];
+        _status = JXVideoPlayerViewStatusPlaying;
+        [self.player play];
+    }
     else {
         return NO;
     }
