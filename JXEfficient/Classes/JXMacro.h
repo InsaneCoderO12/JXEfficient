@@ -10,27 +10,27 @@
 
 // 自定义色
 #define JX_COLOR_RGBA(rr, gg, bb, aa)   [UIColor colorWithRed:(rr) / 255.0 green:(gg) / 255.0 blue:(bb) / 255.0 alpha:(aa) / 1.0] // RGBA 颜色
-#define JX_COLOR_RGB(rr, gg, bb)        X_COLOR_RGBA(rr, gg, bb, 1.0) // RGB 颜色
+#define JX_COLOR_RGB(rr, gg, bb)        X_COLOR_RGBA(rr, gg, bb, 1.0)                                   // RGB 颜色
 
 #define JX_COLOR_HEX(hexValue)          [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 \
                                         green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 \
                                         blue:((float)(hexValue & 0xFF)) / 255.0 \
-                                        alpha:1.0] // 十六进制 (0x9daa76)
+                                        alpha:1.0]                                                      // 十六进制 (0x9daa76)
 
-#define JX_COLOR_GRAY(gray)             JX_COLOR_RGBA(gray, gray, gray, 1.0) // 灰度 [0, 255]
-#define JX_COLOR_GRAY_PERCENT(percent)  JX_COLOR_GRAY(percent * 0.01 * 255.0) // 百分比灰度 [0, 100]
+#define JX_COLOR_GRAY(gray)             JX_COLOR_RGBA(gray, gray, gray, 1.0)                            // 灰度 [0, 255]
+#define JX_COLOR_GRAY_PERCENT(percent)  JX_COLOR_GRAY(percent * 0.01 * 255.0)                           // 百分比灰度 [0, 100]
 #define JX_COLOR_RANDOM                 JX_COLOR_RGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256)) // 随机颜色
 
 // 系统色
-#define JX_COLOR_SYS_SECTION            JX_COLOR_RGB(239, 239, 244)        // (EFEFF4) section 颜色
-#define JX_COLOR_SYS_CELL_LINE          JX_COLOR_RGB(200, 199, 204)        // (C8C7CC) cell分割线颜色
-#define JX_COLOR_SYS_CELL_SELECTION     JX_COLOR_RGB(217, 217, 217)        // (D9D9D9) cell选中颜色
-#define JX_COLOR_SYS_BLUE               JX_COLOR_RGB(000, 122, 255)        // (007AFF) btn 蓝色
-#define JX_COLOR_SYS_TAB_LINE           JX_COLOR_RGB(167, 167, 170)        // (A7A7AA) tab nav 栏的横线
-#define JX_COLOR_SYS_TAB_FONT           JX_COLOR_RGB(146, 146, 146)        // (929292) tab nav 栏的灰色字
-#define JX_COLOR_SYS_PLACEHOLDER        JX_COLOR_RGB(199, 199, 204)        // (c7c7cc) placeholder
-#define JX_COLOR_SYS_IMG_BG             JX_COLOR_RGB(217, 217, 217)        // (D9D9D9) 图片背景
-#define JX_COLOR_SYS_SEARCH             JX_COLOR_RGB(200, 200, 206)        // (C8C8CE) 搜索框边上颜色
+#define JX_COLOR_SYS_SECTION            JX_COLOR_RGB(239, 239, 244)                                     // (EFEFF4) section 颜色
+#define JX_COLOR_SYS_CELL_LINE          JX_COLOR_RGB(200, 199, 204)                                     // (C8C7CC) cell分割线颜色
+#define JX_COLOR_SYS_CELL_SELECTION     JX_COLOR_RGB(217, 217, 217)                                     // (D9D9D9) cell选中颜色
+#define JX_COLOR_SYS_BLUE               JX_COLOR_RGB(000, 122, 255)                                     // (007AFF) btn 蓝色
+#define JX_COLOR_SYS_TAB_LINE           JX_COLOR_RGB(167, 167, 170)                                     // (A7A7AA) tab nav 栏的横线
+#define JX_COLOR_SYS_TAB_FONT           JX_COLOR_RGB(146, 146, 146)                                     // (929292) tab nav 栏的灰色字
+#define JX_COLOR_SYS_PLACEHOLDER        JX_COLOR_RGB(199, 199, 204)                                     // (c7c7cc) placeholder
+#define JX_COLOR_SYS_IMG_BG             JX_COLOR_RGB(217, 217, 217)                                     // (D9D9D9) 图片背景
+#define JX_COLOR_SYS_SEARCH             JX_COLOR_RGB(200, 200, 206)                                     // (C8C8CE) 搜索框边上颜色
 
 #define JX_SCREEN_W                     [UIScreen mainScreen].bounds.size.width                         // 屏幕宽
 #define JX_SCREEN_H                     [UIScreen mainScreen].bounds.size.height                        // 屏幕高
@@ -55,12 +55,12 @@
 #define JX_WEAK_SELF                    __weak __typeof(self) weakSelf = self
 #define JX_STRONG_SELF                  __strong __typeof(weakSelf) self = weakSelf
 
-#define JX_DOCUMENT_DIRECTORY       [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] // Document 目录
-#define JX_DOCUMENT_APPEND(path)    [JX_DOCUMENT_DIRECTORY stringByAppendingPathComponent:path] // Document 下路径拼接
+#define JX_DOCUMENT_DIRECTORY           [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] // Document 目录
+#define JX_DOCUMENT_APPEND(path)        [JX_DOCUMENT_DIRECTORY stringByAppendingPathComponent:path]     // Document 下路径拼接
 
-#define JX_SECONDS_OF_DAY           86400                                                               // 一天的秒数
-#define JX_UNUSE_AREA_OF_BOTTOM     (JX_TABBAR_H - 49.0)                                                // X 底部闲置区域 34pt
-#define JX_BLOCK_EXEC(block, ...)   !block ? nil : block(__VA_ARGS__)                                   // 执行无返回值的 block
+#define JX_SECONDS_OF_DAY               86400                                                           // 一天的秒数
+#define JX_UNUSE_AREA_OF_BOTTOM         (JX_TABBAR_H - 49.0)                                            // X 底部闲置区域 34pt
+#define JX_BLOCK_EXEC(block, ...)       !block ? nil : block(__VA_ARGS__)                               // 执行无返回值的 block
 
 @interface JXMacro : NSObject
 
