@@ -49,7 +49,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 
 + (void)initialize {
     if (!kToastBgColor) {
-        kToastBgColor = COLOR_RGBA(0, 0, 0, .6f);
+        kToastBgColor = JX_COLOR_RGBA(0, 0, 0, .6f);
     }
     if (!kToastTextColor) {
         kToastTextColor = [UIColor whiteColor];
@@ -57,7 +57,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 }
 
 + (void)resetStyle {
-    kToastBgColor = COLOR_RGBA(0, 0, 0, .6f);
+    kToastBgColor = JX_COLOR_RGBA(0, 0, 0, .6f);
     kToastTextColor = [UIColor whiteColor];
 }
 
@@ -76,7 +76,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 
 + (void)initialize {
     if (!kProgressHUDBgColor) {
-        kProgressHUDBgColor = COLOR_RGBA(0, 0, 0, .6f);
+        kProgressHUDBgColor = JX_COLOR_RGBA(0, 0, 0, .6f);
     }
     if (!kProgressHUDTextColor) {
         kProgressHUDTextColor = [UIColor whiteColor];
@@ -87,7 +87,7 @@ static UIColor *kProgressHUDActivityIndicatorColor = nil;
 }
 
 + (void)resetStyle {
-    kProgressHUDBgColor = COLOR_RGBA(0, 0, 0, .6f);
+    kProgressHUDBgColor = JX_COLOR_RGBA(0, 0, 0, .6f);
     kProgressHUDTextColor = [UIColor whiteColor];
     kProgressHUDActivityIndicatorColor = [UIColor whiteColor];
 }

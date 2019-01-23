@@ -11,26 +11,28 @@
 // ====================================================================================================
 #pragma mark - (颜色)Color
 // 自定义色
-#define COLOR_RGBA(r, g, b, a)  [UIColor colorWithRed:(r) / 255.f green:(g) / 255.f blue:(b) / 255.f alpha:(a) / 1.f] // RGBA 颜色
-#define COLOR_RGB(r, g, b)      COLOR_RGBA(r, g, b, 1.f) // RGB 颜色
-#define COLOR_HEX(hexValue)     [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.f \
-                                green:((float)((hexValue & 0xFF00) >> 8)) / 255.f \
-                                blue:((float)(hexValue & 0xFF)) / 255.f \
-                                alpha:1.f] // 十六进制 (0x9daa76)
-#define COLOR_GRAY(gray)        COLOR_RGBA(gray, gray, gray, 1.f) // 灰度 [0, 255]
-#define COLOR_GRAY_PERCENT(percent) COLOR_GRAY(percent * 0.01f * 255.f) // 百分比灰度 [0, 100]
-#define COLOR_RANDOM            COLOR_RGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256)) // 随机颜色
+#define JX_COLOR_RGBA(r, g, b, a)       [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a) / 1.0] // RGBA 颜色
+#define JX_COLOR_RGB(r, g, b)           JX_COLOR_RGBA(r, g, b, 1.0) // RGB 颜色
+
+#define JX_COLOR_HEX(hexValue)          [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 \
+                                        green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 \
+                                        blue:((float)(hexValue & 0xFF)) / 255.0 \
+                                        alpha:1.0] // 十六进制 (0x9daa76)
+
+#define JX_COLOR_GRAY(gray)             JX_COLOR_RGBA(gray, gray, gray, 1.0) // 灰度 [0, 255]
+#define JX_COLOR_GRAY_PERCENT(percent)  JX_COLOR_GRAY(percent * 0.01 * 255.0) // 百分比灰度 [0, 100]
+#define JX_COLOR_RANDOM                 JX_COLOR_RGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256)) // 随机颜色
 
 // 系统色
-#define COLOR_SYS_SECTION           COLOR_RGB(239, 239, 244)        // (EFEFF4) section 颜色
-#define COLOR_SYS_CELL_LINE         COLOR_RGB(200, 199, 204)        // (C8C7CC) cell分割线颜色
-#define COLOR_SYS_CELL_SELECTION    COLOR_RGB(217, 217, 217)        // (D9D9D9) cell选中颜色
-#define COLOR_SYS_BLUE              COLOR_RGB(000, 122, 255)        // (007AFF) btn 蓝色
-#define COLOR_SYS_TAB_LINE          COLOR_RGB(167, 167, 170)        // (A7A7AA) tab nav 栏的横线
-#define COLOR_SYS_TAB_FONT          COLOR_RGB(146, 146, 146)        // (929292) tab nav 栏的灰色字
-#define COLOR_SYS_PLACEHOLDER       COLOR_RGB(199, 199, 204)        // (c7c7cc) placeholder
-#define COLOR_SYS_IMG_BG            COLOR_RGB(217, 217, 217)        // (D9D9D9) 图片背景
-#define COLOR_SYS_SEARCH            COLOR_RGB(200, 200, 206)        // (C8C8CE) 搜索框边上颜色
+#define JX_COLOR_SYS_SECTION            JX_COLOR_RGB(239, 239, 244)        // (EFEFF4) section 颜色
+#define JX_COLOR_SYS_CELL_LINE          JX_COLOR_RGB(200, 199, 204)        // (C8C7CC) cell分割线颜色
+#define JX_COLOR_SYS_CELL_SELECTION     JX_COLOR_RGB(217, 217, 217)        // (D9D9D9) cell选中颜色
+#define JX_COLOR_SYS_BLUE               JX_COLOR_RGB(000, 122, 255)        // (007AFF) btn 蓝色
+#define JX_COLOR_SYS_TAB_LINE           JX_COLOR_RGB(167, 167, 170)        // (A7A7AA) tab nav 栏的横线
+#define JX_COLOR_SYS_TAB_FONT           JX_COLOR_RGB(146, 146, 146)        // (929292) tab nav 栏的灰色字
+#define JX_COLOR_SYS_PLACEHOLDER        JX_COLOR_RGB(199, 199, 204)        // (c7c7cc) placeholder
+#define JX_COLOR_SYS_IMG_BG             JX_COLOR_RGB(217, 217, 217)        // (D9D9D9) 图片背景
+#define JX_COLOR_SYS_SEARCH             JX_COLOR_RGB(200, 200, 206)        // (C8C8CE) 搜索框边上颜色
 
 #define JX_WEAK_SELF                __weak __typeof(self) weakSelf = self
 #define JX_STRONG_SELF              __strong __typeof(weakSelf) self = weakSelf

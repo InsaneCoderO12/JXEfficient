@@ -53,8 +53,8 @@ static UIImage *JXNaviView_black_img_ = nil;
     self.autoresizingMask = UIViewAutoresizingNone;
     self.backgroundColor = [UIColor whiteColor];
     
-    _defaultStyleTitleColor = COLOR_GRAY(51);
-    _bottomLineColor = COLOR_GRAY(222);
+    _defaultStyleTitleColor = JX_COLOR_GRAY(51);
+    _bottomLineColor = JX_COLOR_GRAY(222);
     
     //
     self.leftButton.tintColor = self.defaultStyleTitleColor;
@@ -139,9 +139,9 @@ static UIImage *JXNaviView_black_img_ = nil;
     else {
         [self.backButton setImage:self.back_black_img forState:UIControlStateNormal];
         self.titleLabel.textColor = self.defaultStyleTitleColor;
-        [self.leftButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:COLOR_GRAY(204) disabledColor:COLOR_GRAY(204)];
-        [self.rightButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:COLOR_GRAY(204) disabledColor:COLOR_GRAY(204)];
-        [self.rightSubButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:COLOR_GRAY(204) disabledColor:COLOR_GRAY(204)];
+        [self.leftButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:JX_COLOR_GRAY(204) disabledColor:JX_COLOR_GRAY(204)];
+        [self.rightButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:JX_COLOR_GRAY(204) disabledColor:JX_COLOR_GRAY(204)];
+        [self.rightSubButton jx_titleColorStyleNormalColor:self.defaultStyleTitleColor highlightedColor:JX_COLOR_GRAY(204) disabledColor:JX_COLOR_GRAY(204)];
     }
 }
 

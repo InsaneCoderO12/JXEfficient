@@ -20,7 +20,7 @@
     int hexNumber;
     sscanf(hexChar, "%x", &hexNumber);
     
-    UIColor *color = COLOR_HEX(hexNumber);
+    UIColor *color = JX_COLOR_HEX(hexNumber);
     return color;
 }
 
