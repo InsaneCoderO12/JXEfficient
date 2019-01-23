@@ -3,7 +3,7 @@
 //  JXEfficient
 //
 //  Created by augsun on 12/2/16.
-//  Copyright © 2016 codersun. All rights reserved.
+//  Copyright © 2016 CoderSun. All rights reserved.
 //
 
 #import "JXQRCodeScanView.h"

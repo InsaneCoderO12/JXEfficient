@@ -3,7 +3,7 @@
 //  JXEfficient
 //
 //  Created by CoderSun on 9/25/15.
-//  Copyright © 2015 Codersun. All rights reserved.
+//  Copyright © 2015 CoderSun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
