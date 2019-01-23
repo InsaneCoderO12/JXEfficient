@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "JXInline.h"
-#import "JXMacro.h"
+#import "JXInline.h"                        // 内联
+#import "JXMacro.h"                         // 宏
 
-// Category
+// 系统类功能扩展
 #import "UIImage+JXCategory.h"
 #import "UIScrollView+JXCategory.h"
 #import "UIButton+JXCategory.h"
@@ -26,20 +26,21 @@
 #import "UIColor+JXCategory.h"
 
 //
-#import "JXJSONCache.h"
-#import "JXLocationCoordinates.h"
-#import "JXRegular.h"
-#import "JXSystemAlert.h"
-#import "JXUpdateCheck.h"
-#import "JXUUIDAndKeyChain.h"
+#import "JXJSONCache.h"                     // json 缓存
+#import "JXLocationCoordinates.h"           // 定位
+#import "JXRegular.h"                       // 常用正则匹配
+#import "JXSystemAlert.h"                   // 系统 Alert
+#import "JXUpdateCheck.h"                   // 版本更新检查
+#import "JXUUIDAndKeyChain.h"               // UUID And KeyChain
+#import "JXCoreData.h"                      // 数据库操作
 
 // UIView
-#import "JXQRCodeScanView.h"
-#import "JXImageBrowser.h"
-#import "JXRollView.h"
-#import "JXNaviView.h"
-#import "JXFlowView.h"
-#import "JXVideoPlayerView.h"
+#import "JXQRCodeScanView.h"                // 二维码扫描
+#import "JXImageBrowser.h"                  // 图片浏览器
+#import "JXRollView.h"                      // 轮播
+#import "JXNaviView.h"                      // 导航条
+#import "JXFlowView.h"                      // 流布局
+#import "JXVideoPlayerView.h"               // 视频播放
 
 @interface JXEfficient : NSObject
 

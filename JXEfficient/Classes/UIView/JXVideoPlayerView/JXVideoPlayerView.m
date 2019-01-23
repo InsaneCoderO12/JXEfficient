@@ -8,7 +8,8 @@
 
 #import "JXVideoPlayerView.h"
 #import <AVFoundation/AVFoundation.h>
-#import <JXEfficient.h>
+#import "JXMacro.h"
+#import "JXInline.h"
 
 static const CGFloat kProgressViewHeight = 3.0;
 
@@ -27,10 +28,6 @@ static const CGFloat kProgressViewHeight = 3.0;
 
 - (AVPlayerLayer *)playerLayer {
     return (AVPlayerLayer *)self.layer;
-}
-
-- (void)dealloc {
-//    NSLog(@"dealloc -> JXAVPlayerLayerView");
 }
 
 @end
@@ -208,7 +205,6 @@ static const CGFloat kProgressViewHeight = 3.0;
 }
 
 - (void)dealloc {
-//    NSLog(@"dealloc -> JXVideoPlayerView");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     for (NSString *keyEnum in self.observers.allKeys) {
         [self removeObserverForKey:keyEnum];

@@ -21,6 +21,8 @@
 #import "UIView+JXCategory.h"
 #import "UIView+JXToastAndProgressHUD.h"
 #import "UIViewController+JXCategory.h"
+#import "JXCoreData.h"
+#import "JXCoreDataBaseModel.h"
 #import "JXEfficient.h"
 #import "JXInline.h"
 #import "JXJSONCache.h"

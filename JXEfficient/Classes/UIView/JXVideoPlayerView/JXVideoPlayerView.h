@@ -58,3 +58,61 @@ typedef NS_ENUM(NSUInteger, JXVideoPlayerViewStatus) {
 @end
 
 NS_ASSUME_NONNULL_END
+
+
+
+// 使用例子
+#if 0
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    JX_WEAK_SELF;
+    
+    // 实例化 videoPlayerView
+    self.videoPlayerView = [JXVideoPlayerView videoPlayerView];
+    [self.videoBgView addSubview:self.videoPlayerView];
+    [_videoPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).with.offset(kToL);
+        make.right.mas_equalTo(self).with.offset(-kToR);
+        make.top.bottom.mas_equalTo(self);
+    }];
+    
+    // 状态改变回调
+    self.videoPlayerView.statusDidChanged = ^(JXVideoPlayerViewStatus status) {
+        JX_STRONG_SELF;
+        switch (status) {
+            case JXVideoPlayerViewStatusPlaying:
+            {
+                self.playImgView.hidden = YES;
+            } break;
+                
+            case JXVideoPlayerViewStatusPause:
+            case JXVideoPlayerViewStatusEndPlaying:
+            {
+                self.playImgView.hidden = NO;
+            } break;
+                
+            default: break;
+        }
+    };
+    
+}
+
+// 外部模型数据传入
+- (void)refreshUI:(YJRMaterialDetailViewMap *)map {
+    [super refreshUI:map];
+    
+    [self.videoPlayerView setURL:jx_URLValue(map.model.video) showFirstVideoFrame:YES];
+    
+}
+
+// 播放 或 暂停 点击
+- (IBAction)btnPlayClick:(id)sender {
+    JX_BLOCK_EXEC(self.playClick);
+    if (self.videoPlayerView.canPlay) {
+        [self.videoPlayerView play];
+    }
+    else if (self.videoPlayerView.canPause) {
+        [self.videoPlayerView pause];
+    }
+}
+#endif
