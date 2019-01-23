@@ -1,9 +1,9 @@
 //
 //  UIScrollView+JXCategory.m
-//  MCUtilities_Example
+//  JXEfficient
 //
 //  Created by augsun on 3/2/18.
-//  Copyright © 2018 452720799@qq.com. All rights reserved.
+//  Copyright © 2018 CoderSun. All rights reserved.
 //
 
 #import "UIScrollView+JXCategory.h"

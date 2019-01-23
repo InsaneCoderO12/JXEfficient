@@ -1,9 +1,9 @@
 //
 //  UIView+JXToastAndProgressHUD.h
-//  chifan
+//  JXEfficient
 //
 //  Created by augsun on 6/12/17.
-//  Copyright © 2017 crland. All rights reserved.
+//  Copyright © 2017 CoderSun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,9 +1,9 @@
 //
 //  JXNaviView.h
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 8/28/17.
-//  Copyright © 2017 crland. All rights reserved.
+//  Copyright © 2017 CoderSun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

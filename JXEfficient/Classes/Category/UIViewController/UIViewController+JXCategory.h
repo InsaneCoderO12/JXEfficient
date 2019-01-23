@@ -2,7 +2,8 @@
 //  UIViewController+JXCategory.h
 //  JXEfficient
 //
-//  Created by augsun on 1/1/19.
+//  Created by augsun on 6/12/17.
+//  Copyright © 2017 CoderSun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

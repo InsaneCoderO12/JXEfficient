@@ -1,6 +1,6 @@
 //
 //  JXUUIDAndKeyChain.m
-//  KeyChain
+//  JXEfficient
 //
 //  Created by augsun on 3/25/15.
 //  Copyright © 2015 codersun. All rights reserved.

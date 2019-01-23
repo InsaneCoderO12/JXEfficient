@@ -1,9 +1,9 @@
 //
 //  MCCoreDataManager.m
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 1/4/19.
-//  Copyright © 2019 crland. All rights reserved.
+//  Copyright © 2019 CoderSun. All rights reserved.
 //
 
 #import "JXCoreData.h"

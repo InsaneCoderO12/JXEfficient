@@ -1,9 +1,9 @@
 //
 //  MCFlowView.m
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 9/10/18.
-//  Copyright © 2018 crland. All rights reserved.
+//  Copyright © 2018 CoderSun. All rights reserved.
 //
 
 #import "JXFlowView.h"

@@ -1,9 +1,9 @@
 //
 //  UIView+JXCategory.m
-//  ShiBa
+//  JXEfficient
 //
-//  Created by shiba_iosJX on 6/2/16.
-//  Copyright © 2016 ShiBa. All rights reserved.
+//  Created by augsun on 6/2/16.
+//  Copyright © 2016 Codersun. All rights reserved.
 //
 
 #import "UIView+JXCategory.h"

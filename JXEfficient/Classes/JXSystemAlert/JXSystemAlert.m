@@ -1,9 +1,9 @@
 //
 //  JXSystemAlert.m
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 8/27/16.
-//  Copyright © 2016 crland. All rights reserved.
+//  Copyright © 2016 CoderSun. All rights reserved.
 //
 
 #import "JXSystemAlert.h"

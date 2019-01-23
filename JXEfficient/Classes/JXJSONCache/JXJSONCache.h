@@ -1,9 +1,9 @@
 //
 //  MCCache.h
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 9/6/16.
-//  Copyright © 2016 crland. All rights reserved.
+//  Copyright © 2016 CoderSun. All rights reserved.
 //
 // 用于页面原始服务器返回数据的缓存
 

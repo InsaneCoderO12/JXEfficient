@@ -1,9 +1,9 @@
 //
 //  SBUpdate.h
-//  ShiBa
+//  JXEfficient
 //
-//  Created by shiba_iosJX on 9/9/15.
-//  Copyright © 2016 ShiBa. All rights reserved.
+//  Created by augsun on 9/9/15.
+//  Copyright © 2016 Codersun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

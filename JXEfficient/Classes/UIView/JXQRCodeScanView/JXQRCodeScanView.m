@@ -1,6 +1,6 @@
 //
 //  JXQRCodeScannerView.m
-//  二维码扫描
+//  JXEfficient
 //
 //  Created by augsun on 12/2/16.
 //  Copyright © 2016 codersun. All rights reserved.

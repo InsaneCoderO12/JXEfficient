@@ -1,5 +1,9 @@
 //
-//  RegularHelp.m
+//  JXRegular.h
+//  JXEfficient
+//
+//  Created by augsun on 9/9/15.
+//  Copyright © 2016 Codersun. All rights reserved.
 //
 
 #import "JXRegular.h"

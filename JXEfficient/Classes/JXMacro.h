@@ -1,8 +1,9 @@
 //
 //  JXMacro.h
-//  AFNetworking
+//  JXEfficient
 //
 //  Created by augsun on 4/24/18.
+//  Copyright © 2018 CoderSun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

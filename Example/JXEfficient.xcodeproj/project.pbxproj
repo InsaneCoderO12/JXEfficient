@@ -248,7 +248,7 @@
 			attributes = {
 				CLASSPREFIX = JX;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "452720799@qq.com";
+				ORGANIZATIONNAME = CoderSun;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;

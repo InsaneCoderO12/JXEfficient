@@ -1,9 +1,9 @@
 //
 //  JXRollView.m
-//  JXRollView
+//  JXEfficient
 //
 //  Created by CoderSun on 9/25/15.
-//  Copyright © 2015 AugSun. All rights reserved.
+//  Copyright © 2015 Codersun. All rights reserved.
 //
 
 #import "JXRollView.h"

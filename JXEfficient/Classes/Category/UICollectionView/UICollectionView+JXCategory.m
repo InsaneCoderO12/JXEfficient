@@ -1,9 +1,9 @@
 //
 //  UICollectionView+JXCategory.m
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 9/28/17.
-//  Copyright © 2017 crland. All rights reserved.
+//  Copyright © 2017 CoderSun. All rights reserved.
 //
 
 #import "UICollectionView+JXCategory.h"

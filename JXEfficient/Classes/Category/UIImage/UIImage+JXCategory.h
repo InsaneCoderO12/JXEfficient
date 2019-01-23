@@ -1,9 +1,9 @@
 //
 //  UIImage+JXCategory.h
-//  mixc
+//  JXEfficient
 //
 //  Created by augsun on 7/28/16.
-//  Copyright © 2016 crland. All rights reserved.
+//  Copyright © 2016 CoderSun. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
