@@ -41,10 +41,18 @@ typedef NS_ENUM(NSUInteger, JXVideoPlayerViewStatus) {
 @property (nonatomic, readonly) JXVideoPlayerViewStatus status;
 @property (nonatomic, copy, nullable) void (^statusDidChanged)(JXVideoPlayerViewStatus status); // 状态改变回调
 
-@property (nonatomic, readonly) CGFloat duration; // canPlay == YES 时才有值
+@property (nonatomic, readonly) CGFloat duration; // 状态为 JXVideoPlayerViewStatusPlaying 后才有效
 
-@property (nonatomic, copy, nullable) void (^loadingProgress)(CGFloat loadedTime, CGFloat duration); // 调用 play 方法之后的 缓冲进度
-@property (nonatomic, copy, nullable) void (^playingProgress)(CGFloat currentTime, CGFloat duration); // 调用 play 方法之后的 播放进度
+/*
+ 调用 play 方法之后的 缓冲进度
+ */
+@property (nonatomic, copy, nullable) void (^loadingProgress)(CGFloat loadedTime, CGFloat duration);
+
+/*
+ 调用 play 方法之后的 播放进度
+ <可能状态变为 JXVideoPlayerViewStatusPause 后 还会回调一次, 所以该回调实现里不建议处理状态相关业务, 只处理播放进度逻辑>
+ */
+@property (nonatomic, copy, nullable) void (^playingProgress)(CGFloat currentTime, CGFloat duration);
 
 @property (nonatomic, readonly) BOOL canPlay;
 - (void)play;

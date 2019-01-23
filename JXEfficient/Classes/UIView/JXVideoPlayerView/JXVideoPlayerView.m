@@ -37,6 +37,7 @@ static const CGFloat kProgressViewHeight = 3.0;
 
 @property (nonatomic, strong) AVPlayerItem *avPlayerItem;
 @property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) id timeObserver;
 
 @property (nonatomic, strong) JXAVPlayerLayerView *playerLayerView;
 @property (nonatomic, strong) UIImageView *previewImgView;
@@ -178,13 +179,28 @@ static const CGFloat kProgressViewHeight = 3.0;
         // player
         AVPlayer *player = [AVPlayer playerWithPlayerItem:nil];
         JX_WEAK_SELF;
-        [player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:nil usingBlock:^(CMTime time) {
+        self.timeObserver = [player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 6.0) queue:nil usingBlock:^(CMTime time) {
             JX_STRONG_SELF;
             CGFloat currentTime = CMTimeGetSeconds(time);
             self.progressView.progress = currentTime / self.duration;
             self.progressView.hidden = NO;
             self.previewImgView.hidden = YES;
+            
+            // 播放
+            if (self.status != JXVideoPlayerViewStatusPlaying && self.player.rate == 1.0) {
+                self.realStatus = JXVideoPlayerViewStatusPlaying;
+            }
+            
             JX_BLOCK_EXEC(self.playingProgress, currentTime, self.duration);
+            
+            // 暂停 或 结束播放
+            if (self.status != JXVideoPlayerViewStatusPause && self.player.rate == 0.0) {
+                CGFloat currentTime = CMTimeGetSeconds(self.player.currentTime);
+                CGFloat duration = self.duration;
+                if (currentTime != duration) {
+                    self.realStatus = JXVideoPlayerViewStatusPause;
+                }
+            }
         }];
         self.player = player;
         self.playerLayerView.playerLayer.player = self.player;
@@ -209,6 +225,7 @@ static const CGFloat kProgressViewHeight = 3.0;
     for (NSString *keyEnum in self.observers.allKeys) {
         [self removeObserverForKey:keyEnum];
     }
+    [self.player removeTimeObserver:self.timeObserver];
 }
 
 - (void)removeObserverForKey:(NSString *)key {
@@ -382,18 +399,18 @@ static const CGFloat kProgressViewHeight = 3.0;
     }
     else if (object == self.player) {
         if ([keyPath isEqualToString:@"rate"]) {
-            // 播放
-            if (self.player.rate == 1.0) {
-                self.realStatus = JXVideoPlayerViewStatusPlaying;
-            }
-            // 暂停 或 结束播放
-            else if (self.player.rate == 0.0) {
-                CGFloat currentTime = CMTimeGetSeconds(self.player.currentTime);
-                CGFloat duration = self.duration;
-                if (currentTime != duration) {
-                    self.realStatus = JXVideoPlayerViewStatusPause;
-                }
-            }
+//            // 播放
+//            if (self.player.rate == 1.0) {
+//                self.realStatus = JXVideoPlayerViewStatusPlaying;
+//            }
+//            // 暂停 或 结束播放
+//            else if (self.player.rate == 0.0) {
+//                CGFloat currentTime = CMTimeGetSeconds(self.player.currentTime);
+//                CGFloat duration = self.duration;
+//                if (currentTime != duration) {
+//                    self.realStatus = JXVideoPlayerViewStatusPause;
+//                }
+//            }
         }
     }
 }
