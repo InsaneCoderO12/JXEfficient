@@ -59,9 +59,8 @@ typedef NS_ENUM(NSUInteger, JXVideoPlayerViewStatus) {
 
 NS_ASSUME_NONNULL_END
 
-
-
-// 使用例子
+// ====================================================================================================
+#pragma mark - 使用例子
 #if 0
 - (void)awakeFromNib {
     [super awakeFromNib];
