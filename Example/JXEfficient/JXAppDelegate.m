@@ -16,10 +16,6 @@
     // Override point for customization after application launch.
     
     
-    UIImage *img = [JXEfficient PDFImageNamed:@"JXNaviView_white"];
-    
-    
-    JXNaviView *naviView = [JXNaviView naviView];
 
     return YES;
 }

@@ -8,7 +8,6 @@
 
 #import "JXViewController.h"
 #import <JXEfficient.h>
-#import <Masonry/Masonry.h>
 
 @interface JXViewController ()
 
