@@ -16,6 +16,8 @@ typedef NS_ENUM(NSUInteger, JXVideoPlayerViewStatus) {
     
     JXVideoPlayerViewStatusDidSetURL,               // 已设置 URL
     
+    JXVideoPlayerViewStatusReadyToPlay,             // 播放准备就绪
+    
     JXVideoPlayerViewStatusPlaying,                 // 播放中
     JXVideoPlayerViewStatusPause,                   // 暂停中
     JXVideoPlayerViewStatusEndPlaying,              // 结束播放
@@ -27,21 +29,28 @@ typedef NS_ENUM(NSUInteger, JXVideoPlayerViewStatus) {
 
 + (instancetype)videoPlayerView; // 指定初始化器
 
+/*
+ 下载第一帧图片 该方法没有缓存 使用时自行缓存预览图 注意 cell 复用情况的性能花销
+ */
 + (void)firstVideoFrameForURL:(NSURL *)URL completion:(void (^)(UIImage * _Nullable img))completion; // 获取第一帧图片
 
-@property (nonatomic, readonly) UIProgressView *progressView; // 播放进度 不显示可以 hidden 掉, 默认显示.
+@property (nonatomic, readonly) UIProgressView *progressView; // 播放进度
+@property (nonatomic, assign) BOOL progressViewHidden; // 默认显示
 
 /*
- cell 复用的情况 showFirstVideoFrame 传入 NO 以节约性能
- 同时 调用 firstVideoFrameForURL: completion: 方法异步加载第一帧图片 自行在 JXVideoPlayerView 创建一个 UIImageView 控制预览及视频播放层的隐藏状态.
- firstVideoFrameForURL: completion: 方法没有缓存 注意 cell 复用情况的性能花销
+ URL: 视频 URL
+ prepareForPlay: 是否准备进行播放 <进行缓冲>
+ 
+ cell 复用的情况 prepareForPlay 传入 NO 以节约性能, 切记.
+ 如果服务器没有返回预览图片 可以外部调用 firstVideoFrameForURL: completion: 方法异步加载第一帧图片
+ 同时 自行在 JXVideoPlayerView 实例位置覆盖一层 UIImageView 以控制预览及视频播放层的显示隐藏状态.
  */
-- (void)setURL:(NSURL *)URL showFirstVideoFrame:(BOOL)showFirstVideoFrame;
+- (void)setURL:(NSURL *)URL prepareForPlay:(BOOL)prepareForPlay;
 
 @property (nonatomic, readonly) JXVideoPlayerViewStatus status;
 @property (nonatomic, copy, nullable) void (^statusDidChanged)(JXVideoPlayerViewStatus status); // 状态改变回调
 
-@property (nonatomic, readonly) CGFloat duration; // 状态为 JXVideoPlayerViewStatusPlaying 后才有效
+@property (nonatomic, readonly) CGFloat duration; // 状态为 JXVideoPlayerViewStatusReadyToPlay 后才有效
 
 /*
  调用 play 方法之后的 缓冲进度
@@ -101,7 +110,6 @@ NS_ASSUME_NONNULL_END
             default: break;
         }
     };
-    
 }
 
 // 外部模型数据传入
@@ -109,7 +117,6 @@ NS_ASSUME_NONNULL_END
     [super refreshUI:map];
     
     [self.videoPlayerView setURL:jx_URLValue(map.model.video) showFirstVideoFrame:YES];
-    
 }
 
 // 播放 或 暂停 点击
@@ -122,4 +129,5 @@ NS_ASSUME_NONNULL_END
         [self.videoPlayerView pause];
     }
 }
+
 #endif

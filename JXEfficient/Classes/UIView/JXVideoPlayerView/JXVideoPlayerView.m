@@ -40,14 +40,11 @@ static const CGFloat kProgressViewHeight = 3.0;
 @property (nonatomic, strong) id timeObserver;
 
 @property (nonatomic, strong) JXAVPlayerLayerView *playerLayerView;
-@property (nonatomic, strong) UIImageView *previewImgView;
 
 @property (nonatomic, strong) NSURL *URL;
 @property (nonatomic, copy) NSURL *URL_previous;
 
 @property (nonatomic, assign) JXVideoPlayerViewStatus realStatus;
-
-@property (nonatomic, assign) BOOL videoPlayerReadyToPlay;
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, id> *observers;
 
@@ -108,31 +105,6 @@ static const CGFloat kProgressViewHeight = 3.0;
         
         self.playerLayerView.playerLayer.videoGravity = AVLayerVideoGravityResize;
         
-        // previewImgView
-        self.previewImgView = [[UIImageView alloc] init];
-        [self addSubview:self.previewImgView];
-        self.previewImgView.translatesAutoresizingMaskIntoConstraints = NO;
-        self.previewImgView.backgroundColor = [UIColor blackColor];
-        [self addConstraints:@[
-                               [NSLayoutConstraint constraintWithItem:self.previewImgView attribute:NSLayoutAttributeLeft
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:self attribute:NSLayoutAttributeLeft
-                                                           multiplier:1.0 constant:0.0],
-                               [NSLayoutConstraint constraintWithItem:self.previewImgView attribute:NSLayoutAttributeRight
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:self attribute:NSLayoutAttributeRight
-                                                           multiplier:1.0 constant:0.0],
-                               [NSLayoutConstraint constraintWithItem:self.previewImgView attribute:NSLayoutAttributeTop
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:self attribute:NSLayoutAttributeTop
-                                                           multiplier:1.0 constant:0.0],
-                               [NSLayoutConstraint constraintWithItem:self.previewImgView attribute:NSLayoutAttributeBottom
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:self attribute:NSLayoutAttributeBottom
-                                                           multiplier:1.0 constant:0.0],
-                               ]
-         ];
-
         // progressView
         _progressView = [[UIProgressView alloc] init];
         [self addSubview:self.progressView];
@@ -181,16 +153,17 @@ static const CGFloat kProgressViewHeight = 3.0;
         JX_WEAK_SELF;
         self.timeObserver = [player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 6.0) queue:nil usingBlock:^(CMTime time) {
             JX_STRONG_SELF;
-            CGFloat currentTime = CMTimeGetSeconds(time);
-            self.progressView.progress = currentTime / self.duration;
-            self.progressView.hidden = NO;
-            self.previewImgView.hidden = YES;
-            
+
             // 播放
             if (self.status != JXVideoPlayerViewStatusPlaying && self.player.rate == 1.0) {
                 self.realStatus = JXVideoPlayerViewStatusPlaying;
+                if (!self.progressViewHidden) {
+                    self.progressView.hidden = NO;
+                }
             }
             
+            CGFloat currentTime = CMTimeGetSeconds(time);
+            self.progressView.progress = currentTime / self.duration;
             JX_BLOCK_EXEC(self.playingProgress, currentTime, self.duration);
             
             // 暂停 或 结束播放
@@ -199,6 +172,7 @@ static const CGFloat kProgressViewHeight = 3.0;
                 CGFloat duration = self.duration;
                 if (currentTime != duration) {
                     self.realStatus = JXVideoPlayerViewStatusPause;
+                    self.progressView.hidden = YES;
                 }
             }
         }];
@@ -209,6 +183,11 @@ static const CGFloat kProgressViewHeight = 3.0;
 
     }
     return self;
+}
+
+- (void)setProgressViewHidden:(BOOL)progressViewHidden {
+    _progressViewHidden = progressViewHidden;
+    self.progressView.hidden = YES;
 }
 
 - (void)setRealStatus:(JXVideoPlayerViewStatus)realStatus {
@@ -266,7 +245,7 @@ static const CGFloat kProgressViewHeight = 3.0;
     }
 }
 
-- (void)setURL:(NSURL *)URL showFirstVideoFrame:(BOOL)showFirstVideoFrame {
+- (void)setURL:(NSURL *)URL prepareForPlay:(BOOL)prepareForPlay {
     if (!URL) {
         return;
     }
@@ -274,21 +253,17 @@ static const CGFloat kProgressViewHeight = 3.0;
     
     self.realStatus = JXVideoPlayerViewStatusDidSetURL;
     
-    if (!showFirstVideoFrame) {
+    if (!prepareForPlay) {
         return;
     }
     
-    NSURL *tempURL = [URL copy];
-    [JXVideoPlayerView firstVideoFrameForURL:URL completion:^(UIImage * _Nullable img) {
-        if ([self.URL.absoluteString isEqualToString:tempURL.absoluteString] && img != nil) {
-            self.previewImgView.image = img;
-        }
-    }];
+    [self checkIfNeedReInitial];
 }
 
 - (BOOL)canPlay {
     return
     self.realStatus == JXVideoPlayerViewStatusDidSetURL ||
+    self.realStatus == JXVideoPlayerViewStatusReadyToPlay ||
     self.realStatus == JXVideoPlayerViewStatusPause ||
     self.realStatus == JXVideoPlayerViewStatusEndPlaying ||
     self.realStatus == JXVideoPlayerViewStatusFailure;
@@ -300,7 +275,8 @@ static const CGFloat kProgressViewHeight = 3.0;
         
         [self.player play];
     }
-    else if (self.realStatus == JXVideoPlayerViewStatusPause ||
+    else if (self.realStatus == JXVideoPlayerViewStatusReadyToPlay ||
+             self.realStatus == JXVideoPlayerViewStatusPause ||
              self.realStatus == JXVideoPlayerViewStatusFailure) {
         
         [self.player play];
@@ -329,6 +305,7 @@ static const CGFloat kProgressViewHeight = 3.0;
 
 - (BOOL)canReplay {
     return
+    self.realStatus == JXVideoPlayerViewStatusReadyToPlay ||
     self.realStatus == JXVideoPlayerViewStatusPlaying ||
     self.realStatus == JXVideoPlayerViewStatusPause ||
     self.realStatus == JXVideoPlayerViewStatusEndPlaying ||
@@ -376,7 +353,7 @@ static const CGFloat kProgressViewHeight = 3.0;
                 case AVPlayerItemStatusReadyToPlay:
                 {
                     _duration = CMTimeGetSeconds(self.avPlayerItem.duration);
-                    self.videoPlayerReadyToPlay = YES;
+                    self.realStatus = JXVideoPlayerViewStatusReadyToPlay;
                 } break;
                     
                 case AVPlayerItemStatusFailed:
@@ -399,18 +376,7 @@ static const CGFloat kProgressViewHeight = 3.0;
     }
     else if (object == self.player) {
         if ([keyPath isEqualToString:@"rate"]) {
-//            // 播放
-//            if (self.player.rate == 1.0) {
-//                self.realStatus = JXVideoPlayerViewStatusPlaying;
-//            }
-//            // 暂停 或 结束播放
-//            else if (self.player.rate == 0.0) {
-//                CGFloat currentTime = CMTimeGetSeconds(self.player.currentTime);
-//                CGFloat duration = self.duration;
-//                if (currentTime != duration) {
-//                    self.realStatus = JXVideoPlayerViewStatusPause;
-//                }
-//            }
+
         }
     }
 }
