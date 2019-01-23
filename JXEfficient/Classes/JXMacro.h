@@ -34,23 +34,23 @@
 #define JX_COLOR_SYS_IMG_BG             JX_COLOR_RGB(217, 217, 217)        // (D9D9D9) 图片背景
 #define JX_COLOR_SYS_SEARCH             JX_COLOR_RGB(200, 200, 206)        // (C8C8CE) 搜索框边上颜色
 
-#define JX_WEAK_SELF                __weak __typeof(self) weakSelf = self
-#define JX_STRONG_SELF              __strong __typeof(weakSelf) self = weakSelf
+#define JX_WEAK_SELF                    __weak __typeof(self) weakSelf = self
+#define JX_STRONG_SELF                  __strong __typeof(weakSelf) self = weakSelf
 
-#define W_SCREEN                    [UIScreen mainScreen].bounds.size.width         // 屏幕宽
-#define H_SCREEN                    [UIScreen mainScreen].bounds.size.height        // 屏幕高
+#define JX_SCREEN_W                     [UIScreen mainScreen].bounds.size.width         // 屏幕宽
+#define JX_SCREEN_H                     [UIScreen mainScreen].bounds.size.height        // 屏幕高
 #define H_STATUSBAR                 [UIApplication sharedApplication].statusBarFrame.size.height // 状态栏高
 #define IS_STATUSBAR_44             (H_STATUSBAR == 44.f)                           // iPhone X
 #define H_NAVBAR                    (IS_STATUSBAR_44 ? 88.f : 64.f)                 // 导航条高
 #define H_TABBAR                    (IS_STATUSBAR_44 ? 83.f : 49.f)                 // 标签栏高
-#define IS_320_W                    (W_SCREEN == 320.f ? YES : NO)                  // 是否是 320 宽的手机 5s
-#define IS_375_W                    (W_SCREEN == 375.f ? YES : NO)                  // 是否是 375 宽的手机 6s
-#define IS_414_W                    (W_SCREEN == 414.f ? YES : NO)                  // 是否是 414 宽的手机 6sP
-#define IS_480_H                    (H_SCREEN == 480.f ? YES : NO)                  // 是否是 480 高的手机 4s
-#define IS_568_H                    (H_SCREEN == 568.f ? YES : NO)                  // 是否是 568 高的手机 5s
-#define IS_667_H                    (H_SCREEN == 667.f ? YES : NO)                  // 是否是 667 高的手机 6s
-#define IS_736_H                    (H_SCREEN == 736.f ? YES : NO)                  // 是否是 736 高的手机 6sP
-#define IS_812_H                    (H_SCREEN == 812.f ? YES : NO)                  // 是否是 812 高的手机 iPhone X
+#define IS_320_W                    (JX_SCREEN_W == 320.f ? YES : NO)                  // 是否是 320 宽的手机 5s
+#define IS_375_W                    (JX_SCREEN_W == 375.f ? YES : NO)                  // 是否是 375 宽的手机 6s
+#define IS_414_W                    (JX_SCREEN_W == 414.f ? YES : NO)                  // 是否是 414 宽的手机 6sP
+#define IS_480_H                    (JX_SCREEN_H == 480.f ? YES : NO)                  // 是否是 480 高的手机 4s
+#define IS_568_H                    (JX_SCREEN_H == 568.f ? YES : NO)                  // 是否是 568 高的手机 5s
+#define IS_667_H                    (JX_SCREEN_H == 667.f ? YES : NO)                  // 是否是 667 高的手机 6s
+#define IS_736_H                    (JX_SCREEN_H == 736.f ? YES : NO)                  // 是否是 736 高的手机 6sP
+#define IS_812_H                    (JX_SCREEN_H == 812.f ? YES : NO)                  // 是否是 812 高的手机 iPhone X
 
 #define JX_DOCUMENT_DIRECTORY       [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define JX_DOCUMENT_APPEND(path)    [JX_DOCUMENT_DIRECTORY stringByAppendingPathComponent:path]
