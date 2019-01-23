@@ -73,7 +73,7 @@ static UIImage *JXNaviView_black_img_ = nil;
     
     //
     self.bottomLineView.backgroundColor = self.bottomLineColor;
-    self.h_bottomLineView.constant = JX_ONE_SCREEN_PIX;
+    self.h_bottomLineView.constant = JX_SCREEN_ONE_PIX;
     self.bottomLineView.hidden = YES;
     
     //
