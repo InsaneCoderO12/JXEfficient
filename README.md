@@ -22,7 +22,7 @@ pod 'JXEfficient'
 
 ## Author
 
-452720799@qq.com, codersun@126.com
+codersun@126.com
 
 ## License
 
