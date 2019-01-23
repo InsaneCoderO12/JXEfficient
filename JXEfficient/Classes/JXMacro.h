@@ -35,16 +35,16 @@
 #define JX_SCREEN_W                     [UIScreen mainScreen].bounds.size.width                         // 屏幕宽
 #define JX_SCREEN_H                     [UIScreen mainScreen].bounds.size.height                        // 屏幕高
 
-#define JX_SCREEN_W_IS_320              (JX_SCREEN_W == 320.0 ? YES : NO)                               // 是否是 320 宽的手机 5s
-#define JX_SCREEN_W_IS_375              (JX_SCREEN_W == 375.0 ? YES : NO)                               // 是否是 375 宽的手机 6s
-#define JX_SCREEN_W_IS_414              (JX_SCREEN_W == 414.0 ? YES : NO)                               // 是否是 414 宽的手机 6sP
+#define JX_SCREEN_W_IS_320              (JX_SCREEN_W == 320.0 ? YES : NO)                               // 是否 320 宽的手机 5s
+#define JX_SCREEN_W_IS_375              (JX_SCREEN_W == 375.0 ? YES : NO)                               // 是否 375 宽的手机 6s
+#define JX_SCREEN_W_IS_414              (JX_SCREEN_W == 414.0 ? YES : NO)                               // 是否 414 宽的手机 6sP
 
-#define JX_SCREEN_H_IS_480              (JX_SCREEN_H == 480.0 ? YES : NO)                               // 是否是 480 高的手机 4s
-#define JX_SCREEN_H_IS_568              (JX_SCREEN_H == 568.0 ? YES : NO)                               // 是否是 568 高的手机 5s
-#define JX_SCREEN_H_IS_667              (JX_SCREEN_H == 667.0 ? YES : NO)                               // 是否是 667 高的手机 6s
-#define JX_SCREEN_H_IS_736              (JX_SCREEN_H == 736.0 ? YES : NO)                               // 是否是 736 高的手机 6sP
-#define JX_SCREEN_H_IS_812              (JX_SCREEN_H == 812.0 ? YES : NO)                               // 是否是 812 高的手机 iPhone X, XS
-#define JX_SCREEN_H_IS_896              (JX_SCREEN_H == 896.0 ? YES : NO)                               // 是否是 896 高的手机 iPhone XS Max, XR
+#define JX_SCREEN_H_IS_480              (JX_SCREEN_H == 480.0 ? YES : NO)                               // 是否 480 高的手机 4s
+#define JX_SCREEN_H_IS_568              (JX_SCREEN_H == 568.0 ? YES : NO)                               // 是否 568 高的手机 5s
+#define JX_SCREEN_H_IS_667              (JX_SCREEN_H == 667.0 ? YES : NO)                               // 是否 667 高的手机 6s
+#define JX_SCREEN_H_IS_736              (JX_SCREEN_H == 736.0 ? YES : NO)                               // 是否 736 高的手机 6sP
+#define JX_SCREEN_H_IS_812              (JX_SCREEN_H == 812.0 ? YES : NO)                               // 是否 812 高的手机 iPhone X, XS
+#define JX_SCREEN_H_IS_896              (JX_SCREEN_H == 896.0 ? YES : NO)                               // 是否 896 高的手机 iPhone XS Max, XR
 
 #define JX_SCREEN_ONE_PIX               (1.0 / [UIScreen mainScreen].scale)                             // 屏幕一个像素
 
