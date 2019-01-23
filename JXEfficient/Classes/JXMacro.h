@@ -10,7 +10,7 @@
 
 // 自定义色
 #define JX_COLOR_RGBA(rr, gg, bb, aa)   [UIColor colorWithRed:(rr) / 255.0 green:(gg) / 255.0 blue:(bb) / 255.0 alpha:(aa) / 1.0] // RGBA 颜色
-#define JX_COLOR_RGB(rr, gg, bb)        X_COLOR_RGBA(rr, gg, bb, 1.0)                                   // RGB 颜色
+#define JX_COLOR_RGB(rr, gg, bb)        JX_COLOR_RGBA(rr, gg, bb, 1.0)                                   // RGB 颜色
 
 #define JX_COLOR_HEX(hexValue)          [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 \
                                         green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 \
